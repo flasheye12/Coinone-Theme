@@ -7,10 +7,738 @@
 @homepageURL https://github.com/flasheye12/Coinone-Dark
 @updateURL   https://raw.githubusercontent.com/flasheye12/Coinone-Dark/master/coinone-dark.user.css
 @advanced color base-color "Base color scheme" #4183C4
-@preprocessor uso
+@advanced dropdown bg-choice "Background image" {
+  crosshatch "Cross-Hatch" <<<EOT
+  url('data:image/png;base64,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') EOT;
+
+  uniform "Uniform Tile" <<<EOT
+  url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkAQMAAABKLAcXAAAABlBMVEUfHx8aGhrh02scAAAAH0lEQVR4AWMQRAICeHn/kcAH8vSN6hvVN6pvVN+oPgAPQ4LItqOMdQAAAABJRU5ErkJggg==') EOT;
+
+  random "Random Tile" <<<EOT
+  url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkAgMAAAANjH3HAAAACVBMVEUaGhohISElJSUh9lebAAABwElEQVR4AY3Vua3gOBgGQQXZhgKYgwHJYAA0Ksu9CAh6hxbTbvFzfx6rNEGlHY6z5KvMw4s43mN2Z5fqYLzKyrfyXhXKnKBdD9n58UWW3Vlb3mOCmWoHHZbdV5lv8t7Ver6ldsfqumVAdbblxxcZVcd7QWq2Y6VsadS4ZTzFDbFa5XivqlxVUFG1Jd6k66u8x0RIOw0cXAiNW2z58bJ5r1LTQtVVuy1x2jK+yLTlxy3v5RogszEXSB0ZF4iYWLbMMUBGPDbvpRQUVUV9kvGU6ynrIe9FOqssJcQ4oqurCjV6ytmqco4SwvGeNCoJaphwSHoK13cyuuU9ZaQI0lB1qB8zT3GL2XjKueU9pR+gH0OlqvGUzHWLQ81O0Dg95L3Uj9qxKx0pr3LdYrnlvQKlUEnV/8v4Xt6bThZROwaO5QfTUyY4GCBWu8Wf/nO4ULtj/li3mE9Z47zlx/WU94Iq7RD5XuZ6ynjIGn9yr1VhFaq2NH9s4bP4Rt5j2NFO5MBXGVsmsD5v3gslYORsd8R1i1rrIUoLKLXlvVhgKH7ApToyhk21TJhbLDvdN151vEetJtKdOtYo4SmnOvhGpjpe+xuj3X723ghdygAAAABJRU5ErkJggg==') EOT;
+
+  custom "Custom" <<<EOT
+  bg-custom EOT;
+
+  none "None" <<<EOT
+  none EOT;
+}
+@advanced text bg-custom "Background image [wrap in url()]" "url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAMAAAAMCGV4AAAAD1BMVEUREREREREAAAAREREWFhkN5cwCAAAABHRSTlNfGAAwFBG7CgAAACxJREFUeAFjYGJiZGBhhhMMYIIRTjCgcIE8VC4TKpeRmYEZiTtIzGNihhNMAJJAATdKr5xFAAAAAElFTkSuQmCC')"
+@preprocessor stylus
 ==/UserStyle== */
-@-moz-document domain("coinone.co.kr") {
+@-moz-document regexp("^https?://coinone.co.kr/$"), regexp("^https?://coinone.co.kr/swap[\\S]*"), regexp("^https?://coinone.co.kr/plus[\\S]*") {
+  :root {
+    --bg-color: #181818;
+    --input-bg-color: #202020;
+    --active-bg-color: #2f2f2f;
+    --border-color: #444;
+    --font-color: #ccc;
+    --active-font-color: #f0f0f0;
+    --highlight-color: #f1e05a;
+    --disabled-color: #bbb;
+  }
+
+  * {
+    text-shadow: none !important;
+    box-shadow: none !important;
+    border-color: var(--border-color) !important;
+  }
+
   body {
-    background-color: black;
+    background-color: var(--bg-color);
+    background-image: bg-choice;
+  }
+
+  .coinone-gnb {
+    background-color: var(--bg-color) !important;
+
+    .gnb-list {
+      color: var(--font-color);
+
+      .glyph-ui-new-sup {
+        color: var(--highlight-color) !important;
+      }
+    }
+
+    .notice-menu {
+      color: var(--font-color);
+    }
+
+    .pc-notice-dropdown {
+      background-color: var(--bg-color);
+      border: 1px solid var(--border-color);
+
+      .dropdown-title {
+        color: var(--font-color);
+      }
+
+      .dropdown-link,
+      .glyph-ui-new-small {
+        color: var(--highlight-color) !important;
+      }
+
+      .notice-title {
+        color: var(--font-color) !important;
+      }
+    }
+
+    .pc-user-dropdown {
+      background-color: var(--bg-color);
+
+      @media (min-width: 980px) {
+        border: 1px solid var(--border-color);
+      }
+
+      .user-email {
+        > span {
+          color: var(--font-color);
+        }
+      }
+
+      .gnb-dropdown-area {
+        background-color: var(--bg-color) !important;
+        border-bottom: 1px solid var(--border-color);
+
+        @media (min-width: 980px) {
+          border: 1px solid var(--border-color);
+        }
+
+        .gnb-sub-item {
+          color: var(--font-color);
+
+          &.gnb-item-referral {
+            color: var(--highlight-color);
+          }
+        }
+      }
+    }
+
+    .pc-lang,
+    .mobile-lang {
+      color: var(--font-color);
+    }
+
+    .mobile-sidebar {
+      background-color: var(--bg-color) !important;
+      border: 1px solid var(--border-color);
+
+      @media (min-width: 980px) {
+        border: none;
+      }
+
+      .gnb-item {
+        .icon {
+          color: var(--font-color);
+        }
+
+        .gnb-dropdown-area {
+          background-color: var(--bg-color);
+
+          @media (min-width: 980px) {
+            border: 1px solid var(--border-color) !important;
+          }
+        }
+
+        .gnb-dropdown {
+          color: var(--font-color);
+          border-top: 1px solid var(--border-color);
+          border-bottom: 1px solid var(--border-color);
+
+          @media (min-width: 980px) {
+            border: none;
+          }
+        }
+      }
+    }
+  }
+
+  common-footer,
+  app-footer {
+    background-color: var(--bg-color) !important;
+    border-top: 1px solid var(--border-color);
+
+    .title,
+    .t-tit {
+      color: var(--active-font-color) !important;
+    }
+  }
+
+  /* landing */
+  landing-main {
+    .cover-filter-area {
+      .cover-filter-item {
+        color: var(--font-color) !important;
+
+        &.is-active,
+        &:hover {
+          color: var(--active-font-color) !important;
+
+          &::after {
+            background-color: var(--active-font-color) !important;
+          }
+        }
+      }
+    }
+
+    landing-main-coin-search {
+      input {
+        background-color: var(--input-bg-color) !important;
+      }
+    }
+
+    .cover-market-list-area {
+      th {
+        background-color: var(--bg-color) !important;
+      }
+
+      tr {
+        &.is-active,
+        &:hover {
+          background-color: var(--active-bg-color) !important;
+        }
+      }
+
+      .ticker-name {
+        color: var(--font-color);
+      }
+
+      .go-to-exchange {
+        &:hover {
+          color: var(--font-color) !important;
+        }
+      }
+    }
+
+    .news-section {
+      .news-area {
+        background-color: var(--bg-color);
+        border: 1px solid var(--border-color);
+      }
+
+      .news-item {
+        color: var(--font-color) !important;
+
+        &.emphasis {
+          .news-time {
+            color: var(--highlight-color) !important;
+          }
+        }
+      }
+
+      button {
+        background-color: var(--bg-color) !important;
+        border: 1px solid var(--border-color);
+      }
+    }
+
+    landing-main-series {
+      .section-sub-title,
+      .series-title {
+        color: var(--font-color) !important;
+      }
+    }
+
+    landing-main-notice-info {
+      .section-sub-title,
+      .view-all {
+        color: var(--font-color) !important;
+      }
+
+      .info-title-text {
+        color: var(--font-color);
+      }
+
+      .info-new-badge {
+        color: var(--highlight-color) !important;
+      }
+    }
+
+    landing-main-project-info {
+      .section-sub-title,
+      .view-all,
+      .ticker-name,
+      .info-title {
+        color: var(--font-color) !important;
+      }
+
+      .info-new-badge {
+        color: var(--highlight-color) !important;
+      }
+    }
+
+    landing-main-card-event {
+      .section-sub-title,
+      .event-main-txt {
+        color: var(--font-color) !important;
+      }
+
+      .indicator-item.is-active {
+        background-color: var(--active-font-color) !important;
+      }
+    }
+
+    landing-main-snapshot {
+      .section-sub-title,
+      .snapshot-coin,
+      .coin-symbol,
+      .coin-name,
+      .date-text {
+        color: var(--font-color) !important;
+      }
+    }
+
+    landing-main-service-guide {
+      .section-sub-title,
+      .guide-desc {
+        color: var(--font-color) !important;
+      }
+    }
+
+    landing-sub-promotion {
+      .promotion-title {
+        color: var(--font-color) !important;
+      }
+    }
+
+    landing-main-app-info {
+      background-color: var(--bg-color) !important;
+
+      .app-section-title {
+        color: var(--font-color) !important;
+      }
+    }
+
+    landing-main-service-info {
+      .service-title {
+        color: var(--font-color);
+      }
+    }
+
+    .security-section::before {
+      display: none !important;
+    }
+
+    .card-area::before,
+    .guide-area::before,
+    .promotion-area::before {
+      border: none !important;
+      background-color: var(--bg-color) !important;
+    }
+  }
+
+  .dropdown {
+    .ui-dropdown,
+    .dropdown-menu {
+      background-color: var(--bg-color);
+      border: 1px solid var(--border-color);
+    }
+
+    button,
+    .ui-option-text,
+    .link-list {
+      color: var(--font-color) !important;
+    }
+  }
+
+  .btn.btn-normal {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    color: var(--font-color);
+  }
+}
+
+@-moz-document regexp("^https?://coinone.co.kr/swap[\\S]*") {
+  .swap-title,
+  .text,
+  .icon-coin,
+  .label-select,
+  .coin-symbol,
+  .coin-name,
+  .unit,
+  .slot-from,
+  .slot-to,
+  .btn-picker-amount,
+  .num {
+    color: var(--font-color) !important;
+  }
+
+  .transaction-type {
+    .icon {
+      color: var(--font-color) !important;
+    }
+  }
+
+  .closing-price-num,
+  .quote-num {
+    color: var(--active-font-color) !important;
+  }
+
+  .inp-item {
+    background-color: var(--input-bg-color) !important;
+
+    input {
+      color: var(--font-color) !important;
+    }
+  }
+
+  .input-item--to {
+    .inp-item {
+      border: none !important;
+    }
+  }
+
+  swap-pair-info {
+    .section-box {
+      background-color: var(--bg-color) !important;
+      border: 1px solid var(--border-color) !important;
+    }
+
+    .link-coin-spec {
+      color: var(--font-color) !important;
+
+      &:hover {
+        color: var(--active-font-color) !important;
+      }
+    }
+  }
+
+  .button-set--link {
+    a:hover {
+      background-color: var(--active-bg-color) !important;
+    }
+  }
+}
+
+@-moz-document regexp("^https?://coinone.co.kr/plus/") {
+  .tit-main,
+  .tit-section {
+    color: var(--active-font-color);
+  }
+
+  main-cover {
+    .txt-link,
+    .glyph-ui-new-window-arrow {
+      color: var(--font-color) !important;
+    }
+
+    .link-main {
+      background-color: var(--bg-color) !important;
+      border: 1px solid var(--border-color);
+
+      @media (min-width: 980px) {
+        background-color: transparent !important;
+        border: none;
+      }
+    }
+
+    .inner-list {
+      background-color: transparent !important;
+
+      &::before {
+        background-color: transparent !important;
+      }
+    }
+  }
+
+  main-products {
+    .panel {
+      background-color: var(--bg-color);
+      border: none;
+
+      @media (min-width: 980px) {
+        border: 1px solid var(--border-color) !important;
+      }
+
+      &:hover {
+        background-color: var(--active-bg-color) !important;
+      }
+
+      .tit-panel,
+      .info-roi {
+        color: var(--font-color);
+      }
+
+      &.is-disabled {
+        .badge {
+          background-color: var(--disabled-color) !important;
+        }
+      }
+    }
+
+    .btn {
+      background-color: var(--bg-color) !important;
+      border: 1px solid var(--border-color) !important;
+    }
+  }
+
+  main-overviews {
+    .wrap-overviews {
+      background-color: var(--bg-color) !important;
+    }
+
+    .panel {
+      background-color: var(--bg-color) !important;
+      border: 1px solid var(--border-color) !important;
+
+      .tit-panel,
+      .desc-panel {
+        color: var(--font-color) !important;
+      }
+
+      .badge.is-disabled {
+        background-color: var(--disabled-color) !important;
+      }
+    }
+
+    .btn-group {
+      .btn {
+        color: var(--font-color);
+        background-color: var(--input-bg-color);
+      }
+    }
+  }
+}
+
+@-moz-document regexp("^https?://coinone.co.kr/plus/overview[\\S]*") {
+  app-lnb {
+    .wrap-lnb {
+      background-color: var(--bg-color) !important;
+
+      @media (min-width: 980px) {
+        background-color: transparent !important;
+      }
+
+      .btn,
+      .tit-lnb {
+        color: var(--font-color) !important;
+      }
+    }
+
+    .lnb-feature {
+      border-bottom: 1px solid var(--border-color);
+
+      @media (min-width: 980px) {
+        border: none;
+      }
+
+      .link-panel {
+        background-color: var(--bg-color) !important;
+        color: var(--font-color) !important;
+        border: none;
+
+        @media (min-width: 980px) {
+          border: 1px solid var(--border-color);
+          border-radius: 4px;
+        }
+      }
+
+      .link-list {
+        color: var(--font-color) !important;
+      }
+    }
+  }
+
+  overview-title {
+    color: var(--font-color) !important;
+  }
+
+  overview-staking-cards {
+    .txt-divide {
+      color: var(--font-color);
+    }
+
+    .item-inp {
+      background-color: var(--input-bg-color) !important;
+      border: 1px solid var(--border-color);
+    }
+
+    .list-item.menual-item .link-card {
+      color: var(--font-color) !important;
+      background-color: var(--bg-color) !important;
+      border: 1px solid var(--border-color);
+    }
+  }
+
+  overview-lockup-cards {
+    color: var(--font-color);
+
+    .list-item.menual-item .link-card {
+      color: var(--font-color) !important;
+      background-color: var(--bg-color) !important;
+      border: 1px solid var(--border-color);
+    }
+  }
+}
+
+@-moz-document regexp("^https?://coinone.co.kr/plus/overview[\\S]*"), regexp("^https?://coinone.co.kr/plus/daily[\\S]*"), regexp("^https?://coinone.co.kr/plus/staking[\\S]*"), regexp("^https?://coinone.co.kr/plus/lockup[\\S]*") {
+  app-lnb {
+    .wrap-lnb {
+      background-color: var(--bg-color) !important;
+
+      @media (min-width: 980px) {
+        background-color: transparent !important;
+      }
+
+      .btn,
+      .tit-lnb {
+        color: var(--font-color) !important;
+      }
+    }
+
+    .lnb-feature {
+      border-bottom: 1px solid var(--border-color);
+
+      @media (min-width: 980px) {
+        border: none;
+      }
+
+      .link-panel {
+        background-color: var(--bg-color) !important;
+        color: var(--font-color) !important;
+        border: none;
+
+        @media (min-width: 980px) {
+          border: 1px solid var(--border-color);
+          border-radius: 4px;
+        }
+      }
+
+      .link-list {
+        color: var(--font-color) !important;
+      }
+    }
+  }
+}
+
+@-moz-document regexp("^https?://coinone.co.kr/plus/overview[\\S]*") {
+  plus-report {
+    .tit-section {
+      color: var(--font-color);
+    }
+
+    .descset-report {
+      .desc-title,
+      .desc-detail {
+        background-color: var(--bg-color) !important;
+        color: var(--font-color) !important;
+      }
+    }
+  }
+}
+
+@-moz-document regexp("^https?://coinone.co.kr/plus/daily[\\S]*"), regexp("^https?://coinone.co.kr/plus/staking[\\S]*") {
+  daily-title,
+  staking-title {
+    .tit-plus,
+    .txt-item,
+    .desc-item {
+      color: var(--font-color) !important;
+    }
+  }
+
+  daily-desc,
+  staking-desc {
+    .section-desc {
+      background-color: var(--bg-color) !important;
+      border: 1px solid var(--border-color);
+
+      .tit-section,
+      .txt-desc {
+        color: var(--font-color);
+      }
+    }
+  }
+
+  staking-desc {
+    .info-date {
+      color: var(--font-color);
+    }
+  }
+
+  daily-faq,
+  staking-faq {
+    .section-faq {
+      background-color: var(--bg-color) !important;
+      border: 1px solid var(--border-color);
+      color: var(--font-color);
+    }
+
+    .list-item {
+      .tit-item,
+      .txt-item {
+        background-color: var(--bg-color);
+        color: var(--font-color) !important;
+      }
+
+      &.is-active {
+        .tit-item,
+        .txt-item {
+          background-color: var(--active-bg-color);
+        }
+      }
+    }
+  }
+}
+
+@-moz-document regexp("^https?://coinone.co.kr/plus/lockup[\\S]*") {
+  .fixed-mobile {
+    background-color: transparent;
+  }
+
+  lockup-title {
+    .tit-plus,
+    .txt-item,
+    .tit-list,
+    .txt-list {
+      color: var(--font-color) !important;
+    }
+  }
+
+  lockup-summary {
+    .section-summary,
+    .desc-title {
+      color: var(--font-color) !important;
+    }
+  }
+
+  lockup-join {
+    .wrap-section {
+      background-color: var(--bg-color) !important;
+      border: 1px solid var(--border-color);
+    }
+
+    .box-disabled {
+      color: var(--font-color) !important;
+    }
+  }
+
+  lockup-intro {
+    .section-intro {
+      background-color: var(--bg-color) !important;
+      border: 1px solid var(--border-color);
+      color: var(--font-color);
+    }
+
+    .link-item {
+      color: var(--font-color) !important;
+
+      &::after {
+        content: '>' !important;
+        color: var(--font-color);
+        height: inherit !important;
+        background: none !important;
+      }
+    }
+  }
+
+  lockup-notice {
+    .section-notice {
+      background-color: var(--bg-color) !important;
+      border: 1px solid var(--border-color) !important;
+    }
+
+    .txt-section {
+      color: var(--font-color) !important;
+    }
   }
 }
