@@ -362,17 +362,6 @@
     color: var(--font-color) !important;
   }
 
-  .transaction-type {
-    .icon {
-      color: var(--font-color) !important;
-    }
-  }
-
-  .closing-price-num,
-  .quote-num {
-    color: var(--active-font-color) !important;
-  }
-
   .inp-item {
     background-color: var(--input-bg-color) !important;
 
@@ -381,9 +370,25 @@
     }
   }
 
-  .input-item--to {
-    .inp-item {
-      border: none !important;
+  swap-pair-quotes {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+
+    .input-item--to {
+      .inp-item {
+        border: none !important;
+      }
+    }
+
+    .closing-price-num,
+    .quote-num {
+      color: var(--active-font-color) !important;
+    }
+
+    .transaction-type {
+      .icon {
+        color: var(--font-color) !important;
+      }
     }
   }
 
@@ -402,9 +407,16 @@
     }
   }
 
-  .button-set--link {
-    a:hover {
-      background-color: var(--active-bg-color) !important;
+  swap-pair-order {
+    .section-box {
+      background-color: var(--bg-color);
+      border: 1px solid var(--border-color);
+    }
+
+    .button-set--link {
+      a:hover {
+        background-color: var(--active-bg-color) !important;
+      }
     }
   }
 }
