@@ -186,33 +186,37 @@
       }
     }
 
-    .cover-market-list-area {
-      th {
-        background-color: var(--bg-color) !important;
-      }
+    landing-main-cover-market {
+      .cover-market-list-area {
+        background-color: var(--bg-color);
 
-      tr {
-        &.is-active,
-        &:hover {
-          background-color: var(--active-bg-color) !important;
+        th {
+          background-color: var(--bg-color) !important;
         }
-      }
 
-      .ticker-name {
-        color: var(--font-color);
-      }
+        tr {
+          &.is-active,
+          &:hover {
+            background-color: var(--active-bg-color) !important;
+          }
+        }
 
-      .go-to-exchange {
-        &:hover {
-          color: var(--font-color) !important;
+        .ticker-name {
+          color: var(--font-color);
+        }
+
+        .go-to-exchange {
+          &:hover {
+            color: var(--font-color) !important;
+          }
         }
       }
     }
 
-    .news-section {
+    landing-main-news {
       .news-area {
-        background-color: var(--bg-color);
-        border: 1px solid var(--border-color);
+        background-color: var(--bg-color) !important;
+        border: 1px solid var(--border-color) !important;
       }
 
       .news-item {
@@ -235,6 +239,10 @@
       .section-sub-title,
       .series-title {
         color: var(--font-color) !important;
+      }
+
+      .series-link-area {
+        background-color: var(--bg-color);
       }
     }
 
@@ -275,6 +283,10 @@
       .indicator-item.is-active {
         background-color: var(--active-font-color) !important;
       }
+
+      .card-content {
+        background-color: var(--bg-color);
+      }
     }
 
     landing-main-snapshot {
@@ -285,6 +297,10 @@
       .date-text {
         color: var(--font-color) !important;
       }
+
+      .card-content {
+        background-color: var(--bg-color);
+      }
     }
 
     landing-main-service-guide {
@@ -292,11 +308,19 @@
       .guide-desc {
         color: var(--font-color) !important;
       }
+
+      .guide-item {
+        background-color: var(--bg-color);
+      }
     }
 
     landing-sub-promotion {
       .promotion-title {
         color: var(--font-color) !important;
+      }
+
+      .txt-area {
+        background-color: var(--bg-color);
       }
     }
 
