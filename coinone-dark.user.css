@@ -340,7 +340,14 @@
     }
 
     landing-main-service-info {
-      .service-title {
+      .service-title,
+      .service-desc {
+        color: var(--font-color) !important;
+      }
+    }
+
+    landing-main-security {
+      .section-title {
         color: var(--font-color);
       }
     }
