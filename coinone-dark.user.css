@@ -398,12 +398,6 @@
     background-color: var(--bg-color);
     border: 1px solid var(--border-color);
 
-    .input-item--to {
-      .inp-item {
-        border: none !important;
-      }
-    }
-
     .closing-price-num,
     .quote-num {
       color: var(--active-font-color) !important;
@@ -435,6 +429,12 @@
     .section-box {
       background-color: var(--bg-color);
       border: 1px solid var(--border-color);
+    }
+
+    .input-item--to {
+      .inp-item {
+        border: none !important;
+      }
     }
 
     .button-set--link {
@@ -718,7 +718,11 @@
 
 @-moz-document regexp("^https?://coinone.co.kr/plus/lockup[\\S]*") {
   .fixed-mobile {
-    background-color: transparent;
+    background-color: var(--bg-color);
+
+    @media (min-width: 980px) {
+      background-color: transparent;
+    }
   }
 
   lockup-title {
@@ -733,7 +737,12 @@
   lockup-summary {
     .section-summary,
     .desc-title {
+      background-color: var(--bg-color) !important;
       color: var(--font-color) !important;
+
+      @media (min-width: 980px) {
+        background-color: transparent !important;
+      }
     }
   }
 
