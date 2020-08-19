@@ -1,0 +1,37 @@
+{
+  "name": "coinone-dark",
+  "title": "Coinone Dark",
+  "version": "2.0.4",
+  "description": "Dark Coinone",
+  "license": "MIT",
+  "main": "coinone-dark.user.css",
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged --relative",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix"
+    ],
+    "*.css": [
+      "stylelint --fix"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^9.1.2",
+    "@commitlint/config-conventional": "^9.1.2",
+    "eslint": "^7.0.0",
+    "eslint-config-eslint": "^6.0.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "prettier": "2.0.5",
+    "stylelint": "^13.5.0",
+    "stylelint-config-standard": "^20.0.0"
+  }
+}
