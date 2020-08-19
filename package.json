@@ -1,9 +1,11 @@
 {
   "name": "coinone-dark",
   "title": "Coinone Dark",
-  "version": "2.0.4",
+  "version": "0.0.1",
   "description": "Dark Coinone",
   "license": "MIT",
+  "repository": "flasheye12/Coinone-Dark",
+  "homepage": "https://github.com/flasheye12/Coinone-Dark",
   "main": "coinone-dark.user.css",
   "engines": {
     "node": ">=10"

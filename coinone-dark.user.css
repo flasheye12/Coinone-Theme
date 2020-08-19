@@ -1,3 +1,14 @@
-body {
-  color: gray;
+/* ==UserStyle==
+@name        Coinone Dark
+@version     0.0.1
+@license     MIT
+@homepageURL https://github.com/flasheye12/Coinone-Dark
+@updateURL   https://raw.githubusercontent.com/flasheye12/Coinone-Dark/master/coinone-dark.user.css
+@advanced color base-color "Base color scheme" #4183C4
+@preprocessor uso
+==/UserStyle== */
+@-moz-document domain("coinone.co.kr") {
+  body {
+    background-color: gray;
+  }
 }
