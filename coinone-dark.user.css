@@ -346,6 +346,16 @@
     }
   }
 
+  /* indicator */
+  .indicator-item,
+  .list-step .list-item {
+    background-color: var(--font-color) !important;
+
+    &.is-active {
+      background-color: var(--highlight-color) !important;
+    }
+  }
+
   /* fix to angular animation blink bug begin */
 
   /* plus/lockup */
@@ -529,10 +539,6 @@
         color: var(--font-color) !important;
       }
 
-      .indicator-item.is-active {
-        background-color: var(--highlight-color) !important;
-      }
-
       .card-content {
         background-color: var(--bg-color);
       }
@@ -585,10 +591,6 @@
     landing-main-service-info {
       .service-title {
         color: var(--font-color);
-      }
-
-      .indicator-item.is-active {
-        background-color: var(--highlight-color) !important;
       }
     }
 
