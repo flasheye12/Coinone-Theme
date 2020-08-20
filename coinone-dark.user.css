@@ -2,7 +2,7 @@
 @name        Coinone Dark
 @namespace   flasheye12
 @author      flasheye12
-@version     0.0.1
+@version     0.0.2
 @license     MIT
 @homepageURL https://github.com/flasheye12/Coinone-Dark
 @updateURL   https://raw.githubusercontent.com/flasheye12/Coinone-Dark/master/coinone-dark.user.css
@@ -1594,6 +1594,10 @@
 
 @-moz-document url-prefix("https://coinone.co.kr/my/privacy") {
   my-security-manage {
+    .page-subtitle {
+      color: var(--font-color);
+    }
+
     .box {
       background-color: var(--bg-color) !important;
       color: var(--font-color);
