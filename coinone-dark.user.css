@@ -11,8 +11,8 @@
 @advanced color active-bg-color "Active background color" #2f2f2f
 @advanced color border-color "Border color" #444
 @advanced color font-color "Font color" #ccc
-@advanced color active-font-color "Active font color" #f0f0f0
-@advanced color highlight-color "Highlight color" #f1e05a
+@advanced color active-font-color "Active font color" #f2f2f2
+@advanced color highlight-color "Highlight color" #ff8a51
 @advanced color disabled-color "Disabled color" #bbb
 @advanced dropdown bg-image "Background image" {
   crosshatch "Cross-Hatch" <<<EOT
@@ -33,7 +33,7 @@
 @advanced text bg-custom "Background image [wrap in url()]" "url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAMAAAAMCGV4AAAAD1BMVEUREREREREAAAAREREWFhkN5cwCAAAABHRSTlNfGAAwFBG7CgAAACxJREFUeAFjYGJiZGBhhhMMYIIRTjCgcIE8VC4TKpeRmYEZiTtIzGNihhNMAJJAATdKr5xFAAAAAElFTkSuQmCC')"
 @preprocessor stylus
 ==/UserStyle== */
-@-moz-document regexp("^https?://coinone.co.kr/$"), regexp("^https?://coinone.co.kr/swap[\\S]*"), regexp("^https?://coinone.co.kr/plus[\\S]*") {
+@-moz-document regexp("^https?://coinone.co.kr/(\\?[\\S]*)?"), url-prefix("https://coinone.co.kr/swap"), url-prefix("https://coinone.co.kr/plus"), url-prefix("https://coinone.co.kr/account/login"), url-prefix("https://coinone.co.kr/account/recover"), url-prefix("https://coinone.co.kr/sos"), url-prefix("https://coinone.co.kr/user"), url-prefix("https://coinone.co.kr/coins"), url-prefix("https://coinone.co.kr/support"), url-prefix("https://coinone.co.kr/privacy"), url-prefix("https://coinone.co.kr/fees"), url-prefix("https://coinone.co.kr/terms"), url-prefix("https://coinone.co.kr/wallet"), url-prefix("https://coinone.co.kr/listing-guideline"), url-prefix("https://coinone.co.kr/ico"), url-prefix("https://coinone.co.kr/docs"), url-prefix("https://coinone.co.kr/404"), url-prefix("https://coinone.co.kr/my"), url-prefix("https://coinone.co.kr/promotion"), url-prefix("https://coinone.co.kr/balance") {
   :root {
     --bg-color: bg-color;
     --input-bg-color: input-bg-color;
@@ -69,6 +69,10 @@
 
     .notice-menu {
       color: var(--font-color);
+
+      &::before {
+        background-color: var(--highlight-color) !important;
+      }
     }
 
     .pc-notice-dropdown {
@@ -157,8 +161,16 @@
         }
       }
     }
+
+    .before-login {
+      .info-txt,
+      .btn-grayline-gray {
+        color: var(--font-color);
+      }
+    }
   }
 
+  .coinone-footer,
   common-footer,
   app-footer {
     background-color: var(--bg-color) !important;
@@ -170,7 +182,226 @@
     }
   }
 
-  /* landing */
+  .dropdown {
+    .ui-dropdown,
+    .dropdown-menu {
+      background-color: var(--bg-color);
+      border: 1px solid var(--border-color);
+    }
+
+    button,
+    .ui-option-text,
+    .link-list,
+    .check-label-txt {
+      color: var(--font-color) !important;
+    }
+  }
+
+  /* select */
+  select {
+    background-color: var(--bg-color) !important;
+    color: var(--font-color) !important;
+
+    option {
+      color: var(--font-color) !important;
+    }
+  }
+
+  .form-select-wrap::after {
+    color: var(--font-color) !important;
+  }
+
+  .btn-large:not(.btn-solid-sky),
+  .btn-normal:not(.btn-solid-sky),
+  .btn-mini:not(.btn-solid-sky) {
+    background-color: var(--bg-color) !important;
+    border: 1px solid var(--border-color) !important;
+
+    &:hover {
+      background-color: var(--active-bg-color) !important;
+    }
+  }
+
+  .btn-large:not(.btn-solid-sky):not(.btn-line-sky),
+  .btn-normal:not(.btn-solid-sky):not(.btn-line-sky),
+  .btn-mini:not(.btn-solid-sky):not(.btn-line-sky) {
+    color: var(--font-color) !important;
+
+    &:hover {
+      color: var(--active-font-color) !important;
+    }
+  }
+
+  .btn-sky {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+
+    &:hover {
+      background-color: var(--active-bg-color);
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: var(--font-color);
+  }
+
+  th {
+    background-color: var(--bg-color) !important;
+    color: var(--font-color) !important;
+  }
+
+  td {
+    color: var(--font-color) !important;
+  }
+
+  /* modal */
+  .ui-modal-inner,
+  .modal-confirm {
+    background-color: var(--bg-color) !important;
+    border: 1px solid var(--border-color) !important;
+
+    .ui-modal-title,
+    .form-label,
+    .tit-modal,
+    .tit-box,
+    .modal-header,
+    b,
+    dt,
+    p {
+      color: var(--font-color) !important;
+    }
+
+    .box-desc,
+    .notice-list-item {
+      background-color: var(--active-bg-color);
+    }
+
+    .ui-modal-footer {
+      background-color: var(--bg-color) !important;
+
+      .txt-today-close {
+        color: var(--font-color) !important;
+      }
+    }
+  }
+
+  /* calendar */
+  .ui-calendar {
+    background-color: var(--bg-color);
+    border: 1px solid;
+
+    .ui-calendar-cell.is-picked {
+      color: var(--highlight-color) !important;
+    }
+  }
+
+  /* skeleton layout */
+  #loading-screen,
+  #d {
+    .dummy-content,
+    .mobile-main-dummy .d1::before,
+    .mobile-main-dummy .d1::after,
+    .mobile-main-dummy .d2::before,
+    .mobile-main-dummy .d2::after,
+    .mobile-main-dummy div:not([class]),
+    .pc-main-dummy div:not([class]),
+    .dummy-item,
+    .dummy-main-nav,
+    .d-lo {
+      background-color: var(--active-bg-color) !important;
+    }
+
+    .d3::after {
+      border-color: var(--highlight-color) !important;
+      border-right-color: var(--font-color) !important;
+    }
+
+    .d-l,
+    .dummy-loading-content::before {
+      border-color: var(--highlight-color) !important;
+      border-right-color: var(--font-color) !important;
+    }
+  }
+
+  /* cloudflare */
+  .table_wrapper {
+    background-color: var(--bg-color);
+    border: 1px solid;
+
+    p {
+      color: var(--font-color);
+    }
+
+    .loading_wrapper {
+      border-color: var(--font-color) !important;
+
+      .loading {
+        border-color: var(--highlight-color) !important;
+        border-right-color: var(--font-color) !important;
+      }
+    }
+  }
+
+  /* fix to angular animation blink bug begin */
+
+  /* plus/lockup */
+  .fixed-mobile {
+    background-color: var(--bg-color);
+
+    @media (min-width: 980px) {
+      background-color: transparent;
+    }
+  }
+
+  .ng-trigger {
+    background-color: transparent !important;
+  }
+
+  /* balance */
+  .balance-container,
+  .lnb-wrap,
+  .content-next-to-lnb,
+  .form-switch-wrap,
+  .my-asset,
+  .asset-wrap .asset-item,
+  .asset-wrap .cell,
+  .dw-detail-wrap,
+  .dw-detail-header {
+    background-color: transparent !important;
+  }
+
+  /* balance */
+  .balance-container::before,
+  .balance-container::after {
+    display: none;
+  }
+
+  /* balance/transfer */
+  .dw-coin-wrap::after {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0),
+      var(--bg-color)
+    ) !important;
+  }
+
+  /* my */
+  .my-container,
+  .page-title,
+  .ui-tab-list,
+  .my-section,
+  .box-default {
+    background-color: transparent !important;
+  }
+
+  /* fix to angular animation blink bug end */
+}
+
+@-moz-document regexp("^https?://coinone.co.kr/(\\?[\\S]*)?") {
   landing-main {
     .cover-filter-area {
       .cover-filter-item {
@@ -184,6 +415,17 @@
             background-color: var(--active-font-color) !important;
           }
         }
+      }
+    }
+
+    .app-download-fixed-layer {
+      .bottom-banner {
+        background-color: var(--bg-color);
+        border: 1px solid var(--border-color);
+      }
+
+      .slogan {
+        color: var(--font-color) !important;
       }
     }
 
@@ -288,7 +530,7 @@
       }
 
       .indicator-item.is-active {
-        background-color: var(--active-font-color) !important;
+        background-color: var(--highlight-color) !important;
       }
 
       .card-content {
@@ -306,7 +548,8 @@
       }
 
       .card-content {
-        background-color: var(--bg-color);
+        background-color: var(--bg-color) !important;
+        color: var(--font-color) !important;
       }
     }
 
@@ -340,15 +583,12 @@
     }
 
     landing-main-service-info {
-      .service-title,
-      .service-desc {
-        color: var(--font-color) !important;
-      }
-    }
-
-    landing-main-security {
-      .section-title {
+      .service-title {
         color: var(--font-color);
+      }
+
+      .indicator-item.is-active {
+        background-color: var(--highlight-color) !important;
       }
     }
 
@@ -363,29 +603,9 @@
       background-color: var(--bg-color) !important;
     }
   }
-
-  .dropdown {
-    .ui-dropdown,
-    .dropdown-menu {
-      background-color: var(--bg-color);
-      border: 1px solid var(--border-color);
-    }
-
-    button,
-    .ui-option-text,
-    .link-list {
-      color: var(--font-color) !important;
-    }
-  }
-
-  .btn.btn-normal {
-    background-color: var(--bg-color);
-    border: 1px solid var(--border-color);
-    color: var(--font-color);
-  }
 }
 
-@-moz-document regexp("^https?://coinone.co.kr/swap[\\S]*") {
+@-moz-document url-prefix("https://coinone.co.kr/swap") {
   .swap-title,
   .text,
   .icon-coin,
@@ -459,7 +679,7 @@
   }
 }
 
-@-moz-document regexp("^https?://coinone.co.kr/plus/") {
+@-moz-document url-prefix("https://coinone.co.kr/plus") {
   .tit-main,
   .tit-section {
     color: var(--active-font-color);
@@ -620,7 +840,7 @@
   }
 }
 
-@-moz-document regexp("^https?://coinone.co.kr/plus/overview[\\S]*"), regexp("^https?://coinone.co.kr/plus/daily[\\S]*"), regexp("^https?://coinone.co.kr/plus/staking[\\S]*"), regexp("^https?://coinone.co.kr/plus/lockup[\\S]*") {
+@-moz-document url-prefix("https://coinone.co.kr/plus/overview"), url-prefix("https://coinone.co.kr/plus/daily"), url-prefix("https://coinone.co.kr/plus/staking"), url-prefix("https://coinone.co.kr/plus/lockup") {
   app-lnb {
     .wrap-lnb {
       background-color: var(--bg-color) !important;
@@ -660,7 +880,7 @@
   }
 }
 
-@-moz-document regexp("^https?://coinone.co.kr/plus/overview[\\S]*") {
+@-moz-document url-prefix("https://coinone.co.kr/plus/overview") {
   plus-report {
     .tit-section {
       color: var(--font-color);
@@ -676,7 +896,7 @@
   }
 }
 
-@-moz-document regexp("^https?://coinone.co.kr/plus/daily[\\S]*"), regexp("^https?://coinone.co.kr/plus/staking[\\S]*") {
+@-moz-document url-prefix("https://coinone.co.kr/plus/daily"), url-prefix("https://coinone.co.kr/plus/staking") {
   daily-title,
   staking-title {
     .tit-plus,
@@ -730,15 +950,7 @@
   }
 }
 
-@-moz-document regexp("^https?://coinone.co.kr/plus/lockup[\\S]*") {
-  .fixed-mobile {
-    background-color: var(--bg-color);
-
-    @media (min-width: 980px) {
-      background-color: transparent;
-    }
-  }
-
+@-moz-document url-prefix("https://coinone.co.kr/plus/lockup") {
   lockup-title {
     .tit-plus,
     .txt-item,
@@ -761,13 +973,16 @@
   }
 
   lockup-join {
+    background-color: transparent !important;
+
     .wrap-section {
-      background-color: var(--bg-color) !important;
-      border: 1px solid var(--border-color);
+      background-color: transparent !important;
+      color: var(--font-color);
     }
 
     .box-disabled {
-      color: var(--font-color) !important;
+      background-color: var(--bg-color) !important;
+      border: 1px solid var(--border-color);
     }
   }
 
@@ -798,6 +1013,909 @@
 
     .txt-section {
       color: var(--font-color) !important;
+    }
+  }
+}
+
+@-moz-document url-prefix("https://coinone.co.kr/plus/intro") {
+  intro-section-a {
+    .sub-text {
+      color: var(--font-color) !important;
+    }
+
+    .main-text {
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  intro-section-b {
+    background-color: var(--bg-color) !important;
+    border-top: 1px solid var(--border-color);
+
+    .text-box,
+    .sub-text {
+      color: var(--font-color) !important;
+    }
+
+    .node-item {
+      background-color: var(--bg-color) !important;
+
+      &::before {
+        background-color: var(--bg-color) !important;
+      }
+
+      .node-title {
+        color: var(--font-color);
+      }
+
+      .coin-symbol::after {
+        display: none;
+      }
+
+      &.coinone-item {
+        .coin-symbol {
+          position: relative;
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            box-shadow: inset 0 0 40px #000;
+          }
+        }
+      }
+    }
+  }
+
+  intro-section-c {
+    padding-top: 50px;
+    background-color: var(--bg-color) !important;
+    border-top: 1px solid var(--border-color);
+
+    .content-box,
+    .bar-desc {
+      color: var(--font-color) !important;
+    }
+
+    .bar-value {
+      border-color: hsla(0, 0%, 100%, 0.1) !important;
+    }
+  }
+
+  intro-section-d {
+    background-color: var(--bg-color) !important;
+    border-top: 1px solid var(--border-color);
+
+    .text-box {
+      color: var(--font-color);
+    }
+
+    .voice-box {
+      background-color: var(--active-bg-color) !important;
+
+      .voice-box-bg {
+        display: none;
+      }
+
+      .voice-item {
+        color: var(--active-font-color) !important;
+      }
+
+      .name-text,
+      .position-text {
+        color: var(--font-color) !important;
+      }
+    }
+  }
+
+  intro-section-e {
+    border-top: 1px solid;
+
+    .contact-wrapper {
+      background-color: var(--bg-color) !important;
+
+      .contact-title,
+      .text,
+      .value {
+        color: var(--font-color) !important;
+      }
+    }
+  }
+}
+
+@-moz-document url-prefix("https://coinone.co.kr/sos") {
+  .sos-container {
+    background-color: transparent;
+  }
+
+  landing-sos-request-form {
+    color: var(--font-color);
+
+    .form-desc {
+      color: var(--font-color) !important;
+    }
+
+    .form-label {
+      color: var(--font-color);
+    }
+
+    .captcha-container {
+      background-color: var(--bg-color);
+      border: 1px solid var(--border-color);
+    }
+
+    .bullet-box {
+      background-color: var(--bg-color);
+      border: 1px solid var(--border-color);
+
+      .bullet-item {
+        color: var(--font-color) !important;
+      }
+    }
+
+    input[type='text'],
+    input[type='number'],
+    input[type='email'] {
+      background-color: var(--input-bg-color) !important;
+      border: 1px solid var(--border-color);
+      color: var(--font-color) !important;
+    }
+  }
+}
+
+@-moz-document url-prefix("https://coinone.co.kr/user/signup") {
+  .user-container {
+    background-color: transparent;
+  }
+
+  user-signup-nav {
+    .form-step-item {
+      &.is-checked {
+        color: var(--font-color) !important;
+      }
+    }
+  }
+}
+
+@-moz-document url-prefix("https://coinone.co.kr/user/signup/agree") {
+  user-signup-agree {
+    .check-label-txt,
+    .form-label {
+      color: var(--font-color) !important;
+    }
+
+    .agreement-content {
+      background-color: var(--bg-color);
+    }
+
+    .bullet-box {
+      background-color: var(--bg-color);
+
+      .bullet-item {
+        color: var(--highlight-color) !important;
+      }
+    }
+  }
+}
+
+@-moz-document url-prefix("https://coinone.co.kr/user/signup") {
+  user-signup-form {
+    .form-label {
+      color: var(--font-color);
+    }
+
+    input {
+      background-color: var(--input-bg-color) !important;
+      border: 1px solid var(--border-color);
+      color: var(--font-color) !important;
+    }
+
+    .bullet-box {
+      background-color: var(--bg-color);
+      border: 1px solid var(--border-color);
+
+      .bullet-item {
+        color: var(--font-color) !important;
+      }
+    }
+
+    .captcha-container {
+      background-color: var(--bg-color);
+      border: 1px solid var(--border-color);
+    }
+  }
+}
+
+@-moz-document url-prefix("https://coinone.co.kr/user/signup/confirm") {
+  user-signup-confirm {
+    .page-title,
+    .page-desc {
+      color: var(--font-color);
+    }
+
+    .note-box {
+      background-color: var(--bg-color) !important;
+      color: var(--font-color);
+    }
+  }
+}
+
+@-moz-document url-prefix("https://coinone.co.kr/account/login"), url-prefix("https://coinone.co.kr/account/recover") {
+  #body_wrapper {
+    background: transparent;
+  }
+
+  .box_wrapper {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    color: var(--font-color);
+
+    .right a {
+      color: var(--font-color) !important;
+    }
+  }
+
+  input[type='text'],
+  input[type='number'],
+  input[type='email'] {
+    background-color: var(--input-bg-color) !important;
+    border: 1px solid var(--border-color);
+    color: var(--font-color) !important;
+  }
+}
+
+@-moz-document url-prefix("https://coinone.co.kr/account/login") {
+  .login-box {
+    background-color: var(--bg-color) !important;
+    border: 1px solid var(--border-color);
+    color: var(--font-color);
+
+    .box-sub-title {
+      color: var(--font-color);
+    }
+
+    .more-link a {
+      color: var(--font-color);
+    }
+  }
+
+  .coinone-pass-app {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color) !important;
+    color: var(--font-color);
+
+    .app-title,
+    .app-desc,
+    .download-links a {
+      color: var(--font-color) !important;
+    }
+  }
+}
+
+@-moz-document url-prefix("https://coinone.co.kr/coins"), url-prefix("https://coinone.co.kr/support"), url-prefix("https://coinone.co.kr/fees"), url-prefix("https://coinone.co.kr/terms"), url-prefix("https://coinone.co.kr/wallet"), url-prefix("https://coinone.co.kr/docs") {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: var(--font-color) !important;
+  }
+}
+
+@-moz-document url-prefix("https://coinone.co.kr/coins") {
+  landing-coins-main {
+    .page_section {
+      background-color: transparent !important;
+    }
+
+    .page_content {
+      color: var(--font-color);
+    }
+
+    .ng-star-inserted {
+      border-radius: 4px;
+      background-color: var(--bg-color);
+
+      .symbol,
+      .ticker {
+        color: var(--font-color) !important;
+      }
+    }
+
+    .route-link {
+      background-color: transparent;
+    }
+  }
+}
+
+@-moz-document url-prefix("https://coinone.co.kr/support/guide"), url-prefix("https://coinone.co.kr/fees") {
+  .basic-box {
+    background-color: var(--bg-color) !important;
+    border: 1px solid var(--border-color);
+
+    .box-title {
+      color: var(--font-color) !important;
+    }
+  }
+}
+
+@-moz-document url-prefix("https://coinone.co.kr/support") {
+  landing-tabbar {
+    .has_tabbar_expand_menu {
+      background-color: var(--bg-color) !important;
+    }
+
+    .tabbar-btn:not(.active) {
+      color: var(--font-color) !important;
+
+      &:hover {
+        color: var(--active-font-color) !important;
+      }
+    }
+  }
+}
+
+@-moz-document url-prefix("https://coinone.co.kr/terms") {
+  .static-basic-link {
+    background-color: var(--bg-color) !important;
+    color: var(--font-color) !important;
+  }
+
+  .terms-notice-date {
+    background-color: var(--bg-color) !important;
+    border: 1px solid var(--border-color);
+
+    .bullet-item {
+      color: var(--font-color) !important;
+    }
+  }
+}
+
+@-moz-document url-prefix("https://coinone.co.kr/wallet") {
+  landing-etc-wallet {
+    .landing_header {
+      background-color: var(--bg-color) !important;
+    }
+
+    li,
+    .item_name,
+    .wallet_caption {
+      color: var(--font-color) !important;
+    }
+  }
+
+  .coinone-wallet-page,
+  .landing_section {
+    background-color: transparent !important;
+  }
+}
+
+@-moz-document url-prefix("https://coinone.co.kr/listing-guideline") {
+  #guidelineWrap {
+    background-color: transparent !important;
+  }
+
+  h2,
+  h4,
+  em,
+  p {
+    color: var(--font-color) !important;
+  }
+}
+
+@-moz-document url-prefix("https://coinone.co.kr/ico") {
+  landing-ico-cosmos {
+    .segmented_controls_fee {
+      background-color: var(--bg-color) !important;
+    }
+
+    .page_section {
+      background-color: transparent !important;
+    }
+
+    .section {
+      color: var(--font-color);
+    }
+
+    .border_box {
+      background-color: var(--bg-color);
+    }
+  }
+}
+
+@-moz-document url-prefix("https://coinone.co.kr/docs") {
+  landing-docs {
+    .docs-container {
+      background-color: transparent !important;
+    }
+
+    .card-button-link {
+      background-color: var(--bg-color);
+    }
+
+    .card-button-txt {
+      .card-button-title {
+        color: var(--font-color);
+      }
+    }
+
+    .breadcrumb-link,
+    .section-desc,
+    dt,
+    dd,
+    .bullet-item {
+      color: var(--font-color) !important;
+    }
+
+    .bullet-box {
+      background-color: var(--bg-color);
+      border: 1px solid var(--border-color);
+    }
+  }
+}
+
+@-moz-document url-prefix("https://coinone.co.kr/404") {
+  landing-not-found {
+    .not-found {
+      background-color: transparent !important;
+    }
+
+    p {
+      color: var(--font-color);
+    }
+
+    .not-found-img {
+      padding: 20px;
+      background-color: var(--bg-color);
+      border: 1px solid var(--border-color);
+    }
+  }
+}
+
+@-moz-document url-prefix("https://coinone.co.kr/my") {
+  .my-container {
+    background-color: transparent;
+  }
+
+  .page-title,
+  .ui-tab-list {
+    background-color: var(--bg-color) !important;
+  }
+
+  .my-section {
+    background-color: transparent !important;
+  }
+
+  .link-right-chevron {
+    &:not(.color-primary) {
+      color: var(--font-color) !important;
+
+      &::before {
+        color: var(--font-color) !important;
+      }
+
+      &::after {
+        content: '>';
+        height: inherit;
+      }
+    }
+  }
+
+  .sub-page-content {
+    background-color: var(--bg-color) !important;
+
+    p {
+      color: var(--font-color) !important;
+    }
+  }
+
+  input[type='text'],
+  input[type='password'],
+  input[type='number'] {
+    background-color: var(--input-bg-color) !important;
+    border: 1px solid var(--border-color);
+    color: var(--font-color) !important;
+  }
+}
+
+@-moz-document url-prefix("https://coinone.co.kr/my/activity") {
+  my-activity {
+    .box-default {
+      background-color: var(--bg-color) !important;
+      color: var(--font-color);
+    }
+
+    my-guides {
+      .link-right-chevron {
+        color: var(--font-color) !important;
+      }
+    }
+
+    my-auth {
+      .box-link-txt {
+        background-color: var(--bg-color) !important;
+        color: var(--font-color) !important;
+      }
+
+      .link-underline {
+        color: var(--font-color) !important;
+      }
+    }
+
+    my-noti {
+      .receive-section,
+      .check-area {
+        background-color: transparent !important;
+      }
+
+      p {
+        background-color: transparent !important;
+        color: var(--font-color);
+      }
+
+      .check-label-txt {
+        color: var(--font-color) !important;
+
+        &:hover {
+          color: var(--active-font-color) !important;
+        }
+      }
+    }
+
+    my-wallets {
+      .wallet-addr-section {
+        background-color: transparent !important;
+      }
+
+      .addr-search-wrap {
+        background-color: var(--bg-color) !important;
+      }
+
+      .addr-name {
+        color: var(--font-color);
+      }
+    }
+
+    my-info {
+      .my-bottom-section {
+        background-color: var(--bg-color) !important;
+        color: var(--font-color);
+      }
+    }
+  }
+}
+
+@-moz-document url-prefix("https://coinone.co.kr/my/privacy") {
+  my-security-manage {
+    .box {
+      background-color: var(--bg-color) !important;
+      color: var(--font-color);
+    }
+  }
+
+  my-info-manage {
+    p,
+    .link-underline {
+      color: var(--font-color) !important;
+    }
+  }
+
+  my-info {
+    .my-bottom-section {
+      background-color: var(--bg-color) !important;
+    }
+
+    p {
+      color: var(--font-color) !important;
+    }
+  }
+}
+
+@-moz-document url-prefix("https://coinone.co.kr/my/security") {
+  my-verification-user {
+    .info-txt {
+      color: var(--font-color);
+    }
+  }
+
+  my-verification-info {
+    .more-link {
+      color: var(--font-color) !important;
+    }
+  }
+
+  my-verifications {
+    .verification-item {
+      background-color: var(--bg-color);
+      color: var(--font-color);
+    }
+  }
+
+  my-verification-detail {
+    .verification-desc {
+      background-color: var(--bg-color) !important;
+      border-left: 1px solid;
+      border-right: 1px solid;
+
+      p {
+        color: var(--font-color) !important;
+      }
+    }
+  }
+
+  my-verification-extra {
+    .verification-desc {
+      background-color: var(--bg-color) !important;
+      border: 1px solid;
+    }
+  }
+
+  my-verification-support {
+    .my-bottom-section {
+      background-color: var(--bg-color) !important;
+      color: var(--font-color);
+    }
+  }
+}
+
+@-moz-document url-prefix("https://coinone.co.kr/promotion") {
+  p {
+    color: var(--font-color);
+  }
+}
+
+@-moz-document url-prefix("https://coinone.co.kr/promotion/referral") {
+  promotion-referral-banner {
+    background-color: var(--bg-color);
+
+    .sub-copy {
+      color: var(--font-color) !important;
+    }
+  }
+
+  promotion-referral-user-info {
+    background-color: var(--bg-color);
+
+    .inner {
+      background-color: var(--bg-color) !important;
+      color: var(--font-color) !important;
+
+      .user-name,
+      .desc {
+        color: var(--font-color) !important;
+      }
+    }
+  }
+
+  promotion-referral-code-list {
+    p,
+    dt,
+    dd {
+      color: var(--font-color) !important;
+    }
+  }
+
+  promotion-referral-code-item {
+    .code-item {
+      background-color: var(--bg-color);
+
+      .btn-add-code {
+        border-radius: 5px;
+        color: var(--font-color) !important;
+
+        &:hover {
+          background-color: var(--active-bg-color) !important;
+        }
+      }
+    }
+  }
+
+  promotion-referral-reward {
+    .text-tit {
+      color: var(--font-color) !important;
+    }
+  }
+
+  promotion-referral-reward-summary {
+    .desc {
+      color: var(--font-color) !important;
+    }
+  }
+
+  promotion-referral-daily-reward-list {
+    .no-data {
+      background-color: var(--bg-color);
+    }
+
+    p,
+    .btn-move {
+      color: var(--font-color) !important;
+    }
+  }
+}
+
+@-moz-document url-prefix("https://coinone.co.kr/balance") {
+  .balance-container {
+    background-color: transparent;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+
+    .lnb-wrap,
+    .content-next-to-lnb {
+      background-color: transparent;
+    }
+
+    .lnb-wrap {
+      .lnb-item:not(.is-active) {
+        .lnb-link {
+          color: var(--font-color) !important;
+        }
+      }
+    }
+  }
+
+  h1,
+  .page-title {
+    color: var(--font-color) !important;
+  }
+
+  input[type='text'] {
+    background-color: var(--input-bg-color) !important;
+    color: var(--font-color);
+  }
+
+  .cell.is-active,
+  .sort-item.is-active {
+    .sort.up::before {
+      border-bottom-color: var(--highlight-color);
+    }
+
+    .sort.down::after {
+      border-top-color: var(--highlight-color);
+    }
+  }
+}
+
+@-moz-document url-prefix("https://coinone.co.kr/balance/investment") {
+  balance-investment-summary {
+    .box {
+      background-color: transparent !important;
+
+      .label-txt {
+        color: var(--font-color) !important;
+      }
+
+      &.total,
+      &.balance {
+        .value {
+          color: var(--font-color) !important;
+        }
+      }
+
+      &.analytics {
+        .group:nth-child(1) {
+          .value {
+            color: var(--font-color) !important;
+          }
+        }
+      }
+    }
+  }
+
+  balance-investment-detail {
+    .my-asset {
+      background-color: transparent !important;
+    }
+
+    .asset-wrap {
+      &.table-head {
+        .cell {
+          background-color: var(--bg-color) !important;
+        }
+      }
+
+      .cell,
+      .cell > .value,
+      .cell > .main,
+      .cell > .sub {
+        color: var(--font-color) !important;
+      }
+    }
+  }
+}
+
+@-moz-document url-prefix("https://coinone.co.kr/balance/history") {
+  balance-history-filter {
+    .sub-tab-item.is-active {
+      color: var(--active-font-color) !important;
+    }
+
+    .space-both {
+      color: var(--font-color);
+    }
+  }
+}
+
+@-moz-document url-prefix("https://coinone.co.kr/balance/transfer") {
+  balance-transfer {
+    .dw-coin-wrap {
+      &::after {
+        background-image: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0),
+          var(--bg-color)
+        ) !important;
+      }
+    }
+
+    .dw-detail-wrap,
+    .dw-detail-header {
+      background-color: transparent !important;
+    }
+
+    .dw-item.is-active {
+      .dw-link {
+        color: var(--active-font-color) !important;
+      }
+    }
+
+    .list-header {
+      background-color: var(--bg-color) !important;
+      color: var(--font-color) !important;
+    }
+
+    .glyph-coin-krw,
+    .btn-back,
+    .page-subtitle,
+    .box-title,
+    .box-desc,
+    .cell:not(.status),
+    .form-label,
+    .dw-info-item,
+    .dark,
+    .dark a {
+      color: var(--font-color) !important;
+    }
+
+    .fake-input-addr,
+    .information-box {
+      background-color: var(--bg-color) !important;
+      border: 1px solid;
+      color: var(--font-color);
+    }
+  }
+
+  balance-transfer-list {
+    .total-assets-label,
+    .total-assets-value,
+    .custom-label-txt,
+    .sort-area {
+      color: var(--font-color) !important;
+    }
+
+    .form-switch-wrap {
+      background-color: var(--bg-color) !important;
+
+      label {
+        color: var(--font-color) !important;
+      }
+    }
+
+    .dw-coin-item {
+      background-color: var(--bg-color) !important;
+
+      .coin-item-wrap,
+      .ticker-name {
+        color: var(--font-color) !important;
+      }
     }
   }
 }
