@@ -27,7 +27,8 @@ function createContent(tmp, contents) {
           ? e.value
           : `{\n  ${Object.keys(e.value)
               .map((o) => `"${o}": "${e.value[o]}"`)
-              .join('\n  ')}\n}`;
+              .join(',\n  ')}\n}`;
+
       return (
         `@var ${e.type} ${key} "${e.desc}" ` +
         // Wrap url(...) in quotes

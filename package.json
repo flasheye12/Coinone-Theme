@@ -1,7 +1,7 @@
 {
   "name": "coinone-dark",
   "title": "Coinone Dark",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Dark Coinone",
   "license": "MIT",
   "repository": "flasheye12/Coinone-Dark",
@@ -10,10 +10,13 @@
   "engines": {
     "node": ">=10"
   },
-  "scripts": {},
+  "scripts": {
+    "build": "node generator/build.js"
+  },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged --relative",
+      "pre-commit": "lint-staged --relative && ",
+      "pre-push": "if [[ $(git rev-parse --abbrev-ref HEAD) = master ]]; then npm run build && git add . && git commit --no-verify -m 'chore: resolve usecss' && git push --no-verify origin master; fi",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
