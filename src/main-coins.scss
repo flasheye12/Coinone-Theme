@@ -1,0 +1,25 @@
+@-moz-document url-prefix("https://coinone.co.kr/coins") {
+  landing-coins-main {
+    .page_section {
+      background-color: transparent !important;
+    }
+
+    .page_content {
+      color: var(--font-color);
+    }
+
+    .ng-star-inserted {
+      border-radius: 4px;
+      background-color: var(--bg-color);
+
+      .symbol,
+      .ticker {
+        color: var(--font-color) !important;
+      }
+    }
+
+    .route-link {
+      background-color: transparent;
+    }
+  }
+}

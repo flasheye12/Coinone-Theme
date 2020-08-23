@@ -1,0 +1,66 @@
+@-moz-document url-prefix("https://coinone.co.kr/plus/lockup") {
+  lockup-title {
+    .tit-plus,
+    .txt-item,
+    .tit-list,
+    .txt-list {
+      color: var(--font-color) !important;
+    }
+  }
+
+  lockup-summary {
+    .section-summary,
+    .desc-title {
+      background-color: var(--bg-color) !important;
+      color: var(--font-color) !important;
+
+      @media (min-width: 980px) {
+        background-color: transparent !important;
+      }
+    }
+  }
+
+  lockup-join {
+    background-color: transparent !important;
+
+    .wrap-section {
+      background-color: transparent !important;
+      color: var(--font-color);
+    }
+
+    .box-disabled {
+      background-color: var(--bg-color) !important;
+      border: 1px solid var(--border-color);
+    }
+  }
+
+  lockup-intro {
+    .section-intro {
+      background-color: var(--bg-color) !important;
+      border: 1px solid var(--border-color);
+      color: var(--font-color);
+    }
+
+    .link-item {
+      color: var(--font-color) !important;
+
+      &::after {
+        content: '>' !important;
+        color: var(--font-color);
+        height: inherit !important;
+        background: none !important;
+      }
+    }
+  }
+
+  lockup-notice {
+    .section-notice {
+      background-color: var(--bg-color) !important;
+      border: 1px solid var(--border-color) !important;
+    }
+
+    .txt-section {
+      color: var(--font-color) !important;
+    }
+  }
+}

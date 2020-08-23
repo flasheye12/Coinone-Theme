@@ -1,0 +1,19 @@
+@-moz-document url-prefix("https://coinone.co.kr/ico") {
+  landing-ico-cosmos {
+    .segmented_controls_fee {
+      background-color: var(--bg-color) !important;
+    }
+
+    .page_section {
+      background-color: transparent !important;
+    }
+
+    .section {
+      color: var(--font-color);
+    }
+
+    .border_box {
+      background-color: var(--bg-color);
+    }
+  }
+}

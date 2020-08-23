@@ -1,0 +1,15 @@
+@-moz-document url-prefix("https://coinone.co.kr/terms") {
+  .static-basic-link {
+    background-color: var(--bg-color) !important;
+    color: var(--font-color) !important;
+  }
+
+  .terms-notice-date {
+    background-color: var(--bg-color) !important;
+    border: 1px solid var(--border-color);
+
+    .bullet-item {
+      color: var(--font-color) !important;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@-moz-document url-prefix("https://coinone.co.kr/plus/overview") {
+  plus-report {
+    .tit-section {
+      color: var(--font-color);
+    }
+
+    .descset-report {
+      .desc-title,
+      .desc-detail {
+        background-color: var(--bg-color) !important;
+        color: var(--font-color) !important;
+      }
+    }
+  }
+}

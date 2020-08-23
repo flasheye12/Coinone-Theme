@@ -1,0 +1,66 @@
+@-moz-document url-prefix("https://coinone.co.kr/my/activity") {
+  my-activity {
+    .box-default {
+      background-color: var(--bg-color) !important;
+      color: var(--font-color);
+    }
+
+    my-guides {
+      .link-right-chevron {
+        color: var(--font-color) !important;
+      }
+    }
+
+    my-auth {
+      .box-link-txt {
+        background-color: var(--bg-color) !important;
+        color: var(--font-color) !important;
+      }
+
+      .link-underline {
+        color: var(--font-color) !important;
+      }
+    }
+
+    my-noti {
+      .receive-section,
+      .check-area {
+        background-color: transparent !important;
+      }
+
+      p {
+        background-color: transparent !important;
+        color: var(--font-color);
+      }
+
+      .check-label-txt {
+        color: var(--font-color) !important;
+
+        &:hover {
+          color: var(--active-font-color) !important;
+        }
+      }
+    }
+
+    my-wallets {
+      .wallet-addr-section {
+        background-color: transparent !important;
+      }
+
+      .addr-search-wrap {
+        background-color: var(--bg-color) !important;
+      }
+
+      .addr-name {
+        color: var(--font-color);
+      }
+    }
+
+    my-info {
+      .my-bottom-section {
+        background-color: var(--bg-color) !important;
+        color: var(--font-color);
+      }
+    }
+  }
+}

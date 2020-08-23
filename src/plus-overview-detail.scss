@@ -1,0 +1,70 @@
+@-moz-document regexp("^https?://coinone.co.kr/plus/overview[\\S]*") {
+  app-lnb {
+    .wrap-lnb {
+      background-color: var(--bg-color) !important;
+
+      @media (min-width: 980px) {
+        background-color: transparent !important;
+      }
+
+      .btn,
+      .tit-lnb {
+        color: var(--font-color) !important;
+      }
+    }
+
+    .lnb-feature {
+      border-bottom: 1px solid var(--border-color);
+
+      @media (min-width: 980px) {
+        border: none;
+      }
+
+      .link-panel {
+        background-color: var(--bg-color) !important;
+        color: var(--font-color) !important;
+        border: none;
+
+        @media (min-width: 980px) {
+          border: 1px solid var(--border-color);
+          border-radius: 4px;
+        }
+      }
+
+      .link-list {
+        color: var(--font-color) !important;
+      }
+    }
+  }
+
+  overview-title {
+    color: var(--font-color) !important;
+  }
+
+  overview-staking-cards {
+    .txt-divide {
+      color: var(--font-color);
+    }
+
+    .item-inp {
+      background-color: var(--input-bg-color) !important;
+      border: 1px solid var(--border-color);
+    }
+
+    .list-item.menual-item .link-card {
+      color: var(--font-color) !important;
+      background-color: var(--bg-color) !important;
+      border: 1px solid var(--border-color);
+    }
+  }
+
+  overview-lockup-cards {
+    color: var(--font-color);
+
+    .list-item.menual-item .link-card {
+      color: var(--font-color) !important;
+      background-color: var(--bg-color) !important;
+      border: 1px solid var(--border-color);
+    }
+  }
+}

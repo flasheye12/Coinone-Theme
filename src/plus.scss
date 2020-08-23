@@ -1,0 +1,89 @@
+@-moz-document url-prefix("https://coinone.co.kr/plus") {
+  .tit-main,
+  .tit-section {
+    color: var(--active-font-color);
+  }
+
+  main-cover {
+    .txt-link,
+    .glyph-ui-new-window-arrow {
+      color: var(--font-color) !important;
+    }
+
+    .link-main {
+      background-color: var(--bg-color) !important;
+      border: 1px solid var(--border-color);
+
+      @media (min-width: 980px) {
+        background-color: transparent !important;
+        border: none;
+      }
+    }
+
+    .inner-list {
+      background-color: transparent !important;
+
+      &::before {
+        background-color: transparent !important;
+      }
+    }
+  }
+
+  main-products {
+    .panel {
+      background-color: var(--bg-color);
+      border: none;
+
+      @media (min-width: 980px) {
+        border: 1px solid var(--border-color) !important;
+      }
+
+      &:hover {
+        background-color: var(--active-bg-color) !important;
+      }
+
+      .tit-panel,
+      .info-roi {
+        color: var(--font-color);
+      }
+
+      &.is-disabled {
+        .badge {
+          background-color: var(--disabled-color) !important;
+        }
+      }
+    }
+
+    .btn {
+      background-color: var(--bg-color) !important;
+      border: 1px solid var(--border-color) !important;
+    }
+  }
+
+  main-overviews {
+    .wrap-overviews {
+      background-color: var(--bg-color) !important;
+    }
+
+    .panel {
+      background-color: var(--bg-color) !important;
+      border: 1px solid var(--border-color) !important;
+
+      .tit-panel,
+      .desc-panel {
+        color: var(--font-color) !important;
+      }
+
+      .badge.is-disabled {
+        background-color: var(--disabled-color) !important;
+      }
+    }
+
+    .btn-group {
+      .btn {
+        color: var(--font-color);
+        background-color: var(--input-bg-color);
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@-moz-document url-prefix("https://coinone.co.kr/docs") {
+  landing-docs {
+    .docs-container {
+      background-color: transparent !important;
+    }
+
+    .card-button-link {
+      background-color: var(--bg-color);
+    }
+
+    .card-button-txt {
+      .card-button-title {
+        color: var(--font-color);
+      }
+    }
+
+    .breadcrumb-link,
+    .section-desc,
+    dt,
+    dd,
+    .bullet-item {
+      color: var(--font-color) !important;
+    }
+
+    .bullet-box {
+      background-color: var(--bg-color);
+      border: 1px solid var(--border-color);
+    }
+  }
+}

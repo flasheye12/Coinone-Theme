@@ -1,0 +1,23 @@
+@-moz-document url-prefix("https://coinone.co.kr/account/login"), url-prefix("https://coinone.co.kr/account/recover") {
+  #body_wrapper {
+    background: transparent;
+  }
+
+  .box_wrapper {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    color: var(--font-color);
+
+    .right a {
+      color: var(--font-color) !important;
+    }
+  }
+
+  input[type='text'],
+  input[type='number'],
+  input[type='email'] {
+    background-color: var(--input-bg-color) !important;
+    border: 1px solid var(--border-color);
+    color: var(--font-color) !important;
+  }
+}

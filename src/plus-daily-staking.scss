@@ -1,0 +1,53 @@
+@-moz-document url-prefix("https://coinone.co.kr/plus/daily"), url-prefix("https://coinone.co.kr/plus/staking") {
+  daily-title,
+  staking-title {
+    .tit-plus,
+    .txt-item,
+    .desc-item {
+      color: var(--font-color) !important;
+    }
+  }
+
+  daily-desc,
+  staking-desc {
+    .section-desc {
+      background-color: var(--bg-color) !important;
+      border: 1px solid var(--border-color);
+
+      .tit-section,
+      .txt-desc {
+        color: var(--font-color);
+      }
+    }
+  }
+
+  staking-desc {
+    .info-date {
+      color: var(--font-color);
+    }
+  }
+
+  daily-faq,
+  staking-faq {
+    .section-faq {
+      background-color: var(--bg-color) !important;
+      border: 1px solid var(--border-color);
+      color: var(--font-color);
+    }
+
+    .list-item {
+      .tit-item,
+      .txt-item {
+        background-color: var(--bg-color);
+        color: var(--font-color) !important;
+      }
+
+      &.is-active {
+        .tit-item,
+        .txt-item {
+          background-color: var(--active-bg-color);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,195 @@
+@-moz-document regexp("^https?://coinone.co.kr/(\\?[\\S]*)?") {
+  landing-main {
+    .cover-filter-area {
+      .cover-filter-item {
+        color: var(--font-color) !important;
+
+        &.is-active,
+        &:hover {
+          color: var(--active-font-color) !important;
+
+          &::after {
+            background-color: var(--active-font-color) !important;
+          }
+        }
+      }
+    }
+
+    .app-download-fixed-layer {
+      .bottom-banner {
+        background-color: var(--bg-color);
+        border: 1px solid var(--border-color);
+      }
+
+      .slogan {
+        color: var(--font-color) !important;
+      }
+    }
+
+    landing-main-coin-search {
+      input {
+        background-color: var(--input-bg-color) !important;
+      }
+    }
+
+    landing-main-cover-market {
+      .cover-market-list-area {
+        background-color: var(--bg-color);
+
+        th {
+          background-color: var(--bg-color) !important;
+        }
+
+        tr {
+          &.is-active,
+          &:hover {
+            background-color: var(--active-bg-color) !important;
+          }
+        }
+
+        .ticker-name {
+          color: var(--font-color);
+        }
+
+        .go-to-exchange {
+          &:hover {
+            color: var(--font-color) !important;
+          }
+        }
+      }
+    }
+
+    landing-main-news {
+      .news-area {
+        background-color: var(--bg-color) !important;
+        border: 1px solid var(--border-color) !important;
+      }
+
+      .news-item {
+        color: var(--font-color) !important;
+
+        &.emphasis {
+          .news-time {
+            color: var(--highlight-color) !important;
+          }
+        }
+      }
+
+      button {
+        background-color: var(--bg-color) !important;
+        border: 1px solid var(--border-color);
+      }
+    }
+
+    landing-main-series {
+      .section-sub-title,
+      .series-title {
+        color: var(--font-color) !important;
+      }
+
+      .series-link-area {
+        background-color: var(--bg-color);
+      }
+    }
+
+    landing-main-notice-info {
+      .section-sub-title,
+      .view-all {
+        color: var(--font-color) !important;
+      }
+
+      .info-title-text {
+        color: var(--font-color);
+      }
+
+      .info-new-badge {
+        color: var(--highlight-color) !important;
+      }
+    }
+
+    landing-main-project-info {
+      .section-sub-title,
+      .view-all,
+      .ticker-name,
+      .info-title {
+        color: var(--font-color) !important;
+      }
+
+      .info-new-badge {
+        color: var(--highlight-color) !important;
+      }
+    }
+
+    landing-main-card-event {
+      .section-sub-title,
+      .event-main-txt {
+        color: var(--font-color) !important;
+      }
+
+      .card-content {
+        background-color: var(--bg-color);
+      }
+    }
+
+    landing-main-snapshot {
+      .section-sub-title,
+      .snapshot-coin,
+      .coin-symbol,
+      .coin-name,
+      .date-text {
+        color: var(--font-color) !important;
+      }
+
+      .card-content {
+        background-color: var(--bg-color) !important;
+        color: var(--font-color) !important;
+      }
+    }
+
+    landing-main-service-guide {
+      .section-sub-title,
+      .guide-desc {
+        color: var(--font-color) !important;
+      }
+
+      .guide-item {
+        background-color: var(--bg-color);
+      }
+    }
+
+    landing-sub-promotion {
+      .promotion-title {
+        color: var(--font-color) !important;
+      }
+
+      .txt-area {
+        background-color: var(--bg-color);
+      }
+    }
+
+    landing-main-app-info {
+      background-color: var(--bg-color) !important;
+
+      .app-section-title {
+        color: var(--font-color) !important;
+      }
+    }
+
+    landing-main-service-info {
+      .service-title {
+        color: var(--font-color);
+      }
+    }
+
+    .security-section::before {
+      display: none !important;
+    }
+
+    .card-area::before,
+    .guide-area::before,
+    .promotion-area::before {
+      border: none !important;
+      background-color: var(--bg-color) !important;
+    }
+  }
+}

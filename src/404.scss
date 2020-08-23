@@ -1,0 +1,17 @@
+@-moz-document url-prefix("https://coinone.co.kr/404") {
+  landing-not-found {
+    .not-found {
+      background-color: transparent !important;
+    }
+
+    p {
+      color: var(--font-color);
+    }
+
+    .not-found-img {
+      padding: 20px;
+      background-color: var(--bg-color);
+      border: 1px solid var(--border-color);
+    }
+  }
+}

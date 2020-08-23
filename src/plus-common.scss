@@ -1,0 +1,39 @@
+@-moz-document url-prefix("https://coinone.co.kr/plus/overview"), url-prefix("https://coinone.co.kr/plus/daily"), url-prefix("https://coinone.co.kr/plus/staking"), url-prefix("https://coinone.co.kr/plus/lockup") {
+  app-lnb {
+    .wrap-lnb {
+      background-color: var(--bg-color) !important;
+
+      @media (min-width: 980px) {
+        background-color: transparent !important;
+      }
+
+      .btn,
+      .tit-lnb {
+        color: var(--font-color) !important;
+      }
+    }
+
+    .lnb-feature {
+      border-bottom: 1px solid var(--border-color);
+
+      @media (min-width: 980px) {
+        border: none;
+      }
+
+      .link-panel {
+        background-color: var(--bg-color) !important;
+        color: var(--font-color) !important;
+        border: none;
+
+        @media (min-width: 980px) {
+          border: 1px solid var(--border-color);
+          border-radius: 4px;
+        }
+      }
+
+      .link-list {
+        color: var(--font-color) !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,377 @@
+@-moz-document regexp("^https?://coinone.co.kr/(\\?[\\S]*)?"), url-prefix("https://coinone.co.kr/swap"), url-prefix("https://coinone.co.kr/plus"), url-prefix("https://coinone.co.kr/account/login"), url-prefix("https://coinone.co.kr/account/recover"), url-prefix("https://coinone.co.kr/sos"), url-prefix("https://coinone.co.kr/user"), url-prefix("https://coinone.co.kr/coins"), url-prefix("https://coinone.co.kr/support"), url-prefix("https://coinone.co.kr/privacy"), url-prefix("https://coinone.co.kr/fees"), url-prefix("https://coinone.co.kr/terms"), url-prefix("https://coinone.co.kr/wallet"), url-prefix("https://coinone.co.kr/listing-guideline"), url-prefix("https://coinone.co.kr/ico"), url-prefix("https://coinone.co.kr/docs"), url-prefix("https://coinone.co.kr/404"), url-prefix("https://coinone.co.kr/my"), url-prefix("https://coinone.co.kr/promotion"), url-prefix("https://coinone.co.kr/balance") {
+  :root {
+    --bg-color: bg-color;
+    --input-bg-color: input-bg-color;
+    --active-bg-color: active-bg-color;
+    --border-color: border-color;
+    --font-color: font-color;
+    --active-font-color: active-font-color;
+    --highlight-color: highlight-color;
+    --disabled-color: disabled-color;
+  }
+
+  * {
+    text-shadow: none !important;
+    box-shadow: none !important;
+    border-color: var(--border-color) !important;
+  }
+
+  body {
+    background-color: var(--bg-color);
+    background-image: bg-image;
+  }
+
+  .coinone-gnb {
+    background-color: var(--bg-color) !important;
+
+    .gnb-list {
+      color: var(--font-color);
+
+      .glyph-ui-new-sup {
+        color: var(--highlight-color) !important;
+      }
+    }
+
+    .notice-menu {
+      color: var(--font-color);
+
+      &::before {
+        background-color: var(--highlight-color) !important;
+      }
+    }
+
+    .pc-notice-dropdown {
+      background-color: var(--bg-color);
+      border: 1px solid var(--border-color);
+
+      .dropdown-title {
+        color: var(--font-color);
+      }
+
+      .dropdown-link,
+      .glyph-ui-new-small {
+        color: var(--highlight-color) !important;
+      }
+
+      .notice-title {
+        color: var(--font-color) !important;
+      }
+    }
+
+    .pc-user-dropdown {
+      background-color: var(--bg-color);
+
+      @media (min-width: 980px) {
+        border: 1px solid var(--border-color);
+      }
+
+      .user-email {
+        > span {
+          color: var(--font-color);
+        }
+      }
+
+      .gnb-dropdown-area {
+        background-color: var(--bg-color) !important;
+        border-bottom: 1px solid var(--border-color);
+
+        @media (min-width: 980px) {
+          border: 1px solid var(--border-color);
+        }
+
+        .gnb-sub-item {
+          color: var(--font-color);
+
+          &.gnb-item-referral {
+            color: var(--highlight-color);
+          }
+        }
+      }
+    }
+
+    .pc-lang,
+    .mobile-lang {
+      color: var(--font-color);
+    }
+
+    .mobile-sidebar {
+      background-color: var(--bg-color) !important;
+      border: 1px solid var(--border-color);
+
+      @media (min-width: 980px) {
+        border: none;
+      }
+
+      .gnb-item {
+        .icon {
+          color: var(--font-color);
+        }
+
+        .gnb-dropdown-area {
+          background-color: var(--bg-color);
+
+          @media (min-width: 980px) {
+            border: 1px solid var(--border-color) !important;
+          }
+        }
+
+        .gnb-dropdown {
+          color: var(--font-color);
+          border-top: 1px solid var(--border-color);
+          border-bottom: 1px solid var(--border-color);
+
+          @media (min-width: 980px) {
+            border: none;
+          }
+        }
+      }
+    }
+
+    .before-login {
+      .info-txt,
+      .btn-grayline-gray {
+        color: var(--font-color);
+      }
+    }
+  }
+
+  .coinone-footer,
+  common-footer,
+  app-footer {
+    background-color: var(--bg-color) !important;
+    border-top: 1px solid var(--border-color);
+
+    .title,
+    .t-tit {
+      color: var(--active-font-color) !important;
+    }
+  }
+
+  .dropdown {
+    .ui-dropdown,
+    .dropdown-menu {
+      background-color: var(--bg-color);
+      border: 1px solid var(--border-color);
+    }
+
+    button,
+    .ui-option-text,
+    .link-list,
+    .check-label-txt {
+      color: var(--font-color) !important;
+    }
+  }
+
+  /* select */
+  select {
+    background-color: var(--bg-color) !important;
+    color: var(--font-color) !important;
+
+    option {
+      color: var(--font-color) !important;
+    }
+  }
+
+  .form-select-wrap::after {
+    color: var(--font-color) !important;
+  }
+
+  .btn-large:not(.btn-solid-sky),
+  .btn-normal:not(.btn-solid-sky),
+  .btn-mini:not(.btn-solid-sky) {
+    background-color: var(--bg-color) !important;
+    border: 1px solid var(--border-color) !important;
+
+    &:hover {
+      background-color: var(--active-bg-color) !important;
+    }
+  }
+
+  .btn-large:not(.btn-solid-sky):not(.btn-line-sky),
+  .btn-normal:not(.btn-solid-sky):not(.btn-line-sky),
+  .btn-mini:not(.btn-solid-sky):not(.btn-line-sky) {
+    color: var(--font-color) !important;
+
+    &:hover {
+      color: var(--active-font-color) !important;
+    }
+  }
+
+  .btn-sky {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+
+    &:hover {
+      background-color: var(--active-bg-color);
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: var(--font-color);
+  }
+
+  th {
+    background-color: var(--bg-color) !important;
+    color: var(--font-color) !important;
+  }
+
+  td {
+    color: var(--font-color) !important;
+  }
+
+  /* modal */
+  .ui-modal-inner,
+  .modal-confirm {
+    background-color: var(--bg-color) !important;
+    border: 1px solid var(--border-color) !important;
+
+    .ui-modal-title,
+    .form-label,
+    .tit-modal,
+    .tit-box,
+    .modal-header,
+    b,
+    dt,
+    p {
+      color: var(--font-color) !important;
+    }
+
+    .box-desc,
+    .notice-list-item {
+      background-color: var(--active-bg-color);
+    }
+
+    .ui-modal-footer {
+      background-color: var(--bg-color) !important;
+
+      .txt-today-close {
+        color: var(--font-color) !important;
+      }
+    }
+  }
+
+  /* calendar */
+  .ui-calendar {
+    background-color: var(--bg-color);
+    border: 1px solid;
+
+    .ui-calendar-cell.is-picked {
+      color: var(--highlight-color) !important;
+    }
+  }
+
+  /* skeleton layout */
+  #loading-screen,
+  #d {
+    .dummy-content,
+    .mobile-main-dummy .d1::before,
+    .mobile-main-dummy .d1::after,
+    .mobile-main-dummy .d2::before,
+    .mobile-main-dummy .d2::after,
+    .mobile-main-dummy div:not([class]),
+    .pc-main-dummy div:not([class]),
+    .dummy-item,
+    .dummy-main-nav,
+    .d-lo {
+      background-color: var(--active-bg-color) !important;
+    }
+
+    .d3::after {
+      border-color: var(--highlight-color) !important;
+      border-right-color: var(--font-color) !important;
+    }
+
+    .d-l,
+    .dummy-loading-content::before {
+      border-color: var(--highlight-color) !important;
+      border-right-color: var(--font-color) !important;
+    }
+  }
+
+  /* cloudflare */
+  .table_wrapper {
+    background-color: var(--bg-color);
+    border: 1px solid;
+
+    p {
+      color: var(--font-color);
+    }
+
+    .loading_wrapper {
+      border-color: var(--font-color) !important;
+
+      .loading {
+        border-color: var(--highlight-color) !important;
+        border-right-color: var(--font-color) !important;
+      }
+    }
+  }
+
+  /* indicator */
+  .indicator-item,
+  .list-step .list-item {
+    background-color: var(--font-color) !important;
+
+    &.is-active {
+      background-color: var(--highlight-color) !important;
+    }
+  }
+
+  /* fix to angular animation blink bug begin */
+
+  /* plus/lockup */
+  .fixed-mobile {
+    background-color: var(--bg-color);
+
+    @media (min-width: 980px) {
+      background-color: transparent;
+    }
+  }
+
+  .ng-trigger {
+    background-color: transparent !important;
+  }
+
+  /* balance */
+  .balance-container,
+  .lnb-wrap,
+  .content-next-to-lnb,
+  .form-switch-wrap,
+  .my-asset,
+  .asset-wrap .asset-item,
+  .asset-wrap .cell,
+  .dw-detail-wrap,
+  .dw-detail-header {
+    background-color: transparent !important;
+  }
+
+  /* balance */
+  .balance-container::before,
+  .balance-container::after {
+    display: none;
+  }
+
+  /* balance/transfer */
+  .dw-coin-wrap::after {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0),
+      var(--bg-color)
+    ) !important;
+  }
+
+  /* my */
+  .my-container,
+  .page-title,
+  .ui-tab-list,
+  .my-section,
+  .box-default {
+    background-color: transparent !important;
+  }
+
+  /* fix to angular animation blink bug end */
+}

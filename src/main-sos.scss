@@ -1,0 +1,39 @@
+@-moz-document url-prefix("https://coinone.co.kr/sos") {
+  .sos-container {
+    background-color: transparent;
+  }
+
+  landing-sos-request-form {
+    color: var(--font-color);
+
+    .form-desc {
+      color: var(--font-color) !important;
+    }
+
+    .form-label {
+      color: var(--font-color);
+    }
+
+    .captcha-container {
+      background-color: var(--bg-color);
+      border: 1px solid var(--border-color);
+    }
+
+    .bullet-box {
+      background-color: var(--bg-color);
+      border: 1px solid var(--border-color);
+
+      .bullet-item {
+        color: var(--font-color) !important;
+      }
+    }
+
+    input[type='text'],
+    input[type='number'],
+    input[type='email'] {
+      background-color: var(--input-bg-color) !important;
+      border: 1px solid var(--border-color);
+      color: var(--font-color) !important;
+    }
+  }
+}

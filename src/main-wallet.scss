@@ -1,0 +1,18 @@
+@-moz-document url-prefix("https://coinone.co.kr/wallet") {
+  landing-etc-wallet {
+    .landing_header {
+      background-color: var(--bg-color) !important;
+    }
+
+    li,
+    .item_name,
+    .wallet_caption {
+      color: var(--font-color) !important;
+    }
+  }
+
+  .coinone-wallet-page,
+  .landing_section {
+    background-color: transparent !important;
+  }
+}

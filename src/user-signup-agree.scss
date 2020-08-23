@@ -1,0 +1,13 @@
+@-moz-document url-prefix("https://coinone.co.kr/user/signup") {
+  .user-container {
+    background-color: transparent;
+  }
+
+  user-signup-nav {
+    .form-step-item {
+      &.is-checked {
+        color: var(--font-color) !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@-moz-document url-prefix("https://coinone.co.kr/account/login") {
+  .login-box {
+    background-color: var(--bg-color) !important;
+    border: 1px solid var(--border-color);
+    color: var(--font-color);
+
+    .box-sub-title {
+      color: var(--font-color);
+    }
+
+    .more-link a {
+      color: var(--font-color);
+    }
+  }
+
+  .coinone-pass-app {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color) !important;
+    color: var(--font-color);
+
+    .app-title,
+    .app-desc,
+    .download-links a {
+      color: var(--font-color) !important;
+    }
+  }
+}

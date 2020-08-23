@@ -1,0 +1,11 @@
+@-moz-document url-prefix("https://coinone.co.kr/balance/history") {
+  balance-history-filter {
+    .sub-tab-item.is-active {
+      color: var(--active-font-color) !important;
+    }
+
+    .space-both {
+      color: var(--font-color);
+    }
+  }
+}

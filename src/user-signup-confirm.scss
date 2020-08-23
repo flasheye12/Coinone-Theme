@@ -1,0 +1,13 @@
+@-moz-document url-prefix("https://coinone.co.kr/user/signup/confirm") {
+  user-signup-confirm {
+    .page-title,
+    .page-desc {
+      color: var(--font-color);
+    }
+
+    .note-box {
+      background-color: var(--bg-color) !important;
+      color: var(--font-color);
+    }
+  }
+}

@@ -1,0 +1,44 @@
+@-moz-document url-prefix("https://coinone.co.kr/balance") {
+  .balance-container {
+    background-color: transparent;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+
+    .lnb-wrap,
+    .content-next-to-lnb {
+      background-color: transparent;
+    }
+
+    .lnb-wrap {
+      .lnb-item:not(.is-active) {
+        .lnb-link {
+          color: var(--font-color) !important;
+        }
+      }
+    }
+  }
+
+  h1,
+  .page-title {
+    color: var(--font-color) !important;
+  }
+
+  input[type='text'] {
+    background-color: var(--input-bg-color) !important;
+    color: var(--font-color);
+  }
+
+  .cell.is-active,
+  .sort-item.is-active {
+    .sort.up::before {
+      border-bottom-color: var(--highlight-color);
+    }
+
+    .sort.down::after {
+      border-top-color: var(--highlight-color);
+    }
+  }
+}

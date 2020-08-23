@@ -1,0 +1,47 @@
+@-moz-document url-prefix("https://coinone.co.kr/balance/investment") {
+  balance-investment-summary {
+    .box {
+      background-color: transparent !important;
+
+      .label-txt {
+        color: var(--font-color) !important;
+      }
+
+      &.total,
+      &.balance {
+        .value {
+          color: var(--font-color) !important;
+        }
+      }
+
+      &.analytics {
+        .group:nth-child(1) {
+          .value {
+            color: var(--font-color) !important;
+          }
+        }
+      }
+    }
+  }
+
+  balance-investment-detail {
+    .my-asset {
+      background-color: transparent !important;
+    }
+
+    .asset-wrap {
+      &.table-head {
+        .cell {
+          background-color: var(--bg-color) !important;
+        }
+      }
+
+      .cell,
+      .cell > .value,
+      .cell > .main,
+      .cell > .sub {
+        color: var(--font-color) !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@-moz-document url-prefix("https://coinone.co.kr/support") {
+  landing-tabbar {
+    .has_tabbar_expand_menu {
+      background-color: var(--bg-color) !important;
+    }
+
+    .tabbar-btn:not(.active) {
+      color: var(--font-color) !important;
+
+      &:hover {
+        color: var(--active-font-color) !important;
+      }
+    }
+  }
+}
