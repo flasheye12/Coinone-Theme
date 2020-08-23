@@ -1,12 +1,19 @@
-@-moz-document url-prefix("https://coinone.co.kr/user/signup") {
-  .user-container {
-    background-color: transparent;
-  }
+@-moz-document url-prefix("https://coinone.co.kr/user/signup/agree") {
+  user-signup-agree {
+    .check-label-txt,
+    .form-label {
+      color: var(--font-color) !important;
+    }
 
-  user-signup-nav {
-    .form-step-item {
-      &.is-checked {
-        color: var(--font-color) !important;
+    .agreement-content {
+      background-color: var(--bg-color);
+    }
+
+    .bullet-box {
+      background-color: var(--bg-color);
+
+      .bullet-item {
+        color: var(--highlight-color) !important;
       }
     }
   }
