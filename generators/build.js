@@ -23,10 +23,10 @@ function createContent(tmp, contents) {
     .map((key) => {
       const e = vars[key];
       const v =
-        e.type !== 'dropdown'
+        e.type !== 'select'
           ? e.value
           : `{\n  ${Object.keys(e.value)
-              .map((o) => `${o} "${o}" <<<EOT\n  ${e.value[o]} EOT;`)
+              .map((o) => `"${o}": "${e.value[o]}"`)
               .join('\n  ')}\n}`;
       return (
         `@var ${e.type} ${key} "${e.desc}" ` +
