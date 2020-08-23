@@ -61,4 +61,6 @@ fs.readFile(tmpFile, 'utf8').then((tmp) => {
     resolve(__dirname, `../${main}`),
     createContent(tmp, contents.join('\n'))
   );
+
+  console.log('done!!');
 });
