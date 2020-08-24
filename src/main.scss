@@ -99,7 +99,8 @@
 
     landing-main-series {
       .section-sub-title,
-      .series-title {
+      .series-title,
+      .view-all {
         color: var(--font-color) !important;
       }
 
@@ -193,7 +194,8 @@
 
     landing-main-service-guide {
       .section-sub-title,
-      .guide-desc {
+      .guide-desc,
+      .view-all {
         color: var(--font-color) !important;
       }
 
@@ -207,6 +209,7 @@
         color: var(--sub-font-color) !important;
       }
 
+      .section-sub-title,
       .promotion-title {
         color: var(--font-color) !important;
       }
@@ -217,6 +220,10 @@
 
       .tag-name {
         color: var(--highlight-color);
+      }
+
+      .sub-desc {
+        color: var(--sub-font-color);
       }
     }
 
