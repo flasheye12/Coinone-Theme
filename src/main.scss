@@ -84,6 +84,12 @@
       .news-item {
         color: var(--font-color) !important;
 
+        .mini-badge-gray {
+          background-color: var(--bg-color) !important;
+          border: 1px solid var(--border-color);
+          color: var(--active-font-color);
+        }
+
         &.emphasis {
           .news-time {
             color: var(--highlight-color) !important;

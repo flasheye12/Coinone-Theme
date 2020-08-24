@@ -55,7 +55,7 @@
     "highlight-color": {
       "type": "color",
       "desc": "Highlight color",
-      "value": "#ff8a51"
+      "value": "#f97b40"
     },
     "disabled-color": {
       "type": "color",

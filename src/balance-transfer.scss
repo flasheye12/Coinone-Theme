@@ -107,4 +107,10 @@
       color: var(--font-color) !important;
     }
   }
+
+  balance-withdraw-coin-form {
+    .wallet-name {
+      color: var(--sub);
+    }
+  }
 }

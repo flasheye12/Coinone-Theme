@@ -152,17 +152,28 @@
   }
 
   .dropdown {
+    button,
+    .ui-option-text,
+    .link-list,
+    .check-label-txt,
+    .dropdown-toggle {
+      background-color: var(--bg-color);
+      border: 1px solid var(--border-color);
+      color: var(--font-color) !important;
+
+      &:hover {
+        background-color: var(--active-bg-color) !important;
+      }
+
+      &::after {
+        border-top-color: var(--font-color) !important;
+      }
+    }
+
     .ui-dropdown,
     .dropdown-menu {
       background-color: var(--bg-color);
       border: 1px solid var(--border-color);
-    }
-
-    button,
-    .ui-option-text,
-    .link-list,
-    .check-label-txt {
-      color: var(--font-color) !important;
     }
   }
 
@@ -269,7 +280,9 @@
     .modal-header,
     b,
     dt,
-    p {
+    p,
+    .info-item,
+    .sub-price {
       color: var(--font-color) !important;
     }
 
@@ -294,6 +307,10 @@
 
     .custom-label-txt {
       color: var(--sub-font-color) !important;
+    }
+
+    .edit-area {
+      background-color: var(--bg-color) !important;
     }
   }
 
@@ -442,7 +459,8 @@
   /* color */
   .color-primary,
   .color_blue,
-  .primary {
+  .primary,
+  .color-em {
     color: var(--highlight-color) !important;
   }
 
