@@ -2,7 +2,7 @@
 @name         Coinone Dark
 @namespace    Theme
 @author       flasheye12
-@version      0.0.7
+@version      0.0.8
 @description  Dark Coinone
 @homepageURL  https://github.com/flasheye12/Coinone-Dark
 @supportURL   https://github.com/flasheye12/Coinone-Dark/issues
@@ -83,6 +83,15 @@
       .dropdown-link,
       .glyph-ui-new-small {
         color: var(--highlight-color) !important;
+      }
+
+      .notice-tag {
+        background-color: var(--active-bg-color) !important;
+        color: var(--font-color) !important;
+      }
+
+      .notice-date {
+        color: var(--sub-font-color) !important;
       }
 
       .notice-title {
@@ -177,6 +186,12 @@
     .t-tit {
       color: var(--active-font-color) !important;
     }
+
+    span,
+    a,
+    div {
+      color: var(--font-color) !important;
+    }
   }
 
   .dropdown {
@@ -208,33 +223,54 @@
     color: var(--font-color) !important;
   }
 
-  .btn-large:not(.btn-solid-sky),
-  .btn-normal:not(.btn-solid-sky),
-  .btn-mini:not(.btn-solid-sky) {
+  /* input */
+  input[type='text'],
+  input[type='email'],
+  input[type='number'],
+  input[type='password'] {
+    background-color: var(--input-bg-color) !important;
+    color: var(--font-color) !important;
+
+    &::placeholder {
+      color: var(--sub-font-color) !important;
+    }
+  }
+
+  /* button */
+  .btn-ghost,
+  .btn-line-gray,
+  .btn-line-sky,
+  .btn-large,
+  .btn-normal,
+  .btn-mini {
     background-color: var(--bg-color) !important;
     border: 1px solid var(--border-color) !important;
+    color: var(--highlight-color) !important;
 
     &:hover {
       background-color: var(--active-bg-color) !important;
     }
-  }
 
-  .btn-large:not(.btn-solid-sky):not(.btn-line-sky),
-  .btn-normal:not(.btn-solid-sky):not(.btn-line-sky),
-  .btn-mini:not(.btn-solid-sky):not(.btn-line-sky) {
-    color: var(--font-color) !important;
+    &.btn-solid-sky {
+      background-color: var(--highlight-color) !important;
+      border: 1px solid var(--border-color) !important;
+      color: var(--font-color) !important;
 
-    &:hover {
-      color: var(--active-font-color) !important;
+      &:hover {
+        filter: brightness(1.1) !important;
+      }
     }
   }
 
-  .btn-sky {
-    background-color: var(--bg-color);
-    border: 1px solid var(--border-color);
+  .btn.btn-primary,
+  .btn-sky,
+  .btn.btn_expand {
+    background-color: var(--highlight-color) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--font-color) !important;
 
     &:hover {
-      background-color: var(--active-bg-color);
+      filter: brightness(1.1) !important;
     }
   }
 
@@ -246,6 +282,10 @@
     color: var(--font-color);
   }
 
+  small {
+    color: var(--sub-font-color) !important;
+  }
+
   th {
     background-color: var(--bg-color) !important;
     color: var(--font-color) !important;
@@ -253,6 +293,10 @@
 
   td {
     color: var(--font-color) !important;
+
+    li {
+      color: var(--font-color) !important;
+    }
   }
 
   /* modal */
@@ -283,6 +327,16 @@
       .txt-today-close {
         color: var(--font-color) !important;
       }
+    }
+
+    .notice-list {
+      li {
+        color: var(--sub-font-color) !important;
+      }
+    }
+
+    .custom-label-txt {
+      color: var(--sub-font-color) !important;
     }
   }
 
@@ -427,6 +481,23 @@
   }
 
   /* fix to angular animation blink bug end */
+
+  /* color */
+  .color-primary,
+  .color_blue,
+  .primary {
+    color: var(--highlight-color) !important;
+  }
+
+  .gray {
+    color: var(--sub-font-color) !important;
+  }
+
+  /* icon font */
+  [class*='glyph-coin-'],
+  [class*='glyph-ui-'] {
+    color: var(--font-color) !important;
+  }
 }
 
 @-moz-document regexp("^https?://coinone.co.kr/(\\?[\\S]*)?") {
@@ -457,6 +528,16 @@
       }
     }
 
+    .cover-area {
+      .volume-label {
+        color: var(--font-color) !important;
+      }
+
+      .volume-amount {
+        color: var(--sub-font-color) !important;
+      }
+    }
+
     landing-main-coin-search {
       input {
         background-color: var(--input-bg-color) !important;
@@ -482,7 +563,13 @@
           color: var(--font-color);
         }
 
+        .full-name {
+          color: var(--sub-font-color) !important;
+        }
+
         .go-to-exchange {
+          color: var(--sub-font-color) !important;
+
           &:hover {
             color: var(--font-color) !important;
           }
@@ -518,8 +605,22 @@
         color: var(--font-color) !important;
       }
 
+      .series-version {
+        color: var(--sub-font-color) !important;
+      }
+
       .series-link-area {
         background-color: var(--bg-color);
+
+        &:hover {
+          .series-btn {
+            background-color: var(--active-bg-color) !important;
+          }
+        }
+      }
+
+      .series-btn {
+        color: var(--highlight-color) !important;
       }
     }
 
@@ -536,6 +637,11 @@
       .info-new-badge {
         color: var(--highlight-color) !important;
       }
+
+      .info-summary,
+      .info-time {
+        color: var(--sub-font-color) !important;
+      }
     }
 
     landing-main-project-info {
@@ -546,12 +652,22 @@
         color: var(--font-color) !important;
       }
 
+      .full-name,
+      .info-summary,
+      .info-time {
+        color: var(--sub-font-color) !important;
+      }
+
       .info-new-badge {
         color: var(--highlight-color) !important;
       }
     }
 
     landing-main-card-event {
+      .event-name {
+        color: var(--sub-font-color);
+      }
+
       .section-sub-title,
       .event-main-txt {
         color: var(--font-color) !important;
@@ -589,12 +705,20 @@
     }
 
     landing-sub-promotion {
+      .promotion-label {
+        color: var(--sub-font-color) !important;
+      }
+
       .promotion-title {
         color: var(--font-color) !important;
       }
 
       .txt-area {
         background-color: var(--bg-color);
+      }
+
+      .tag-name {
+        color: var(--highlight-color);
       }
     }
 
@@ -604,10 +728,25 @@
       .app-section-title {
         color: var(--font-color) !important;
       }
+
+      .app-section-sub-title {
+        color: var(--sub-font-color) !important;
+      }
     }
 
     landing-main-service-info {
+      .service-label,
+      .service-desc {
+        color: var(--sub-font-color) !important;
+      }
+
       .service-title {
+        color: var(--font-color);
+      }
+    }
+
+    landing-main-security {
+      .section-title {
         color: var(--font-color);
       }
     }
@@ -636,6 +775,14 @@
     .wallet_caption {
       color: var(--font-color) !important;
     }
+
+    .caption {
+      color: var(--sub-font-color) !important;
+    }
+
+    .color_blue {
+      color: var(--highlight-color) !important;
+    }
   }
 
   .coinone-wallet-page,
@@ -658,6 +805,24 @@
       color: var(--font-color) !important;
     }
   }
+
+  landing-terms-type {
+    .breadcrumb-link {
+      color: var(--sub-font-color) !important;
+    }
+
+    .static-body {
+      a {
+        color: var(--highlight-color) !important;
+      }
+
+      p,
+      ol > li,
+      ul > li {
+        color: var(--sub-font-color);
+      }
+    }
+  }
 }
 
 @-moz-document url-prefix("https://coinone.co.kr/support") {
@@ -674,6 +839,39 @@
       }
     }
   }
+
+  landing-support-main {
+    .color_darkgray {
+      color: var(--sub-font-color) !important;
+
+      a {
+        color: var(--highlight-color) !important;
+      }
+    }
+
+    .contact-item {
+      p,
+      small * {
+        color: var(--sub-font-color) !important;
+      }
+
+      a.color_deepblue {
+        color: var(--highlight-color) !important;
+      }
+    }
+  }
+
+  landing-support-guide {
+    p,
+    ul li,
+    .bullet-item {
+      color: var(--sub-font-color) !important;
+    }
+
+    a {
+      color: var(--highlight-color) !important;
+    }
+  }
 }
 
 @-moz-document url-prefix("https://coinone.co.kr/sos") {
@@ -686,6 +884,10 @@
 
     .form-desc {
       color: var(--font-color) !important;
+
+      a {
+        color: var(--highlight-color);
+      }
     }
 
     .form-label {
@@ -704,28 +906,36 @@
       .bullet-item {
         color: var(--font-color) !important;
       }
-    }
 
-    input[type='text'],
-    input[type='number'],
-    input[type='email'] {
-      background-color: var(--input-bg-color) !important;
-      border: 1px solid var(--border-color);
-      color: var(--font-color) !important;
+      a {
+        color: var(--highlight-color);
+      }
     }
   }
 }
 
 @-moz-document url-prefix("https://coinone.co.kr/listing-guideline") {
-  #guidelineWrap {
-    background-color: transparent !important;
-  }
+  landing-listing-guideline {
+    #guidelineWrap {
+      background-color: transparent !important;
+    }
 
-  h2,
-  h4,
-  em,
-  p {
-    color: var(--font-color) !important;
+    h2,
+    h4,
+    em,
+    p {
+      color: var(--font-color) !important;
+    }
+
+    strong,
+    h3,
+    a {
+      color: var(--highlight-color) !important;
+    }
+
+    ul > li {
+      color: var(--sub-font-color);
+    }
   }
 }
 
@@ -745,6 +955,29 @@
 
     .border_box {
       background-color: var(--bg-color);
+    }
+
+    strong,
+    a {
+      color: var(--highlight-color) !important;
+
+      > * {
+        color: var(--font-color);
+      }
+    }
+
+    .gray,
+    .list_style_disc small {
+      color: var(--sub-font-color) !important;
+    }
+  }
+
+  #body_wrapper {
+    landing-cosmos-history {
+      .color_darkgray,
+      .color_atom {
+        color: var(--font-color) !important;
+      }
     }
   }
 }
@@ -768,11 +1001,25 @@
 
     .card-button-link {
       background-color: var(--bg-color);
+
+      &:hover {
+        .card-button-icon {
+          color: var(--highlight-color) !important;
+        }
+      }
+    }
+
+    .card-button-label {
+      color: var(--font-color) !important;
     }
 
     .card-button-txt {
       .card-button-title {
         color: var(--font-color);
+      }
+
+      .card-button-desc {
+        color: var(--sub-font-color);
       }
     }
 
@@ -787,6 +1034,11 @@
     .bullet-box {
       background-color: var(--bg-color);
       border: 1px solid var(--border-color);
+    }
+
+    .page-desc,
+    .sub-txt {
+      color: var(--sub-font-color) !important;
     }
   }
 }
@@ -825,6 +1077,41 @@
       background-color: transparent;
     }
   }
+
+  landing-coins {
+    .bg_white,
+    .landing_section,
+    .page_section,
+    .video_section {
+      background-color: transparent !important;
+    }
+
+    .cover_section .cover {
+      background-color: var(--bg-color) !important;
+      background-image: none !important;
+    }
+
+    .border_box {
+      background-color: var(--bg-color) !important;
+      color: var(--font-color);
+    }
+
+    .info-txt,
+    p,
+    ul > li,
+    strong {
+      color: var(--font-color);
+    }
+
+    a {
+      color: var(--highlight-color) !important;
+    }
+
+    .index-btn-link {
+      background-color: var(--bg-color);
+      color: var(--font-color) !important;
+    }
+  }
 }
 
 @-moz-document url-prefix("https://coinone.co.kr/account/login") {
@@ -853,6 +1140,10 @@
       color: var(--font-color) !important;
     }
   }
+
+  .txt-below-box {
+    color: var(--sub-font-color) !important;
+  }
 }
 
 @-moz-document url-prefix("https://coinone.co.kr/account/login"), url-prefix("https://coinone.co.kr/account/recover") {
@@ -861,6 +1152,10 @@
   }
 
   .box_wrapper {
+    h1 {
+      color: var(--font-color);
+    }
+
     background-color: var(--bg-color);
     border: 1px solid var(--border-color);
     color: var(--font-color);
@@ -868,14 +1163,6 @@
     .right a {
       color: var(--font-color) !important;
     }
-  }
-
-  input[type='text'],
-  input[type='number'],
-  input[type='email'] {
-    background-color: var(--input-bg-color) !important;
-    border: 1px solid var(--border-color);
-    color: var(--font-color) !important;
   }
 }
 
@@ -885,8 +1172,20 @@
       color: var(--active-font-color) !important;
     }
 
-    .space-both {
-      color: var(--font-color);
+    .space-both,
+    .sub-tab-item {
+      color: var(--font-color) !important;
+    }
+
+    .history-period-info {
+      color: var(--sub-font-color) !important;
+    }
+  }
+
+  balance-export-to-file {
+    button {
+      background-color: var(--bg-color) !important;
+      color: var(--font-color) !important;
     }
   }
 }
@@ -936,6 +1235,15 @@
         color: var(--font-color) !important;
       }
     }
+
+    .txt-assets-desc,
+    .switch-label {
+      color: var(--sub-font-color) !important;
+    }
+
+    .form-switch-wrap .hide-checkbox:checked + .form-switch {
+      background-color: var(--highlight-color) !important;
+    }
   }
 }
 
@@ -975,9 +1283,14 @@
     .cell:not(.status),
     .form-label,
     .dw-info-item,
-    .dark,
-    .dark a {
+    .dw-link,
+    .info-item,
+    ul > li {
       color: var(--font-color) !important;
+    }
+
+    .box-desc b span {
+      color: var(--highlight-color) !important;
     }
 
     .fake-input-addr,
@@ -985,6 +1298,11 @@
       background-color: var(--bg-color) !important;
       border: 1px solid;
       color: var(--font-color);
+    }
+
+    .dark,
+    .dark a {
+      color: var(--sub-font-color) !important;
     }
   }
 
@@ -1012,6 +1330,31 @@
         color: var(--font-color) !important;
       }
     }
+
+    .full-name,
+    .sym-almost,
+    .retention-rate {
+      color: var(--sub-font-color) !important;
+    }
+
+    .form-switch-wrap .hide-checkbox:checked + .form-switch {
+      background-color: var(--highlight-color);
+    }
+
+    .dw-coin-item.is-active::before {
+      background-color: var(--highlight-color) !important;
+    }
+  }
+
+  balance-transfer-history {
+    .history-desc {
+      color: var(--sub-font-color);
+    }
+
+    button {
+      background-color: var(--bg-color) !important;
+      color: var(--font-color) !important;
+    }
   }
 }
 
@@ -1030,9 +1373,15 @@
     }
 
     .lnb-wrap {
-      .lnb-item:not(.is-active) {
+      .lnb-item {
         .lnb-link {
           color: var(--font-color) !important;
+        }
+
+        &.is-active {
+          .lnb-link {
+            color: var(--active-font-color) !important;
+          }
         }
       }
     }
@@ -1041,11 +1390,6 @@
   h1,
   .page-title {
     color: var(--font-color) !important;
-  }
-
-  input[type='text'] {
-    background-color: var(--input-bg-color) !important;
-    color: var(--font-color);
   }
 
   .cell.is-active,
@@ -1067,9 +1411,26 @@
       color: var(--font-color);
     }
 
+    my-greeting {
+      .with-coinone {
+        color: var(--sub-font-color) !important;
+      }
+    }
+
+    my-profile {
+      .info-key {
+        color: var(--sub-font-color) !important;
+      }
+    }
+
     my-guides {
       .link-right-chevron {
         color: var(--font-color) !important;
+      }
+
+      .last-login,
+      .if-not-you {
+        color: var(--sub-font-color) !important;
       }
     }
 
@@ -1102,6 +1463,11 @@
           color: var(--active-font-color) !important;
         }
       }
+
+      .page-subtitle-desc,
+      .txt-desc {
+        color: var(--sub-font-color) !important;
+      }
     }
 
     my-wallets {
@@ -1115,6 +1481,10 @@
 
       .addr-name {
         color: var(--font-color);
+      }
+
+      .addr-value {
+        color: var(--sub-font-color) !important;
       }
     }
 
@@ -1137,12 +1507,22 @@
       background-color: var(--bg-color) !important;
       color: var(--font-color);
     }
+
+    .box-desc {
+      color: var(--sub-font-color) !important;
+    }
   }
 
   my-info-manage {
     p,
     .link-underline {
       color: var(--font-color) !important;
+    }
+
+    .info-key,
+    .verified-date,
+    ul > li {
+      color: var(--sub-font-color) !important;
     }
   }
 
@@ -1162,11 +1542,21 @@
     .info-txt {
       color: var(--font-color);
     }
+
+    .secure-level {
+      color: var(--sub-font-color) !important;
+    }
   }
 
   my-verification-info {
     .more-link {
       color: var(--font-color) !important;
+
+      a::after {
+        content: '>';
+        height: inherit;
+        background: none !important;
+      }
     }
   }
 
@@ -1174,6 +1564,14 @@
     .verification-item {
       background-color: var(--bg-color);
       color: var(--font-color);
+    }
+
+    .step-desc {
+      color: var(--sub-font-color) !important;
+    }
+
+    .step-status {
+      color: var(--highlight-color) !important;
     }
   }
 
@@ -1194,6 +1592,10 @@
       background-color: var(--bg-color) !important;
       border: 1px solid;
     }
+
+    .bullet-square li {
+      color: var(--sub-font-color) !important;
+    }
   }
 
   my-verification-support {
@@ -1207,6 +1609,22 @@
 @-moz-document url-prefix("https://coinone.co.kr/my") {
   .my-container {
     background-color: transparent;
+
+    .ui-tab-item {
+      span {
+        color: var(--font-color);
+      }
+
+      &.is-active {
+        span {
+          color: var(--active-font-color);
+        }
+
+        .ui-tab-link::after {
+          background-color: var(--active-font-color) !important;
+        }
+      }
+    }
   }
 
   .page-title,
@@ -1241,12 +1659,8 @@
     }
   }
 
-  input[type='text'],
-  input[type='password'],
-  input[type='number'] {
-    background-color: var(--input-bg-color) !important;
-    border: 1px solid var(--border-color);
-    color: var(--font-color) !important;
+  .form-label {
+    color: var(--sub-font-color) !important;
   }
 }
 
@@ -1397,6 +1811,14 @@
         }
       }
     }
+
+    .node-desc {
+      color: var(--sub-font-color) !important;
+    }
+
+    .node-sub-desc {
+      color: var(--highlight-color) !important;
+    }
   }
 
   intro-section-c {
@@ -1411,6 +1833,10 @@
 
     .bar-value {
       border-color: hsla(0, 0%, 100%, 0.1) !important;
+    }
+
+    .bar-text {
+      color: var(--sub-font-color) !important;
     }
   }
 
@@ -1459,8 +1885,17 @@
   lockup-title {
     .tit-plus,
     .txt-item,
-    .tit-list,
+    .tit-list {
+      color: var(--font-color) !important;
+    }
+
     .txt-list {
+      color: var(--sub-font-color) !important;
+    }
+
+    .badge {
+      background-color: var(--bg-color) !important;
+      border: 1px solid var(--border-color) !important;
       color: var(--font-color) !important;
     }
   }
@@ -1469,11 +1904,18 @@
     .section-summary,
     .desc-title {
       background-color: var(--bg-color) !important;
-      color: var(--font-color) !important;
 
       @media (min-width: 980px) {
         background-color: transparent !important;
       }
+    }
+
+    .section-summary {
+      color: var(--font-color) !important;
+    }
+
+    .desc-title {
+      color: var(--sub-font-color) !important;
     }
   }
 
@@ -1488,6 +1930,7 @@
     .box-disabled {
       background-color: var(--bg-color) !important;
       border: 1px solid var(--border-color);
+      color: var(--sub-font-color) !important;
     }
   }
 
@@ -1603,8 +2046,19 @@
       .desc-title,
       .desc-detail {
         background-color: var(--bg-color) !important;
+      }
+
+      .desc-title {
+        color: var(--sub-font-color) !important;
+      }
+
+      .desc-detail {
         color: var(--font-color) !important;
       }
+    }
+
+    .info-date {
+      color: var(--sub-font-color) !important;
     }
   }
 }
@@ -1668,6 +2122,7 @@
     .btn {
       background-color: var(--bg-color) !important;
       border: 1px solid var(--border-color) !important;
+      color: var(--font-color) !important;
     }
   }
 
@@ -1700,6 +2155,12 @@
 }
 
 @-moz-document url-prefix("https://coinone.co.kr/promotion/referral") {
+  promotion-referral {
+    .referral-header {
+      background-color: var(--bg-color) !important;
+    }
+  }
+
   promotion-referral-banner {
     background-color: var(--bg-color);
 
@@ -1752,6 +2213,10 @@
   }
 
   promotion-referral-reward-summary {
+    .term {
+      color: var(--sub-font-color) !important;
+    }
+
     .desc {
       color: var(--font-color) !important;
     }
@@ -1766,10 +2231,24 @@
     .btn-move {
       color: var(--font-color) !important;
     }
+
+    .btn-mini-round-gray {
+      background-color: var(--bg-color) !important;
+      border: 1px solid var(--border-color);
+      color: var(--font-color) !important;
+    }
   }
 }
 
 @-moz-document url-prefix("https://coinone.co.kr/promotion") {
+  .dummy-item,
+  .dummy-content-head,
+  .dummy-content,
+  .dummy-content-body::after {
+    background-color: var(--bg-color);
+    background-image: none;
+  }
+
   p {
     color: var(--font-color);
   }
@@ -1790,12 +2269,23 @@
     color: var(--font-color) !important;
   }
 
+  .swap-sub-title,
+  .filter,
+  .closing-price,
+  .report-cont {
+    color: var(--sub-font-color) !important;
+  }
+
   .inp-item {
     background-color: var(--input-bg-color) !important;
 
     input {
       color: var(--font-color) !important;
     }
+  }
+
+  .dropdown-toggle {
+    border: none !important;
   }
 
   swap-pair-quotes {
@@ -1846,6 +2336,20 @@
         background-color: var(--active-bg-color) !important;
       }
     }
+
+    label {
+      color: var(--sub-font-color) !important;
+
+      .badge {
+        background-color: var(--bg-color) !important;
+        border: 1px solid var(--border-color);
+        color: var(--highlight-color) !important;
+      }
+    }
+
+    .symbol-asset {
+      color: var(--sub-font-color);
+    }
   }
 }
 
@@ -1867,6 +2371,14 @@
         color: var(--highlight-color) !important;
       }
     }
+
+    .status,
+    ol li,
+    ul li,
+    .policy-template p,
+    .form-label-desc {
+      color: var(--sub-font-color) !important;
+    }
   }
 }
 
@@ -1880,6 +2392,10 @@
     .note-box {
       background-color: var(--bg-color) !important;
       color: var(--font-color);
+    }
+
+    .bullet-item {
+      color: var(--sub-font-color) !important;
     }
   }
 }
@@ -1909,6 +2425,10 @@
       background-color: var(--bg-color);
       border: 1px solid var(--border-color);
     }
+
+    .form-info-txt {
+      color: var(--sub-font-color);
+    }
   }
 }
 
@@ -1919,8 +2439,20 @@
 
   user-signup-nav {
     .form-step-item {
-      &.is-checked {
-        color: var(--font-color) !important;
+      color: var(--font-color) !important;
+
+      .step-icon {
+        background-color: var(--bg-color) !important;
+        border: 1px solid var(--border-color);
+      }
+
+      &.is-active {
+        color: var(--active-font-color) !important;
+
+        .step-icon {
+          background-color: var(--active-font-color) !important;
+          color: var(--sub-font-color) !important;
+        }
       }
     }
   }
