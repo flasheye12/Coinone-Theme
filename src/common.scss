@@ -6,6 +6,7 @@
     --border-color: border-color;
     --font-color: font-color;
     --active-font-color: active-font-color;
+    --desc-font-color: desc-font-color;
     --highlight-color: highlight-color;
     --disabled-color: disabled-color;
   }
@@ -270,10 +271,31 @@
     .dummy-content,
     .mobile-main-dummy .d1::before,
     .mobile-main-dummy .d1::after,
+    .mobile-main-dummy .d1 > div,
     .mobile-main-dummy .d2::before,
     .mobile-main-dummy .d2::after,
+    .mobile-main-dummy .d2 i,
     .mobile-main-dummy div:not([class]),
     .pc-main-dummy div:not([class]),
+    .pc-main-dummy .d1 .d1-left > div,
+    .pc-main-dummy .d1 .d1-right > div:nth-child(1),
+    .pc-main-dummy .d1 .d1-right > div:nth-child(2),
+    .pc-main-dummy .d2 > div:nth-child(1),
+    .pc-main-dummy .d2 > div:nth-child(2),
+    .pc-main-dummy .d2::before,
+    .pc-main-dummy .d2::after,
+    .pc-main-dummy .d3-left-top i,
+    .pc-main-dummy .d3-left-top div,
+    .pc-main-dummy .d3-left-bottom-list i,
+    .pc-main-dummy .d3-left-bottom-item > div:nth-child(1)::before,
+    .pc-main-dummy .d3-left-bottom-item > div:nth-child(1)::after,
+    .pc-main-dummy .d3-left-bottom-item > div:nth-child(2),
+    .pc-main-dummy .d3-right-top::before,
+    .pc-main-dummy .d3-right-bottom::before,
+    .pc-main-dummy .d3-right-top i,
+    .pc-main-dummy .d3-right-bottom i,
+    .pc-main-dummy .d4::before,
+    .pc-main-dummy .d4::after,
     .dummy-item,
     .dummy-main-nav,
     .d-lo {
