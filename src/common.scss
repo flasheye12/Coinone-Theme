@@ -1,16 +1,4 @@
 @-moz-document regexp("^https?://coinone.co.kr/(\\?[\\S]*)?"), url-prefix("https://coinone.co.kr/swap"), url-prefix("https://coinone.co.kr/plus"), url-prefix("https://coinone.co.kr/account/login"), url-prefix("https://coinone.co.kr/account/recover"), url-prefix("https://coinone.co.kr/sos"), url-prefix("https://coinone.co.kr/user"), url-prefix("https://coinone.co.kr/coins"), url-prefix("https://coinone.co.kr/support"), url-prefix("https://coinone.co.kr/privacy"), url-prefix("https://coinone.co.kr/fees"), url-prefix("https://coinone.co.kr/terms"), url-prefix("https://coinone.co.kr/wallet"), url-prefix("https://coinone.co.kr/listing-guideline"), url-prefix("https://coinone.co.kr/ico"), url-prefix("https://coinone.co.kr/docs"), url-prefix("https://coinone.co.kr/404"), url-prefix("https://coinone.co.kr/my"), url-prefix("https://coinone.co.kr/promotion"), url-prefix("https://coinone.co.kr/balance") {
-  :root {
-    --bg-color: bg-color;
-    --input-bg-color: input-bg-color;
-    --active-bg-color: active-bg-color;
-    --border-color: border-color;
-    --font-color: font-color;
-    --active-font-color: active-font-color;
-    --desc-font-color: desc-font-color;
-    --highlight-color: highlight-color;
-    --disabled-color: disabled-color;
-  }
-
   * {
     text-shadow: none !important;
     box-shadow: none !important;

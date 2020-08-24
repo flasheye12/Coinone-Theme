@@ -47,9 +47,9 @@
       "desc": "Active font color",
       "value": "#f2f2f2"
     },
-    "desc-font-color": {
+    "sub-font-color": {
       "type": "color",
-      "desc": "Description font color",
+      "desc": "Sub font color",
       "value": "#aeb3bb"
     },
     "highlight-color": {

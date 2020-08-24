@@ -8,6 +8,8 @@ const cssFiles = glob
   .sync(resolve(__dirname, '../src/*.scss'))
   .filter((file) => !/template/.test(file))
   .sort((file1, file2) => {
+    if (/\/vars.scss$/.test(file1)) return -1;
+    if (/\/vars.scss$/.test(file2)) return 1;
     if (/\/common.scss$/.test(file1)) return -1;
     if (/\/common.scss$/.test(file2)) return 1;
     if (/main[\S]*.scss$/.test(file1)) return -1;
