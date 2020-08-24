@@ -2,7 +2,7 @@
 @name         Coinone Dark
 @namespace    Theme
 @author       flasheye12
-@version      0.0.6
+@version      0.0.7
 @description  Dark Coinone
 @homepageURL  https://github.com/flasheye12/Coinone-Dark
 @supportURL   https://github.com/flasheye12/Coinone-Dark/issues
@@ -23,11 +23,11 @@
 @var color border-color "Border color" #444
 @var color font-color "Font color" #ccc
 @var color active-font-color "Active font color" #f2f2f2
-@var color desc-font-color "Description font color" #aeb3bb
+@var color sub-font-color "Sub font color" #aeb3bb
 @var color highlight-color "Highlight color" #ff8a51
 @var color disabled-color "Disabled color" #bbb
 ==/UserStyle== */
-@-moz-document regexp("^https?://coinone.co.kr/(\\?[\\S]*)?"), url-prefix("https://coinone.co.kr/swap"), url-prefix("https://coinone.co.kr/plus"), url-prefix("https://coinone.co.kr/account/login"), url-prefix("https://coinone.co.kr/account/recover"), url-prefix("https://coinone.co.kr/sos"), url-prefix("https://coinone.co.kr/user"), url-prefix("https://coinone.co.kr/coins"), url-prefix("https://coinone.co.kr/support"), url-prefix("https://coinone.co.kr/privacy"), url-prefix("https://coinone.co.kr/fees"), url-prefix("https://coinone.co.kr/terms"), url-prefix("https://coinone.co.kr/wallet"), url-prefix("https://coinone.co.kr/listing-guideline"), url-prefix("https://coinone.co.kr/ico"), url-prefix("https://coinone.co.kr/docs"), url-prefix("https://coinone.co.kr/404"), url-prefix("https://coinone.co.kr/my"), url-prefix("https://coinone.co.kr/promotion"), url-prefix("https://coinone.co.kr/balance") {
+@-moz-document domain("coinone.co.kr") {
   :root {
     --bg-color: bg-color;
     --input-bg-color: input-bg-color;
@@ -35,11 +35,13 @@
     --border-color: border-color;
     --font-color: font-color;
     --active-font-color: active-font-color;
-    --desc-font-color: desc-font-color;
+    --sub-font-color: sub-font-color;
     --highlight-color: highlight-color;
     --disabled-color: disabled-color;
   }
+}
 
+@-moz-document regexp("^https?://coinone.co.kr/(\\?[\\S]*)?"), url-prefix("https://coinone.co.kr/swap"), url-prefix("https://coinone.co.kr/plus"), url-prefix("https://coinone.co.kr/account/login"), url-prefix("https://coinone.co.kr/account/recover"), url-prefix("https://coinone.co.kr/sos"), url-prefix("https://coinone.co.kr/user"), url-prefix("https://coinone.co.kr/coins"), url-prefix("https://coinone.co.kr/support"), url-prefix("https://coinone.co.kr/privacy"), url-prefix("https://coinone.co.kr/fees"), url-prefix("https://coinone.co.kr/terms"), url-prefix("https://coinone.co.kr/wallet"), url-prefix("https://coinone.co.kr/listing-guideline"), url-prefix("https://coinone.co.kr/ico"), url-prefix("https://coinone.co.kr/docs"), url-prefix("https://coinone.co.kr/404"), url-prefix("https://coinone.co.kr/my"), url-prefix("https://coinone.co.kr/promotion"), url-prefix("https://coinone.co.kr/balance") {
   * {
     text-shadow: none !important;
     box-shadow: none !important;
