@@ -2,8 +2,17 @@
   lockup-title {
     .tit-plus,
     .txt-item,
-    .tit-list,
+    .tit-list {
+      color: var(--font-color) !important;
+    }
+
     .txt-list {
+      color: var(--sub-font-color) !important;
+    }
+
+    .badge {
+      background-color: var(--bg-color) !important;
+      border: 1px solid var(--border-color) !important;
       color: var(--font-color) !important;
     }
   }
@@ -12,11 +21,18 @@
     .section-summary,
     .desc-title {
       background-color: var(--bg-color) !important;
-      color: var(--font-color) !important;
 
       @media (min-width: 980px) {
         background-color: transparent !important;
       }
+    }
+
+    .section-summary {
+      color: var(--font-color) !important;
+    }
+
+    .desc-title {
+      color: var(--sub-font-color) !important;
     }
   }
 
@@ -31,6 +47,7 @@
     .box-disabled {
       background-color: var(--bg-color) !important;
       border: 1px solid var(--border-color);
+      color: var(--sub-font-color) !important;
     }
   }
 

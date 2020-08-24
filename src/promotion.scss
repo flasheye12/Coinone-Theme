@@ -1,4 +1,12 @@
 @-moz-document url-prefix("https://coinone.co.kr/promotion") {
+  .dummy-item,
+  .dummy-content-head,
+  .dummy-content,
+  .dummy-content-body::after {
+    background-color: var(--bg-color);
+    background-image: none;
+  }
+
   p {
     color: var(--font-color);
   }

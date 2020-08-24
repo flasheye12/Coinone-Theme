@@ -1,6 +1,22 @@
 @-moz-document url-prefix("https://coinone.co.kr/my") {
   .my-container {
     background-color: transparent;
+
+    .ui-tab-item {
+      span {
+        color: var(--font-color);
+      }
+
+      &.is-active {
+        span {
+          color: var(--active-font-color);
+        }
+
+        .ui-tab-link::after {
+          background-color: var(--active-font-color) !important;
+        }
+      }
+    }
   }
 
   .page-title,
@@ -35,11 +51,7 @@
     }
   }
 
-  input[type='text'],
-  input[type='password'],
-  input[type='number'] {
-    background-color: var(--input-bg-color) !important;
-    border: 1px solid var(--border-color);
-    color: var(--font-color) !important;
+  .form-label {
+    color: var(--sub-font-color) !important;
   }
 }

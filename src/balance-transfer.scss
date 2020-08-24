@@ -34,9 +34,14 @@
     .cell:not(.status),
     .form-label,
     .dw-info-item,
-    .dark,
-    .dark a {
+    .dw-link,
+    .info-item,
+    ul > li {
       color: var(--font-color) !important;
+    }
+
+    .box-desc b span {
+      color: var(--highlight-color) !important;
     }
 
     .fake-input-addr,
@@ -44,6 +49,11 @@
       background-color: var(--bg-color) !important;
       border: 1px solid;
       color: var(--font-color);
+    }
+
+    .dark,
+    .dark a {
+      color: var(--sub-font-color) !important;
     }
   }
 
@@ -70,6 +80,31 @@
       .ticker-name {
         color: var(--font-color) !important;
       }
+    }
+
+    .full-name,
+    .sym-almost,
+    .retention-rate {
+      color: var(--sub-font-color) !important;
+    }
+
+    .form-switch-wrap .hide-checkbox:checked + .form-switch {
+      background-color: var(--highlight-color);
+    }
+
+    .dw-coin-item.is-active::before {
+      background-color: var(--highlight-color) !important;
+    }
+  }
+
+  balance-transfer-history {
+    .history-desc {
+      color: var(--sub-font-color);
+    }
+
+    button {
+      background-color: var(--bg-color) !important;
+      color: var(--font-color) !important;
     }
   }
 }

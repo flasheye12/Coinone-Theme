@@ -51,6 +51,14 @@
         }
       }
     }
+
+    .node-desc {
+      color: var(--sub-font-color) !important;
+    }
+
+    .node-sub-desc {
+      color: var(--highlight-color) !important;
+    }
   }
 
   intro-section-c {
@@ -65,6 +73,10 @@
 
     .bar-value {
       border-color: hsla(0, 0%, 100%, 0.1) !important;
+    }
+
+    .bar-text {
+      color: var(--sub-font-color) !important;
     }
   }
 

@@ -42,6 +42,15 @@
         color: var(--highlight-color) !important;
       }
 
+      .notice-tag {
+        background-color: var(--active-bg-color) !important;
+        color: var(--font-color) !important;
+      }
+
+      .notice-date {
+        color: var(--sub-font-color) !important;
+      }
+
       .notice-title {
         color: var(--font-color) !important;
       }
@@ -134,6 +143,12 @@
     .t-tit {
       color: var(--active-font-color) !important;
     }
+
+    span,
+    a,
+    div {
+      color: var(--font-color) !important;
+    }
   }
 
   .dropdown {
@@ -165,33 +180,54 @@
     color: var(--font-color) !important;
   }
 
-  .btn-large:not(.btn-solid-sky),
-  .btn-normal:not(.btn-solid-sky),
-  .btn-mini:not(.btn-solid-sky) {
+  /* input */
+  input[type='text'],
+  input[type='email'],
+  input[type='number'],
+  input[type='password'] {
+    background-color: var(--input-bg-color) !important;
+    color: var(--font-color) !important;
+
+    &::placeholder {
+      color: var(--sub-font-color) !important;
+    }
+  }
+
+  /* button */
+  .btn-ghost,
+  .btn-line-gray,
+  .btn-line-sky,
+  .btn-large,
+  .btn-normal,
+  .btn-mini {
     background-color: var(--bg-color) !important;
     border: 1px solid var(--border-color) !important;
+    color: var(--highlight-color) !important;
 
     &:hover {
       background-color: var(--active-bg-color) !important;
     }
-  }
 
-  .btn-large:not(.btn-solid-sky):not(.btn-line-sky),
-  .btn-normal:not(.btn-solid-sky):not(.btn-line-sky),
-  .btn-mini:not(.btn-solid-sky):not(.btn-line-sky) {
-    color: var(--font-color) !important;
+    &.btn-solid-sky {
+      background-color: var(--highlight-color) !important;
+      border: 1px solid var(--border-color) !important;
+      color: var(--font-color) !important;
 
-    &:hover {
-      color: var(--active-font-color) !important;
+      &:hover {
+        filter: brightness(1.1) !important;
+      }
     }
   }
 
-  .btn-sky {
-    background-color: var(--bg-color);
-    border: 1px solid var(--border-color);
+  .btn.btn-primary,
+  .btn-sky,
+  .btn.btn_expand {
+    background-color: var(--highlight-color) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--font-color) !important;
 
     &:hover {
-      background-color: var(--active-bg-color);
+      filter: brightness(1.1) !important;
     }
   }
 
@@ -203,6 +239,10 @@
     color: var(--font-color);
   }
 
+  small {
+    color: var(--sub-font-color) !important;
+  }
+
   th {
     background-color: var(--bg-color) !important;
     color: var(--font-color) !important;
@@ -210,6 +250,10 @@
 
   td {
     color: var(--font-color) !important;
+
+    li {
+      color: var(--font-color) !important;
+    }
   }
 
   /* modal */
@@ -240,6 +284,16 @@
       .txt-today-close {
         color: var(--font-color) !important;
       }
+    }
+
+    .notice-list {
+      li {
+        color: var(--sub-font-color) !important;
+      }
+    }
+
+    .custom-label-txt {
+      color: var(--sub-font-color) !important;
     }
   }
 
@@ -384,4 +438,21 @@
   }
 
   /* fix to angular animation blink bug end */
+
+  /* color */
+  .color-primary,
+  .color_blue,
+  .primary {
+    color: var(--highlight-color) !important;
+  }
+
+  .gray {
+    color: var(--sub-font-color) !important;
+  }
+
+  /* icon font */
+  [class*='glyph-coin-'],
+  [class*='glyph-ui-'] {
+    color: var(--font-color) !important;
+  }
 }

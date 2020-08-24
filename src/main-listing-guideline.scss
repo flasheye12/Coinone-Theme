@@ -1,12 +1,24 @@
 @-moz-document url-prefix("https://coinone.co.kr/listing-guideline") {
-  #guidelineWrap {
-    background-color: transparent !important;
-  }
+  landing-listing-guideline {
+    #guidelineWrap {
+      background-color: transparent !important;
+    }
 
-  h2,
-  h4,
-  em,
-  p {
-    color: var(--font-color) !important;
+    h2,
+    h4,
+    em,
+    p {
+      color: var(--font-color) !important;
+    }
+
+    strong,
+    h3,
+    a {
+      color: var(--highlight-color) !important;
+    }
+
+    ul > li {
+      color: var(--sub-font-color);
+    }
   }
 }

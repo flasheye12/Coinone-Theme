@@ -6,11 +6,25 @@
 
     .card-button-link {
       background-color: var(--bg-color);
+
+      &:hover {
+        .card-button-icon {
+          color: var(--highlight-color) !important;
+        }
+      }
+    }
+
+    .card-button-label {
+      color: var(--font-color) !important;
     }
 
     .card-button-txt {
       .card-button-title {
         color: var(--font-color);
+      }
+
+      .card-button-desc {
+        color: var(--sub-font-color);
       }
     }
 
@@ -25,6 +39,11 @@
     .bullet-box {
       background-color: var(--bg-color);
       border: 1px solid var(--border-color);
+    }
+
+    .page-desc,
+    .sub-txt {
+      color: var(--sub-font-color) !important;
     }
   }
 }

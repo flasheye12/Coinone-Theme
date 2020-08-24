@@ -5,8 +5,20 @@
 
   user-signup-nav {
     .form-step-item {
-      &.is-checked {
-        color: var(--font-color) !important;
+      color: var(--font-color) !important;
+
+      .step-icon {
+        background-color: var(--bg-color) !important;
+        border: 1px solid var(--border-color);
+      }
+
+      &.is-active {
+        color: var(--active-font-color) !important;
+
+        .step-icon {
+          background-color: var(--active-font-color) !important;
+          color: var(--sub-font-color) !important;
+        }
       }
     }
   }

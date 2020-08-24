@@ -15,5 +15,28 @@
     .border_box {
       background-color: var(--bg-color);
     }
+
+    strong,
+    a {
+      color: var(--highlight-color) !important;
+
+      > * {
+        color: var(--font-color);
+      }
+    }
+
+    .gray,
+    .list_style_disc small {
+      color: var(--sub-font-color) !important;
+    }
+  }
+
+  #body_wrapper {
+    landing-cosmos-history {
+      .color_darkgray,
+      .color_atom {
+        color: var(--font-color) !important;
+      }
+    }
   }
 }

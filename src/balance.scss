@@ -13,9 +13,15 @@
     }
 
     .lnb-wrap {
-      .lnb-item:not(.is-active) {
+      .lnb-item {
         .lnb-link {
           color: var(--font-color) !important;
+        }
+
+        &.is-active {
+          .lnb-link {
+            color: var(--active-font-color) !important;
+          }
         }
       }
     }
@@ -24,11 +30,6 @@
   h1,
   .page-title {
     color: var(--font-color) !important;
-  }
-
-  input[type='text'] {
-    background-color: var(--input-bg-color) !important;
-    color: var(--font-color);
   }
 
   .cell.is-active,

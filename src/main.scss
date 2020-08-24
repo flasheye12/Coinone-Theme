@@ -26,6 +26,16 @@
       }
     }
 
+    .cover-area {
+      .volume-label {
+        color: var(--font-color) !important;
+      }
+
+      .volume-amount {
+        color: var(--sub-font-color) !important;
+      }
+    }
+
     landing-main-coin-search {
       input {
         background-color: var(--input-bg-color) !important;
@@ -51,7 +61,13 @@
           color: var(--font-color);
         }
 
+        .full-name {
+          color: var(--sub-font-color) !important;
+        }
+
         .go-to-exchange {
+          color: var(--sub-font-color) !important;
+
           &:hover {
             color: var(--font-color) !important;
           }
@@ -87,8 +103,22 @@
         color: var(--font-color) !important;
       }
 
+      .series-version {
+        color: var(--sub-font-color) !important;
+      }
+
       .series-link-area {
         background-color: var(--bg-color);
+
+        &:hover {
+          .series-btn {
+            background-color: var(--active-bg-color) !important;
+          }
+        }
+      }
+
+      .series-btn {
+        color: var(--highlight-color) !important;
       }
     }
 
@@ -105,6 +135,11 @@
       .info-new-badge {
         color: var(--highlight-color) !important;
       }
+
+      .info-summary,
+      .info-time {
+        color: var(--sub-font-color) !important;
+      }
     }
 
     landing-main-project-info {
@@ -115,12 +150,22 @@
         color: var(--font-color) !important;
       }
 
+      .full-name,
+      .info-summary,
+      .info-time {
+        color: var(--sub-font-color) !important;
+      }
+
       .info-new-badge {
         color: var(--highlight-color) !important;
       }
     }
 
     landing-main-card-event {
+      .event-name {
+        color: var(--sub-font-color);
+      }
+
       .section-sub-title,
       .event-main-txt {
         color: var(--font-color) !important;
@@ -158,12 +203,20 @@
     }
 
     landing-sub-promotion {
+      .promotion-label {
+        color: var(--sub-font-color) !important;
+      }
+
       .promotion-title {
         color: var(--font-color) !important;
       }
 
       .txt-area {
         background-color: var(--bg-color);
+      }
+
+      .tag-name {
+        color: var(--highlight-color);
       }
     }
 
@@ -173,10 +226,25 @@
       .app-section-title {
         color: var(--font-color) !important;
       }
+
+      .app-section-sub-title {
+        color: var(--sub-font-color) !important;
+      }
     }
 
     landing-main-service-info {
+      .service-label,
+      .service-desc {
+        color: var(--sub-font-color) !important;
+      }
+
       .service-title {
+        color: var(--font-color);
+      }
+    }
+
+    landing-main-security {
+      .section-title {
         color: var(--font-color);
       }
     }

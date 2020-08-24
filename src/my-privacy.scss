@@ -8,12 +8,22 @@
       background-color: var(--bg-color) !important;
       color: var(--font-color);
     }
+
+    .box-desc {
+      color: var(--sub-font-color) !important;
+    }
   }
 
   my-info-manage {
     p,
     .link-underline {
       color: var(--font-color) !important;
+    }
+
+    .info-key,
+    .verified-date,
+    ul > li {
+      color: var(--sub-font-color) !important;
     }
   }
 

@@ -5,9 +5,26 @@
       color: var(--font-color);
     }
 
+    my-greeting {
+      .with-coinone {
+        color: var(--sub-font-color) !important;
+      }
+    }
+
+    my-profile {
+      .info-key {
+        color: var(--sub-font-color) !important;
+      }
+    }
+
     my-guides {
       .link-right-chevron {
         color: var(--font-color) !important;
+      }
+
+      .last-login,
+      .if-not-you {
+        color: var(--sub-font-color) !important;
       }
     }
 
@@ -40,6 +57,11 @@
           color: var(--active-font-color) !important;
         }
       }
+
+      .page-subtitle-desc,
+      .txt-desc {
+        color: var(--sub-font-color) !important;
+      }
     }
 
     my-wallets {
@@ -53,6 +75,10 @@
 
       .addr-name {
         color: var(--font-color);
+      }
+
+      .addr-value {
+        color: var(--sub-font-color) !important;
       }
     }
 

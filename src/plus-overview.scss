@@ -8,8 +8,19 @@
       .desc-title,
       .desc-detail {
         background-color: var(--bg-color) !important;
+      }
+
+      .desc-title {
+        color: var(--sub-font-color) !important;
+      }
+
+      .desc-detail {
         color: var(--font-color) !important;
       }
+    }
+
+    .info-date {
+      color: var(--sub-font-color) !important;
     }
   }
 }

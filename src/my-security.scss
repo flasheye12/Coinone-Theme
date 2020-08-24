@@ -3,11 +3,21 @@
     .info-txt {
       color: var(--font-color);
     }
+
+    .secure-level {
+      color: var(--sub-font-color) !important;
+    }
   }
 
   my-verification-info {
     .more-link {
       color: var(--font-color) !important;
+
+      a::after {
+        content: '>';
+        height: inherit;
+        background: none !important;
+      }
     }
   }
 
@@ -15,6 +25,14 @@
     .verification-item {
       background-color: var(--bg-color);
       color: var(--font-color);
+    }
+
+    .step-desc {
+      color: var(--sub-font-color) !important;
+    }
+
+    .step-status {
+      color: var(--highlight-color) !important;
     }
   }
 
@@ -34,6 +52,10 @@
     .verification-desc {
       background-color: var(--bg-color) !important;
       border: 1px solid;
+    }
+
+    .bullet-square li {
+      color: var(--sub-font-color) !important;
     }
   }
 

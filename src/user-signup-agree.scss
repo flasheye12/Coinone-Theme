@@ -16,5 +16,13 @@
         color: var(--highlight-color) !important;
       }
     }
+
+    .status,
+    ol li,
+    ul li,
+    .policy-template p,
+    .form-label-desc {
+      color: var(--sub-font-color) !important;
+    }
   }
 }

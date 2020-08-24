@@ -43,5 +43,14 @@
         color: var(--font-color) !important;
       }
     }
+
+    .txt-assets-desc,
+    .switch-label {
+      color: var(--sub-font-color) !important;
+    }
+
+    .form-switch-wrap .hide-checkbox:checked + .form-switch {
+      background-color: var(--highlight-color) !important;
+    }
   }
 }

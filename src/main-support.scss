@@ -12,4 +12,37 @@
       }
     }
   }
+
+  landing-support-main {
+    .color_darkgray {
+      color: var(--sub-font-color) !important;
+
+      a {
+        color: var(--highlight-color) !important;
+      }
+    }
+
+    .contact-item {
+      p,
+      small * {
+        color: var(--sub-font-color) !important;
+      }
+
+      a.color_deepblue {
+        color: var(--highlight-color) !important;
+      }
+    }
+  }
+
+  landing-support-guide {
+    p,
+    ul li,
+    .bullet-item {
+      color: var(--sub-font-color) !important;
+    }
+
+    a {
+      color: var(--highlight-color) !important;
+    }
+  }
 }

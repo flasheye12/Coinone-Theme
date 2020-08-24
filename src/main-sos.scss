@@ -8,6 +8,10 @@
 
     .form-desc {
       color: var(--font-color) !important;
+
+      a {
+        color: var(--highlight-color);
+      }
     }
 
     .form-label {
@@ -26,14 +30,10 @@
       .bullet-item {
         color: var(--font-color) !important;
       }
-    }
 
-    input[type='text'],
-    input[type='number'],
-    input[type='email'] {
-      background-color: var(--input-bg-color) !important;
-      border: 1px solid var(--border-color);
-      color: var(--font-color) !important;
+      a {
+        color: var(--highlight-color);
+      }
     }
   }
 }

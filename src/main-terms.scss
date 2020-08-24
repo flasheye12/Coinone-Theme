@@ -12,4 +12,22 @@
       color: var(--font-color) !important;
     }
   }
+
+  landing-terms-type {
+    .breadcrumb-link {
+      color: var(--sub-font-color) !important;
+    }
+
+    .static-body {
+      a {
+        color: var(--highlight-color) !important;
+      }
+
+      p,
+      ol > li,
+      ul > li {
+        color: var(--sub-font-color);
+      }
+    }
+  }
 }

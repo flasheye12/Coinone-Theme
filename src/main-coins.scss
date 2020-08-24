@@ -22,4 +22,39 @@
       background-color: transparent;
     }
   }
+
+  landing-coins {
+    .bg_white,
+    .landing_section,
+    .page_section,
+    .video_section {
+      background-color: transparent !important;
+    }
+
+    .cover_section .cover {
+      background-color: var(--bg-color) !important;
+      background-image: none !important;
+    }
+
+    .border_box {
+      background-color: var(--bg-color) !important;
+      color: var(--font-color);
+    }
+
+    .info-txt,
+    p,
+    ul > li,
+    strong {
+      color: var(--font-color);
+    }
+
+    a {
+      color: var(--highlight-color) !important;
+    }
+
+    .index-btn-link {
+      background-color: var(--bg-color);
+      color: var(--font-color) !important;
+    }
+  }
 }

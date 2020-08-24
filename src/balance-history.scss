@@ -4,8 +4,20 @@
       color: var(--active-font-color) !important;
     }
 
-    .space-both {
-      color: var(--font-color);
+    .space-both,
+    .sub-tab-item {
+      color: var(--font-color) !important;
+    }
+
+    .history-period-info {
+      color: var(--sub-font-color) !important;
+    }
+  }
+
+  balance-export-to-file {
+    button {
+      background-color: var(--bg-color) !important;
+      color: var(--font-color) !important;
     }
   }
 }

@@ -13,12 +13,23 @@
     color: var(--font-color) !important;
   }
 
+  .swap-sub-title,
+  .filter,
+  .closing-price,
+  .report-cont {
+    color: var(--sub-font-color) !important;
+  }
+
   .inp-item {
     background-color: var(--input-bg-color) !important;
 
     input {
       color: var(--font-color) !important;
     }
+  }
+
+  .dropdown-toggle {
+    border: none !important;
   }
 
   swap-pair-quotes {
@@ -68,6 +79,20 @@
       a:hover {
         background-color: var(--active-bg-color) !important;
       }
+    }
+
+    label {
+      color: var(--sub-font-color) !important;
+
+      .badge {
+        background-color: var(--bg-color) !important;
+        border: 1px solid var(--border-color);
+        color: var(--highlight-color) !important;
+      }
+    }
+
+    .symbol-asset {
+      color: var(--sub-font-color);
     }
   }
 }
