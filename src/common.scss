@@ -21,6 +21,10 @@
       }
     }
 
+    .gnb-link.is-active {
+      color: var(--active-font-color);
+    }
+
     .notice-menu {
       color: var(--font-color);
 
