@@ -1,12 +1,12 @@
 /* ==UserStyle==
-@name         Coinone Dark
+@name         Coinone Theme
 @namespace    Theme
 @author       flasheye12
-@version      0.0.9
-@description  Dark Coinone
-@homepageURL  https://github.com/flasheye12/Coinone-Dark
-@supportURL   https://github.com/flasheye12/Coinone-Dark/issues
-@updateURL    https://raw.githubusercontent.com/flasheye12/Coinone-Dark/master/coinone-dark.user.css
+@version      0.0.10
+@description  Theme Coinone
+@homepageURL  https://github.com/flasheye12/Coinone-Theme
+@supportURL   https://github.com/flasheye12/Coinone-Theme/issues
+@updateURL    https://raw.githubusercontent.com/flasheye12/Coinone-Theme/master/coinone-theme.user.css
 @license      MIT
 @preprocessor stylus
 @var color bg-color "Background color" #181818
@@ -24,7 +24,7 @@
 @var color font-color "Font color" #ccc
 @var color active-font-color "Active font color" #f2f2f2
 @var color sub-font-color "Sub font color" #aeb3bb
-@var color highlight-color "Highlight color" #ff8a51
+@var color highlight-color "Highlight color" #f97b40
 @var color disabled-color "Disabled color" #bbb
 ==/UserStyle== */
 @-moz-document domain("coinone.co.kr") {
@@ -195,17 +195,28 @@
   }
 
   .dropdown {
+    button,
+    .ui-option-text,
+    .link-list,
+    .check-label-txt,
+    .dropdown-toggle {
+      background-color: var(--bg-color);
+      border: 1px solid var(--border-color);
+      color: var(--font-color) !important;
+
+      &:hover {
+        background-color: var(--active-bg-color) !important;
+      }
+
+      &::after {
+        border-top-color: var(--font-color) !important;
+      }
+    }
+
     .ui-dropdown,
     .dropdown-menu {
       background-color: var(--bg-color);
       border: 1px solid var(--border-color);
-    }
-
-    button,
-    .ui-option-text,
-    .link-list,
-    .check-label-txt {
-      color: var(--font-color) !important;
     }
   }
 
@@ -312,7 +323,9 @@
     .modal-header,
     b,
     dt,
-    p {
+    p,
+    .info-item,
+    .sub-price {
       color: var(--font-color) !important;
     }
 
@@ -337,6 +350,10 @@
 
     .custom-label-txt {
       color: var(--sub-font-color) !important;
+    }
+
+    .edit-area {
+      background-color: var(--bg-color) !important;
     }
   }
 
@@ -485,7 +502,8 @@
   /* color */
   .color-primary,
   .color_blue,
-  .primary {
+  .primary,
+  .color-em {
     color: var(--highlight-color) !important;
   }
 
@@ -585,6 +603,12 @@
 
       .news-item {
         color: var(--font-color) !important;
+
+        .mini-badge-gray {
+          background-color: var(--bg-color) !important;
+          border: 1px solid var(--border-color);
+          color: var(--active-font-color);
+        }
 
         &.emphasis {
           .news-time {
@@ -1361,6 +1385,12 @@
     button {
       background-color: var(--bg-color) !important;
       color: var(--font-color) !important;
+    }
+  }
+
+  balance-withdraw-coin-form {
+    .wallet-name {
+      color: var(--sub);
     }
   }
 }

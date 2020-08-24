@@ -1,12 +1,12 @@
 {
-  "name": "coinone-dark",
-  "title": "Coinone Dark",
-  "version": "0.0.10",
-  "description": "Dark Coinone",
+  "name": "coinone-theme",
+  "title": "Coinone Theme",
+  "version": "0.0.11",
+  "description": "Theme Coinone",
   "license": "MIT",
-  "repository": "flasheye12/Coinone-Dark",
-  "homepage": "https://github.com/flasheye12/Coinone-Dark",
-  "main": "coinone-dark.user.css",
+  "repository": "flasheye12/Coinone-Theme",
+  "homepage": "https://github.com/flasheye12/Coinone-theme",
+  "main": "coinone-theme.user.css",
   "engines": {
     "node": ">=10"
   },
