@@ -24,17 +24,24 @@ function createContent(tmp, contents) {
   const variables = keys
     .map((key) => {
       const e = vars[key];
-      const v =
-        e.type !== 'select'
-          ? e.value
-          : `{\n  ${Object.keys(e.value)
-              .map((o) => `"${o}": "${e.value[o]}"`)
-              .join(',\n  ')}\n}`;
+      let value;
+
+      if (e.type !== 'select') {
+        value = e.value;
+      } else {
+        if (Array.isArray(e.value)) {
+          value = `[${e.value.map((o) => `"${o}"`)}]`;
+        } else {
+          value = `{\n  ${Object.keys(e.value)
+            .map((o) => `"${o}": "${e.value[o]}"`)
+            .join(',\n  ')}\n}`;
+        }
+      }
 
       return (
         `@var ${e.type} ${key} "${e.desc}" ` +
         // Wrap url(...) in quotes
-        `${v.indexOf('url(') === 0 ? `"${v}"` : v}`
+        `${value.indexOf('url(') === 0 ? `"${value}"` : value}`
       );
     })
     .join('\n');

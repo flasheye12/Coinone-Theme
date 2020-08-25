@@ -37,6 +37,20 @@
     }
 
     landing-main-coin-search {
+      background-color: var(--bg-color) !important;
+
+      .search-result-area {
+        background-color: var(--bg-color) !important;
+
+        .search-result-item {
+          color: var(--font-color) !important;
+        }
+
+        .full-name {
+          color: var(--sub-font-color) !important;
+        }
+      }
+
       input {
         background-color: var(--input-bg-color) !important;
       }
@@ -179,7 +193,9 @@
       }
 
       .card-content {
-        background-color: var(--bg-color);
+        @media (min-width: 980px) {
+          background-color: var(--bg-color);
+        }
       }
     }
 
@@ -206,7 +222,9 @@
       }
 
       .guide-item {
-        background-color: var(--bg-color);
+        @media (min-width: 980px) {
+          background-color: var(--bg-color);
+        }
       }
     }
 
