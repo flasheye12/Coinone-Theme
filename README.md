@@ -2,6 +2,11 @@
 
 ## 설치하기
 
-1. [크롬 스타일러스 설치하기](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)
+1. 사용중인 브라우저에 따라 아래 확장프로그램 설치
 
-2. [테마 사용하기](https://github.com/flasheye12/Coinone-Theme/raw/master/coinone-theme.user.css)
+   [Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) |
+   [Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/) |
+   [Opera](https://addons.opera.com/en-gb/extensions/details/stylus/) |
+   [Safari](https://cascadea.app/)
+
+2. [테마 설치하기](https://github.com/flasheye12/Coinone-Theme/raw/master/coinone-theme.user.css)
