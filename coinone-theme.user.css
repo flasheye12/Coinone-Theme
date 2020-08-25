@@ -2,14 +2,14 @@
 @name         Coinone Theme
 @namespace    Theme
 @author       flasheye12
-@version      0.0.12
+@version      0.0.13
 @description  Theme Coinone
 @homepageURL  https://github.com/flasheye12/Coinone-Theme
 @supportURL   https://github.com/flasheye12/Coinone-Theme/issues
 @updateURL    https://raw.githubusercontent.com/flasheye12/Coinone-Theme/master/coinone-theme.user.css
 @license      MIT
 @preprocessor stylus
-@var select theme "Theme" ["custom:Custom Theme","dark:Dark Theme","haberdashery:Haberdashery Theme","expensive:Expensive Theme","terminal:Terminal Theme","light:Light Theme","sweetTreat:Sweet Treat Theme","banana:Banana Theme","chocoMint:Choco Mint Theme","discotheque:Dischotheque Theme","eggplant:Eggplant Theme","hoth:Hoth Theme","moodIndigo:MoodIndigo Theme"]
+@var select theme "Theme" ["custom:Custom Theme","dark:Dark Theme","haberdashery:Haberdashery Theme","expensive:Expensive Theme","terminal:Terminal Theme","sweetTreat:Sweet Treat Theme","banana:Banana Theme","chocoMint:Choco Mint Theme","discotheque:Dischotheque Theme","eggplant:Eggplant Theme","hoth:Hoth Theme"]
 @var color body-color "Custom Body Color" #1e1e1e
 @var color bg-color "Custom Background color" #181818
 @var color input-bg-color "Custom Input background color" #202020
@@ -22,17 +22,146 @@
 @var color disabled-color "Custom Disabled color" #bbb
 ==/UserStyle== */
 @-moz-document domain("coinone.co.kr") {
+  /*
+	 * --input-bg-color = --bg-color + 080808
+   * --active-bg-color = --bg-color + 0f0f0f
+	 * --active-font-color = --font-color + 262626
+	 * --sub-font-color = --font-color - 1e1911
+	 */
+
   :root {
-    --body-color: body-color;
-    --bg-color: bg-color;
-    --input-bg-color: input-bg-color;
-    --active-bg-color: active-bg-color;
-    --border-color: border-color;
-    --font-color: font-color;
-    --active-font-color: active-font-color;
-    --sub-font-color: sub-font-color;
-    --highlight-color: highlight-color;
-    --disabled-color: disabled-color;
+    if theme == dark {
+      --body-color: #181818;
+      --bg-color: #1e1e1e;
+      --input-bg-color: #202020;
+      --active-bg-color: #2f2f2f;
+      --border-color: #444;
+      --font-color: #ccc;
+      --active-font-color: #f2f2f2;
+      --sub-font-color: #aeb3bb;
+      --highlight-color: #f97b40;
+      --disabled-color: #bbb;
+    }
+    else if theme == haberdashery {
+      --body-color: #073642;
+      --bg-color: #193f47;
+      --input-bg-color: #0f3e4a;
+      --active-bg-color: #1e4d59;
+      --border-color: #204952;
+      --font-color: #829692;
+      --active-font-color: #a8bcb8;
+      --sub-font-color: #647d81;
+      --highlight-color: #f97b40;
+      --disabled-color: #bbb;
+    }
+    else if (theme == expensive) {
+      --body-color: #b8b390;
+      --bg-color: #c9c49c;
+      --input-bg-color: #d1cca4;
+      --active-bg-color: #d8d3ab;
+      --border-color: #71715f;
+      --font-color: #71715f;
+      --active-font-color: #979785;
+      --sub-font-color: #53584e;
+      --highlight-color: #f97b40;
+      --disabled-color: #bbb;
+    }
+    else if (theme == terminal) {
+      --body-color: #1a2b23;
+      --bg-color: #1f3d2b;
+      --input-bg-color: #22332b;
+      --active-bg-color: #293a32;
+      --border-color: #71715f;
+      --font-color: #4ee077;
+      --active-font-color: #94e9b0;
+      --sub-font-color: #30c766;
+      --highlight-color: #f97b40;
+      --disabled-color: #bbb;
+    }
+    else if (theme == sweetTreat) {
+      --body-color: #ffc2c0;
+      --bg-color: #ffeeed;
+      --input-bg-color: #eaeaea;
+      --active-bg-color: #fff;
+      --border-color: #edd8dd;
+      --font-color: #a5819c;
+      --active-font-color: #cba7c2;
+      --sub-font-color: #87688b;
+      --highlight-color: #ffb7cd;
+      --disabled-color: #bbb;
+    }
+    else if (theme == banana) {
+      --body-color: #ffc806;
+      --bg-color: #ffeb84;
+      --input-bg-color: #eaeaea;
+      --active-bg-color: #fff;
+      --border-color: #eed57c;
+      --font-color: #ac7e5c;
+      --active-font-color: #d2a482;
+      --sub-font-color: #8e654b;
+      --highlight-color: #000;
+      --disabled-color: #bbb;
+    }
+    else if (theme == chocoMint) {
+      --body-color: #42362b;
+      --bg-color: #544538;
+      --input-bg-color: #5c4d40;
+      --active-bg-color: #635447;
+      --border-color: #65584c;
+      --font-color: #a9a29b;
+      --active-font-color: #cfc8c1;
+      --sub-font-color: #8b898a;
+      --highlight-color: #08775d;
+      --disabled-color: #bbb;
+    }
+    else if (theme == discotheque) {
+      --body-color: #582b27;
+      --bg-color: #6a1b1b;
+      --input-bg-color: #722323;
+      --active-bg-color: #792a2a;
+      --border-color: #792e24;
+      --font-color: #ffd476;
+      --active-font-color: #ffecbc;
+      --sub-font-color: #e1bb65;
+      --highlight-color: #f46767;
+      --disabled-color: #bbb;
+    }
+    else if (theme == eggplant) {
+      --body-color: #4a154b;
+      --bg-color: #5c2c5d;
+      --input-bg-color: #643465;
+      --active-bg-color: #6b3b6c;
+      --border-color: #e9e3e6;
+      --font-color: #a387a1;
+      --active-font-color: #c9adc7;
+      --sub-font-color: #856e90;
+      --highlight-color: #fff;
+      --disabled-color: #bbb;
+    }
+    else if (theme == hoth) {
+      --body-color: #e5e6e8;
+      --bg-color: #f8f8fa;
+      --input-bg-color: #fff;
+      --active-bg-color: #fff;
+      --border-color: #c3c3c3;
+      --font-color: #989b9f;
+      --active-font-color: #bec1c5;
+      --sub-font-color: #7a828e;
+      --highlight-color: #c5c5c5;
+      --disabled-color: #bbb;
+    }
+    else if theme == custom {
+      --body-color: body-color;
+      --bg-color: bg-color;
+      --input-bg-color: input-bg-color;
+      --active-bg-color: active-bg-color;
+      --border-color: border-color;
+      --font-color: font-color;
+      --active-font-color: active-font-color;
+      --sub-font-color: sub-font-color;
+      --highlight-color: highlight-color;
+      --disabled-color: disabled-color;
+    }
   }
 }
 
@@ -67,6 +196,28 @@
 
       &::before {
         background-color: var(--highlight-color) !important;
+      }
+    }
+
+    .mobile-notice-page {
+      background-color: var(--bg-color) !important;
+
+      .more-link {
+        color: var(--highlight-color);
+      }
+
+      .notice-tag {
+        background-color: var(--bg-color) !important;
+        border: 1px solid var(--border-color) !important;
+        color: var(--font-color) !important;
+      }
+
+      .notice-date {
+        color: var(--sub-font-color) !important;
+      }
+
+      .notice-title {
+        color: var(--font-color) !important;
       }
     }
 
@@ -271,12 +422,13 @@
     }
   }
 
+  .btn.btn-join,
   .btn.btn-primary,
   .btn-sky,
   .btn.btn_expand {
     background-color: var(--highlight-color) !important;
     border: 1px solid var(--border-color) !important;
-    color: var(--font-color) !important;
+    color: var(--sub-font-color) !important;
 
     &:hover {
       filter: brightness(1.1) !important;
@@ -555,6 +707,20 @@
     }
 
     landing-main-coin-search {
+      background-color: var(--bg-color) !important;
+
+      .search-result-area {
+        background-color: var(--bg-color) !important;
+
+        .search-result-item {
+          color: var(--font-color) !important;
+        }
+
+        .full-name {
+          color: var(--sub-font-color) !important;
+        }
+      }
+
       input {
         background-color: var(--input-bg-color) !important;
       }
@@ -697,7 +863,9 @@
       }
 
       .card-content {
-        background-color: var(--bg-color);
+        @media (min-width: 980px) {
+          background-color: var(--bg-color);
+        }
       }
     }
 
@@ -724,7 +892,9 @@
       }
 
       .guide-item {
-        background-color: var(--bg-color);
+        @media (min-width: 980px) {
+          background-color: var(--bg-color);
+        }
       }
     }
 
