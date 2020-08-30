@@ -1,4 +1,4 @@
-@-moz-document regexp("^https?://coinone.co.kr/(\\?[\\S]*)?"), url-prefix("https://coinone.co.kr/swap"), url-prefix("https://coinone.co.kr/plus"), url-prefix("https://coinone.co.kr/account/login"), url-prefix("https://coinone.co.kr/account/recover"), url-prefix("https://coinone.co.kr/sos"), url-prefix("https://coinone.co.kr/user"), url-prefix("https://coinone.co.kr/coins"), url-prefix("https://coinone.co.kr/support"), url-prefix("https://coinone.co.kr/privacy"), url-prefix("https://coinone.co.kr/fees"), url-prefix("https://coinone.co.kr/terms"), url-prefix("https://coinone.co.kr/wallet"), url-prefix("https://coinone.co.kr/listing-guideline"), url-prefix("https://coinone.co.kr/ico"), url-prefix("https://coinone.co.kr/docs"), url-prefix("https://coinone.co.kr/404"), url-prefix("https://coinone.co.kr/my"), url-prefix("https://coinone.co.kr/promotion"), url-prefix("https://coinone.co.kr/balance") {
+@-moz-document regexp("^https?://coinone.co.kr/(\\?[\\S]*)?"), url-prefix("https://coinone.co.kr/swap"), url-prefix("https://coinone.co.kr/plus"), url-prefix("https://coinone.co.kr/account/login"), url-prefix("https://coinone.co.kr/account/recover"), url-prefix("https://coinone.co.kr/sos"), url-prefix("https://coinone.co.kr/user"), url-prefix("https://coinone.co.kr/coins"), url-prefix("https://coinone.co.kr/support"), url-prefix("https://coinone.co.kr/privacy"), url-prefix("https://coinone.co.kr/fees"), url-prefix("https://coinone.co.kr/terms"), url-prefix("https://coinone.co.kr/wallet"), url-prefix("https://coinone.co.kr/listing-guideline"), url-prefix("https://coinone.co.kr/ico"), url-prefix("https://coinone.co.kr/docs"), url-prefix("https://coinone.co.kr/404"), url-prefix("https://coinone.co.kr/my"), url-prefix("https://coinone.co.kr/promotion"), url-prefix("https://coinone.co.kr/balance"), url-prefix("https://coinone.co.kr/exchange") {
   * {
     text-shadow: none !important;
     box-shadow: none !important;
@@ -200,6 +200,22 @@
       background-color: var(--bg-color);
       border: 1px solid var(--border-color);
     }
+
+    .link-item {
+      color: var(--font-color);
+
+      &:hover {
+        color: var(--active-font-color) !important;
+      }
+    }
+
+    .toggle .slider {
+      background-color: var(--disabled-color) !important;
+    }
+
+    .toggle input:checked ~ .slider {
+      background-color: var(--highlight-color) !important;
+    }
   }
 
   /* select */
@@ -231,6 +247,8 @@
 
   /* button */
   .btn-ghost,
+  .btn-send,
+  .btn-link,
   .btn-line-gray,
   .btn-line-sky,
   .btn-large,
@@ -295,10 +313,13 @@
 
   /* modal */
   .ui-modal-inner,
-  .modal-confirm {
+  .modal-confirm,
+  .modal-content {
     background-color: var(--bg-color) !important;
     border: 1px solid var(--border-color) !important;
 
+    .title,
+    .modal-title,
     .ui-modal-title,
     .form-label,
     .tit-modal,
@@ -308,7 +329,8 @@
     dt,
     p,
     .info-item,
-    .sub-price {
+    .sub-price,
+    .modal-body {
       color: var(--font-color) !important;
     }
 
@@ -317,6 +339,7 @@
       background-color: var(--active-bg-color);
     }
 
+    .modal-header,
     .ui-modal-footer {
       background-color: var(--bg-color) !important;
 

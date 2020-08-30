@@ -1,0 +1,176 @@
+@-moz-document url-prefix("https://coinone.co.kr/exchange") {
+  .coinone-gnb {
+    .gnb-inner,
+    .mobile-sidebar,
+    select {
+      background-color: var(--body-color) !important;
+    }
+  }
+
+  .trade-wrapper {
+    background-color: var(--body-color);
+    background-image: none;
+
+    .grid-layout-item {
+      background-color: var(--bg-color);
+      border: 1px solid var(--border-color);
+    }
+  }
+
+  .btn-bookmark span {
+    color: var(--highlight-color) !important;
+  }
+
+  trade-chart-info {
+    trade-chart-info-summary {
+      .ticker-info,
+      .text-segment-market,
+      .icon-btn-ticker {
+        color: var(--font-color) !important;
+      }
+
+      .icon {
+        color: inherit !important;
+      }
+    }
+
+    trade-chart-info-detail {
+      .term {
+        color: var(--font-color) !important;
+      }
+
+      .desc {
+        color: var(--sub-font-color);
+      }
+
+      .unit {
+        color: var(--sub-font-color) !important;
+      }
+    }
+
+    trade-spark-line-chart {
+      .svg-container {
+        .main-svg:nth-child(1) {
+          background-color: var(--bg-color) !important;
+        }
+      }
+    }
+  }
+
+  trade-tickers {
+    .inp-item {
+      background-color: var(--input-bg-color) !important;
+    }
+
+    .btn-segment-market {
+      color: var(--font-color) !important;
+    }
+
+    trade-total-market-volume {
+      .daily-volume {
+        color: var(--font-color) !important;
+      }
+    }
+
+    trade-market-ticker-list,
+    trade-stared-ticker-list {
+      .btn-sort,
+      .coin-symbol,
+      .volume-amount {
+        color: var(--font-color) !important;
+      }
+
+      .coin-name {
+        color: var(--sub-font-color) !important;
+      }
+
+      .row-unit {
+        border-color: transparent !important;
+      }
+
+      .icon-inp-radio::after {
+        background-color: var(--highlight-color) !important;
+      }
+    }
+  }
+
+  trade-user-asset {
+    trade-asset-summary {
+      color: var(--font-color);
+
+      .title,
+      .link-item--to-investment,
+      .num {
+        color: var(--font-color) !important;
+      }
+    }
+
+    trade-asset-list {
+      .list-header li,
+      .coin-symbol,
+      .row-unit {
+        color: var(--font-color) !important;
+      }
+
+      .holding-asset .price {
+        color: var(--sub-font-color) !important;
+      }
+
+      .earnings-rate .icon {
+        color: inherit !important;
+      }
+    }
+  }
+
+  trade-chat {
+    trade-chat-title {
+      .tit,
+      .user-nickname {
+        color: var(--font-color) !important;
+      }
+
+      .user-lv {
+        color: var(--sub-font-color) !important;
+      }
+    }
+
+    trade-chat-messages {
+      .msg {
+        color: var(--font-color) !important;
+      }
+
+      .time {
+        color: var(--sub-font-color) !important;
+      }
+
+      .btn-scroll-latest-msg {
+        background-color: var(--bg-color) !important;
+      }
+    }
+
+    trade-chat-form {
+      .msg-box {
+        background-color: var(--input-bg-color) !important;
+        border: 1px solid var(--border-color) !important;
+      }
+
+      textarea {
+        color: var(--font-color) !important;
+        caret-color: var(--highlight-color) !important;
+      }
+    }
+  }
+
+  .footer {
+    .link-item,
+    .tel-area,
+    .link-tel {
+      color: var(--sub-font-color) !important;
+    }
+
+    .support-time,
+    .copyright {
+      color: var(--font-color) !important;
+    }
+  }
+}
