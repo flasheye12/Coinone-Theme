@@ -2,7 +2,7 @@
 @name         Coinone Theme
 @namespace    Theme
 @author       flasheye12
-@version      0.0.14
+@version      0.0.15
 @description  Theme Coinone
 @homepageURL  https://github.com/flasheye12/Coinone-Theme
 @supportURL   https://github.com/flasheye12/Coinone-Theme/issues
@@ -2691,6 +2691,12 @@
 
   .dropdown-toggle {
     border: none !important;
+  }
+
+  swap-quotes-timer {
+    .base-timer__path-remaining.is-progress {
+      color: var(--highlight-color);
+    }
   }
 
   swap-pair-quotes {
