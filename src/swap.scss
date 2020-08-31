@@ -32,6 +32,12 @@
     border: none !important;
   }
 
+  swap-quotes-timer {
+    .base-timer__path-remaining.is-progress {
+      color: var(--highlight-color);
+    }
+  }
+
   swap-pair-quotes {
     background-color: var(--bg-color);
     border: 1px solid var(--border-color);
