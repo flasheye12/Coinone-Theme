@@ -2,7 +2,7 @@
 @name         Coinone Theme
 @namespace    Theme
 @author       flasheye12
-@version      0.0.16
+@version      0.0.17
 @description  Theme Coinone
 @homepageURL  https://github.com/flasheye12/Coinone-Theme
 @supportURL   https://github.com/flasheye12/Coinone-Theme/issues
@@ -435,6 +435,7 @@
   .btn-close,
   .btn-confirm,
   .btn-link,
+  .btn-line,
   .btn-line-gray,
   .btn-line-sky,
   .btn-large,
@@ -465,7 +466,7 @@
   .btn.btn_expand {
     background-color: var(--highlight-color) !important;
     border: 1px solid var(--border-color) !important;
-    color: var(--sub-font-color) !important;
+    color: var(--font-color) !important;
 
     &:hover {
       filter: brightness(1.1) !important;
@@ -1653,6 +1654,8 @@
 
 @-moz-document url-prefix("https://coinone.co.kr/exchange") {
   .coinone-gnb {
+    background-color: var(--body-color) !important;
+
     .gnb-inner,
     .mobile-sidebar,
     select {
@@ -1750,6 +1753,14 @@
       .icon-inp-radio::after {
         background-color: var(--highlight-color) !important;
       }
+
+      li.is-active {
+        border-image-source: linear-gradient(
+          278deg,
+          var(--highlight-color),
+          var(--highlight-color)
+        ) !important;
+      }
     }
   }
 
@@ -1823,6 +1834,11 @@
       .msg-box {
         background-color: var(--input-bg-color) !important;
         border: 1px solid var(--border-color) !important;
+        border-radius: 0;
+
+        .inp-item {
+          border-radius: 6px;
+        }
       }
     }
   }
@@ -1994,6 +2010,7 @@
     button,
     .btn-close,
     .btn-close:hover,
+    .btn-dropdown,
     .btn-dropdown:hover {
       background-color: #fff !important;
       color: #424242 !important;
@@ -2003,7 +2020,8 @@
       background-color: rgba(66, 66, 66, 0.12) !important;
     }
 
-    .layout-save {
+    .layout-save,
+    .btn-clear-text {
       border: none !important;
 
       &:hover {
@@ -2028,12 +2046,26 @@
       background-color: #fff !important;
 
       &.is-focus {
-        border: 1px solid var(--border-color) !important;
+        border: 1px solid #000 !important;
       }
 
       input {
-        background-color: #fff !important;
+        color: #000 !important;
+        caret-color: #000 !important;
+
+        &::placeholder {
+          color: inherit !important;
+        }
       }
+    }
+
+    .icon,
+    *[class*='glyph-ui-'] {
+      color: #000 !important;
+    }
+
+    .dropdown-item .link-item:hover {
+      color: #000 !important;
     }
   }
 
@@ -2045,6 +2077,7 @@
     }
   }
 
+  .option-name,
   .shortcut-group-title,
   .timezone-item,
   .t-nickname {
