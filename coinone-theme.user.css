@@ -2,7 +2,7 @@
 @name         Coinone Theme
 @namespace    Theme
 @author       flasheye12
-@version      0.0.15
+@version      0.0.16
 @description  Theme Coinone
 @homepageURL  https://github.com/flasheye12/Coinone-Theme
 @supportURL   https://github.com/flasheye12/Coinone-Theme/issues
@@ -343,7 +343,8 @@
     }
   }
 
-  .dropdown {
+  .dropdown,
+  .dropdown-item {
     button,
     .ui-option-text,
     .link-list,
@@ -375,14 +376,14 @@
         color: var(--active-font-color) !important;
       }
     }
+  }
 
-    .toggle .slider {
-      background-color: var(--disabled-color) !important;
-    }
+  .toggle .slider {
+    background-color: var(--disabled-color) !important;
+  }
 
-    .toggle input:checked ~ .slider {
-      background-color: var(--highlight-color) !important;
-    }
+  .toggle input:checked ~ .slider {
+    background-color: var(--highlight-color) !important;
   }
 
   /* select */
@@ -406,15 +407,33 @@
   input[type='password'] {
     background-color: var(--input-bg-color) !important;
     color: var(--font-color) !important;
+    caret-color: var(--highlight-color) !important;
 
     &::placeholder {
       color: var(--sub-font-color) !important;
     }
   }
 
+  textarea {
+    color: var(--font-color) !important;
+    caret-color: var(--highlight-color) !important;
+  }
+
+  .inp-item {
+    background-color: var(--input-bg-color) !important;
+
+    input {
+      color: var(--font-color) !important;
+    }
+  }
+
   /* button */
   .btn-ghost,
   .btn-send,
+  .btn-minus,
+  .btn-plus,
+  .btn-close,
+  .btn-confirm,
   .btn-link,
   .btn-line-gray,
   .btn-line-sky,
@@ -1687,17 +1706,21 @@
         .main-svg:nth-child(1) {
           background-color: var(--bg-color) !important;
         }
+
+        .js-fill {
+          fill: var(--bg-color) !important;
+        }
       }
     }
   }
 
   trade-tickers {
-    .inp-item {
-      background-color: var(--input-bg-color) !important;
-    }
-
     .btn-segment-market {
       color: var(--font-color) !important;
+
+      &.is-selected {
+        background-color: var(--highlight-color) !important;
+      }
     }
 
     trade-total-market-volume {
@@ -1710,7 +1733,9 @@
     trade-stared-ticker-list {
       .btn-sort,
       .coin-symbol,
-      .volume-amount {
+      .volume-amount,
+      .text-move-swap,
+      .row-unit.is-zero {
         color: var(--font-color) !important;
       }
 
@@ -1729,6 +1754,14 @@
   }
 
   trade-user-asset {
+    .state-msg {
+      background-color: var(--bg-color) !important;
+
+      .msg {
+        color: var(--font-color) !important;
+      }
+    }
+
     trade-asset-summary {
       color: var(--font-color);
 
@@ -1780,6 +1813,10 @@
       .btn-scroll-latest-msg {
         background-color: var(--bg-color) !important;
       }
+
+      .btn-nick-name {
+        border: none;
+      }
     }
 
     trade-chat-form {
@@ -1787,12 +1824,231 @@
         background-color: var(--input-bg-color) !important;
         border: 1px solid var(--border-color) !important;
       }
+    }
+  }
 
-      textarea {
+  trade-realtime-transaction {
+    trade-realtime-transaction-list {
+      .table-header {
+        li {
+          background-color: var(--bg-color) !important;
+        }
+
+        .title {
+          color: var(--font-color) !important;
+        }
+      }
+
+      .num-time {
         color: var(--font-color) !important;
-        caret-color: var(--highlight-color) !important;
       }
     }
+  }
+
+  trade-order-book {
+    trade-order-book-head {
+      .list-order-book-header,
+      .num-price-unit {
+        color: var(--font-color) !important;
+      }
+
+      .dropdown-item {
+        button {
+          border: none;
+        }
+      }
+    }
+
+    trade-order-book-walls {
+      .col-1,
+      .col-blind {
+        background-color: var(--bg-color) !important;
+      }
+
+      .col-blind {
+        color: var(--font-color) !important;
+      }
+    }
+
+    trade-order-book-total {
+      .order-sum {
+        color: var(--font-color) !important;
+      }
+    }
+
+    trade-order-book-menu {
+      .item {
+        color: var(--font-color) !important;
+        background-color: var(--bg-color) !important;
+      }
+
+      .inp-item {
+        border-radius: 0 !important;
+      }
+
+      .item .toggle-item .toggle .slider {
+        background-color: transparent !important;
+      }
+
+      .toggle {
+        background-color: var(--disabled-color) !important;
+
+        input:not(:checked) + .slider {
+          .state1 {
+            background-color: var(--bg-color) !important;
+            color: var(--active-font-color) !important;
+          }
+        }
+
+        input:checked + .slider {
+          .state1 {
+            background-color: var(--disabled-color) !important;
+          }
+
+          .state2 {
+            background-color: var(--bg-color) !important;
+            color: var(--active-font-color) !important;
+          }
+        }
+      }
+    }
+  }
+
+  trade-order-form {
+    .ui-tab-content {
+      background-color: var(--bg-color) !important;
+    }
+
+    .item,
+    .unit,
+    label,
+    .btn-set-quick-amount button,
+    dt,
+    dd,
+    .num,
+    .text {
+      color: var(--font-color) !important;
+    }
+
+    .tab-item-buy:not(.is-active),
+    .tab-item-sell:not(.is-active) {
+      background-color: var(--disabled-color) !important;
+    }
+
+    trade-order-content {
+      .btn-minus {
+        border: none !important;
+      }
+
+      .btn-plus {
+        border-top: none !important;
+        border-right: none !important;
+        border-bottom: none !important;
+      }
+    }
+  }
+
+  trade-order-history {
+    .ui-tab-item,
+    .ui-tab-content,
+    .box-button {
+      background-color: var(--bg-color) !important;
+      color: var(--font-color) !important;
+    }
+
+    .ui-tab-item.is-active {
+      &::after {
+        background-color: var(--highlight-color) !important;
+      }
+    }
+
+    .msg,
+    .text {
+      color: var(--font-color) !important;
+    }
+
+    .order-unsigned {
+      color: var(--font-color) !important;
+    }
+
+    .order-total,
+    .row-trade-time {
+      color: var(--sub-font-color) !important;
+    }
+
+    .popover {
+      background-color: var(--bg-color) !important;
+      border: 1px solid var(--body-color) !important;
+
+      .po-row-unit {
+        color: var(--font-color) !important;
+      }
+
+      .btn-close {
+        color: var(--font-color) !important;
+      }
+    }
+  }
+
+  trade-chart {
+    button,
+    .btn-close,
+    .btn-close:hover,
+    .btn-dropdown:hover {
+      background-color: #fff !important;
+      color: #424242 !important;
+    }
+
+    .btn-interval.is-selected {
+      background-color: rgba(66, 66, 66, 0.12) !important;
+    }
+
+    .layout-save {
+      border: none !important;
+
+      &:hover {
+        background-color: #fff !important;
+      }
+    }
+
+    .trd-chart-btn-private,
+    .trd-chart-btn-public {
+      border: none !important;
+
+      &:hover {
+        background-color: inherit !important;
+      }
+    }
+
+    .dropdown-menu {
+      background-color: #fff !important;
+    }
+
+    .inp-item {
+      background-color: #fff !important;
+
+      &.is-focus {
+        border: 1px solid var(--border-color) !important;
+      }
+
+      input {
+        background-color: #fff !important;
+      }
+    }
+  }
+
+  .transaction-amount {
+    background-color: var(--bg-color) !important;
+
+    .num-amount {
+      color: var(--font-color) !important;
+    }
+  }
+
+  .shortcut-group-title,
+  .timezone-item,
+  .t-nickname {
+    color: var(--font-color) !important;
   }
 
   .footer {
@@ -2681,21 +2937,13 @@
     color: var(--sub-font-color) !important;
   }
 
-  .inp-item {
-    background-color: var(--input-bg-color) !important;
-
-    input {
-      color: var(--font-color) !important;
-    }
-  }
-
   .dropdown-toggle {
     border: none !important;
   }
 
   swap-quotes-timer {
     .base-timer__path-remaining.is-progress {
-      color: var(--highlight-color);
+      color: var(--highlight-color) !important;
     }
   }
 
