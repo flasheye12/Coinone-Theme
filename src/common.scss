@@ -176,7 +176,8 @@
     }
   }
 
-  .dropdown {
+  .dropdown,
+  .dropdown-item {
     button,
     .ui-option-text,
     .link-list,
@@ -208,14 +209,14 @@
         color: var(--active-font-color) !important;
       }
     }
+  }
 
-    .toggle .slider {
-      background-color: var(--disabled-color) !important;
-    }
+  .toggle .slider {
+    background-color: var(--disabled-color) !important;
+  }
 
-    .toggle input:checked ~ .slider {
-      background-color: var(--highlight-color) !important;
-    }
+  .toggle input:checked ~ .slider {
+    background-color: var(--highlight-color) !important;
   }
 
   /* select */
@@ -239,15 +240,33 @@
   input[type='password'] {
     background-color: var(--input-bg-color) !important;
     color: var(--font-color) !important;
+    caret-color: var(--highlight-color) !important;
 
     &::placeholder {
       color: var(--sub-font-color) !important;
     }
   }
 
+  textarea {
+    color: var(--font-color) !important;
+    caret-color: var(--highlight-color) !important;
+  }
+
+  .inp-item {
+    background-color: var(--input-bg-color) !important;
+
+    input {
+      color: var(--font-color) !important;
+    }
+  }
+
   /* button */
   .btn-ghost,
   .btn-send,
+  .btn-minus,
+  .btn-plus,
+  .btn-close,
+  .btn-confirm,
   .btn-link,
   .btn-line-gray,
   .btn-line-sky,

@@ -20,21 +20,13 @@
     color: var(--sub-font-color) !important;
   }
 
-  .inp-item {
-    background-color: var(--input-bg-color) !important;
-
-    input {
-      color: var(--font-color) !important;
-    }
-  }
-
   .dropdown-toggle {
     border: none !important;
   }
 
   swap-quotes-timer {
     .base-timer__path-remaining.is-progress {
-      color: var(--highlight-color);
+      color: var(--highlight-color) !important;
     }
   }
 
