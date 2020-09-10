@@ -2,7 +2,7 @@
 @name         Coinone Theme
 @namespace    Theme
 @author       flasheye12
-@version      0.0.18
+@version      0.0.19
 @description  Theme Coinone
 @homepageURL  https://github.com/flasheye12/Coinone-Theme
 @supportURL   https://github.com/flasheye12/Coinone-Theme/issues
@@ -33,7 +33,7 @@
     if theme == dark {
       --body-color: #181818;
       --bg-color: #1e1e1e;
-      --input-bg-color: #202020;
+      --input-bg-color: #4b4b4b;
       --active-bg-color: #2f2f2f;
       --border-color: #444;
       --font-color: #ccc;
@@ -2749,6 +2749,7 @@
     }
 
     .descset-report {
+      .desc-report,
       .desc-title,
       .desc-detail {
         background-color: var(--bg-color) !important;
