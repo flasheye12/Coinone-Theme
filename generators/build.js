@@ -46,10 +46,13 @@ function createContent(tmp, contents) {
     })
     .join('\n');
 
+  const newVersion = version.split('.');
+  newVersion[2] = +(newVersion[2] || 0) + 1;
+
   return [
     tmp
       .replace('{{title}}', title)
-      .replace('{{version}}', version)
+      .replace('{{version}}', newVersion.join('.'))
       .replace('{{description}}', description)
       .replace(/{{repository}}/g, repository)
       .replace('{{main}}', main)

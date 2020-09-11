@@ -29,6 +29,10 @@
 
       &.is-active {
         background-color: var(--active-bg-color) !important;
+
+        &::after {
+          border-bottom-color: var(--highlight-color) !important;
+        }
       }
     }
 
