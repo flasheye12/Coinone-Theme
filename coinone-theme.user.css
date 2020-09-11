@@ -177,7 +177,8 @@
   }
 }
 
-@-moz-document regexp("^https?://coinone.co.kr/(\\?[\\S]*)?"), url-prefix("https://coinone.co.kr/swap"), url-prefix("https://coinone.co.kr/plus"), url-prefix("https://coinone.co.kr/account/login"), url-prefix("https://coinone.co.kr/account/recover"), url-prefix("https://coinone.co.kr/sos"), url-prefix("https://coinone.co.kr/user"), url-prefix("https://coinone.co.kr/coins"), url-prefix("https://coinone.co.kr/support"), url-prefix("https://coinone.co.kr/privacy"), url-prefix("https://coinone.co.kr/fees"), url-prefix("https://coinone.co.kr/terms"), url-prefix("https://coinone.co.kr/wallet"), url-prefix("https://coinone.co.kr/listing-guideline"), url-prefix("https://coinone.co.kr/ico"), url-prefix("https://coinone.co.kr/docs"), url-prefix("https://coinone.co.kr/404"), url-prefix("https://coinone.co.kr/my"), url-prefix("https://coinone.co.kr/promotion"), url-prefix("https://coinone.co.kr/balance"), url-prefix("https://coinone.co.kr/exchange") {
+@-moz-document regexp("^https?://coinone.co.kr/(\\?[\\S]*)?"), url-prefix("https://coinone.co.kr/swap"), url-prefix("https://coinone.co.kr/plus"), url-prefix("https://coinone.co.kr/account/login"), url-prefix("https://coinone.co.kr/account/recover"), url-prefix("https://coinone.co.kr/sos"), url-prefix("https://coinone.co.kr/user"), url-prefix("https://coinone.co.kr/coins"), url-prefix("https://coinone.co.kr/support"), url-prefix("https://coinone.co.kr/privacy"), url-prefix("https://coinone.co.kr/fees"), url-prefix("https://coinone.co.kr/terms"), url-prefix("https://coinone.co.kr/wallet"), url-prefix("https://coinone.co.kr/listing-guideline"), url-prefix("https://coinone.co.kr/ico"), url-prefix("https://coinone.co.kr/docs"), url-prefix("https://coinone.co.kr/404"), url-prefix("https://coinone.co.kr/my"), url-prefix("https://coinone.co.kr/promotion"), url-prefix("https://coinone.co.kr/balance"), url-prefix("https://coinone.co.kr/exchange")
+{
   * {
     text-shadow: none !important;
     box-shadow: none !important;
@@ -720,6 +721,21 @@
   [class*='glyph-ui-'] {
     color: var(--font-color) !important;
   }
+
+  /* lnb font colors */
+  .lnb-wrap {
+    .lnb-item {
+      .lnb-link {
+        color: var(--font-color) !important;
+      }
+
+      &.is-active {
+        .lnb-link {
+          color: var(--active-font-color) !important;
+        }
+      }
+    }
+  }
 }
 
 @-moz-document regexp("^https?://coinone.co.kr/(\\?[\\S]*)?") {
@@ -1078,51 +1094,46 @@
   }
 }
 
-@-moz-document url-prefix("https://coinone.co.kr/support") {
-  landing-tabbar {
-    .has_tabbar_expand_menu {
-      background-color: var(--bg-color) !important;
-    }
+@-moz-document url-prefix("https://coinone.co.kr/support")
+{
+  .static-container {
+    background-color: var(--body-color) !important;
 
-    .tabbar-btn:not(.active) {
-      color: var(--font-color) !important;
-
-      &:hover {
-        color: var(--active-font-color) !important;
-      }
+    &::before,
+    &::after {
+      background-image: none !important;
     }
   }
 
-  landing-support-main {
-    .color_darkgray {
-      color: var(--sub-font-color) !important;
+  p,
+  ul li {
+    color: var(--sub-font-color) !important;
+  }
 
-      a {
-        color: var(--highlight-color) !important;
+  .fee-item {
+    background-color: var(--body-color) !important;
+  }
+
+  .table-inner-scroll {
+    .thead-list {
+      background-color: var(--bg-color) !important;
+
+      .item {
+        color: var(--font-color) !important;
       }
     }
 
-    .contact-item {
-      p,
-      small * {
+    .tbody-wrap,
+    .tbody-wrap li {
+      background-color: var(--body-color) !important;
+
+      .item {
         color: var(--sub-font-color) !important;
       }
-
-      a.color_deepblue {
-        color: var(--highlight-color) !important;
-      }
-    }
-  }
-
-  landing-support-guide {
-    p,
-    ul li,
-    .bullet-item {
-      color: var(--sub-font-color) !important;
     }
 
-    a {
-      color: var(--highlight-color) !important;
+    .tbody-wrap li {
+      border-bottom: none !important;
     }
   }
 }
@@ -1617,7 +1628,8 @@
   }
 }
 
-@-moz-document url-prefix("https://coinone.co.kr/balance") {
+@-moz-document url-prefix("https://coinone.co.kr/balance")
+{
   .balance-container {
     background-color: transparent;
 
@@ -1629,20 +1641,6 @@
     .lnb-wrap,
     .content-next-to-lnb {
       background-color: transparent;
-    }
-
-    .lnb-wrap {
-      .lnb-item {
-        .lnb-link {
-          color: var(--font-color) !important;
-        }
-
-        &.is-active {
-          .lnb-link {
-            color: var(--active-font-color) !important;
-          }
-        }
-      }
     }
   }
 
@@ -2243,7 +2241,8 @@
   }
 }
 
-@-moz-document url-prefix("https://coinone.co.kr/my/security") {
+@-moz-document url-prefix("https://coinone.co.kr/my/security")
+{
   my-verification-user {
     .info-txt {
       color: var(--font-color);
@@ -2270,6 +2269,10 @@
     .verification-item {
       background-color: var(--bg-color);
       color: var(--font-color);
+
+      &.is-active {
+        background-color: var(--active-bg-color) !important;
+      }
     }
 
     .step-desc {
@@ -2587,7 +2590,8 @@
   }
 }
 
-@-moz-document url-prefix("https://coinone.co.kr/plus/lockup") {
+@-moz-document url-prefix("https://coinone.co.kr/plus/lockup")
+{
   lockup-title {
     .tit-plus,
     .txt-item,
@@ -2633,6 +2637,7 @@
       color: var(--font-color);
     }
 
+    .box-form,
     .box-disabled {
       background-color: var(--bg-color) !important;
       border: 1px solid var(--border-color);
