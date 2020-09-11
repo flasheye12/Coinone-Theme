@@ -1,48 +1,43 @@
-@-moz-document url-prefix("https://coinone.co.kr/support") {
-  landing-tabbar {
-    .has_tabbar_expand_menu {
-      background-color: var(--bg-color) !important;
-    }
+@-moz-document url-prefix("https://coinone.co.kr/support")
+{
+  .static-container {
+    background-color: var(--body-color) !important;
 
-    .tabbar-btn:not(.active) {
-      color: var(--font-color) !important;
-
-      &:hover {
-        color: var(--active-font-color) !important;
-      }
+    &::before,
+    &::after {
+      background-image: none !important;
     }
   }
 
-  landing-support-main {
-    .color_darkgray {
-      color: var(--sub-font-color) !important;
+  p,
+  ul li {
+    color: var(--sub-font-color) !important;
+  }
 
-      a {
-        color: var(--highlight-color) !important;
+  .fee-item {
+    background-color: var(--body-color) !important;
+  }
+
+  .table-inner-scroll {
+    .thead-list {
+      background-color: var(--bg-color) !important;
+
+      .item {
+        color: var(--font-color) !important;
       }
     }
 
-    .contact-item {
-      p,
-      small * {
+    .tbody-wrap,
+    .tbody-wrap li {
+      background-color: var(--body-color) !important;
+
+      .item {
         color: var(--sub-font-color) !important;
       }
-
-      a.color_deepblue {
-        color: var(--highlight-color) !important;
-      }
-    }
-  }
-
-  landing-support-guide {
-    p,
-    ul li,
-    .bullet-item {
-      color: var(--sub-font-color) !important;
     }
 
-    a {
-      color: var(--highlight-color) !important;
+    .tbody-wrap li {
+      border-bottom: none !important;
     }
   }
 }
