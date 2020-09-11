@@ -2,7 +2,7 @@
 @name         Coinone Theme
 @namespace    Theme
 @author       flasheye12
-@version      0.0.21
+@version      0.0.23
 @description  Theme Coinone
 @homepageURL  https://github.com/flasheye12/Coinone-Theme
 @supportURL   https://github.com/flasheye12/Coinone-Theme/issues
@@ -2272,6 +2272,10 @@
 
       &.is-active {
         background-color: var(--active-bg-color) !important;
+
+        &::after {
+          border-bottom-color: var(--highlight-color) !important;
+        }
       }
     }
 
