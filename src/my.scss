@@ -1,4 +1,5 @@
-@-moz-document url-prefix("https://coinone.co.kr/my") {
+@-moz-document url-prefix("https://coinone.co.kr/my")
+{
   .my-container {
     background-color: transparent;
 
@@ -39,6 +40,7 @@
       &::after {
         content: '>';
         height: inherit;
+        background-image: none !important;
       }
     }
   }
