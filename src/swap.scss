@@ -59,6 +59,12 @@
         color: var(--active-font-color) !important;
       }
     }
+
+    .link-plus {
+      &:hover {
+        background-color: var(--active-bg-color) !important;
+      }
+    }
   }
 
   swap-pair-order {
