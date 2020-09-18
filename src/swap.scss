@@ -13,6 +13,10 @@
     color: var(--font-color) !important;
   }
 
+  .btn-picker-amount:hover {
+    background-color: var(--active-bg-color) !important;
+  }
+
   .swap-sub-title,
   .filter,
   .closing-price,
