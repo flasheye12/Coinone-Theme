@@ -2,7 +2,7 @@
 @name         Coinone Theme
 @namespace    Theme
 @author       flasheye12
-@version      0.0.25
+@version      0.0.26
 @description  Theme Coinone
 @homepageURL  https://github.com/flasheye12/Coinone-Theme
 @supportURL   https://github.com/flasheye12/Coinone-Theme/issues
@@ -22,13 +22,6 @@
 @var color disabled-color "Custom Disabled color" #bbb
 ==/UserStyle== */
 @-moz-document domain("coinone.co.kr") {
-  /*
-	 * --input-bg-color = --bg-color + 080808
-   * --active-bg-color = --bg-color + 0f0f0f
-	 * --active-font-color = --font-color + 262626
-	 * --sub-font-color = --font-color - 1e1911
-	 */
-
   :root {
     if theme == dark {
       --body-color: #181818;
