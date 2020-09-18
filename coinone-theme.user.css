@@ -2,7 +2,7 @@
 @name         Coinone Theme
 @namespace    Theme
 @author       flasheye12
-@version      0.0.26
+@version      0.0.27
 @description  Theme Coinone
 @homepageURL  https://github.com/flasheye12/Coinone-Theme
 @supportURL   https://github.com/flasheye12/Coinone-Theme/issues
@@ -2988,6 +2988,10 @@
   .btn-picker-amount,
   .num {
     color: var(--font-color) !important;
+  }
+
+  .btn-picker-amount:hover {
+    background-color: var(--active-bg-color) !important;
   }
 
   .swap-sub-title,
