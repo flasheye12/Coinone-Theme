@@ -2,7 +2,7 @@
 @name         Coinone Theme
 @namespace    Theme
 @author       flasheye12
-@version      0.0.27
+@version      0.0.28
 @description  Theme Coinone
 @homepageURL  https://github.com/flasheye12/Coinone-Theme
 @supportURL   https://github.com/flasheye12/Coinone-Theme/issues
@@ -2785,12 +2785,14 @@
 }
 
 @-moz-document url-prefix("https://coinone.co.kr/plus") {
+
   .tit-main,
   .tit-section {
     color: var(--active-font-color);
   }
 
   main-cover {
+
     .txt-link,
     .glyph-ui-new-window-arrow {
       color: var(--font-color) !important;
@@ -2817,10 +2819,11 @@
 
   main-products {
     .panel {
-      background-color: var(--bg-color);
+      background-color: var(--body-color);
       border: none;
 
-      @media (min-width: 980px) {
+      @media (min-width: 640px) {
+        background-color: var(--bg-color);
         border: 1px solid var(--border-color) !important;
       }
 
@@ -2874,7 +2877,6 @@
     }
   }
 }
-
 @-moz-document url-prefix("https://coinone.co.kr/promotion/referral") {
   promotion-referral {
     .referral-header {
