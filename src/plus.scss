@@ -1,12 +1,11 @@
-@-moz-document url-prefix("https://coinone.co.kr/plus") {
-
+@-moz-document url-prefix("https://coinone.co.kr/plus")
+{
   .tit-main,
   .tit-section {
     color: var(--active-font-color);
   }
 
   main-cover {
-
     .txt-link,
     .glyph-ui-new-window-arrow {
       color: var(--font-color) !important;
@@ -16,7 +15,7 @@
       background-color: var(--bg-color) !important;
       border: 1px solid var(--border-color);
 
-      @media (min-width: 980px) {
+      @media (min-width: 640px) {
         background-color: transparent !important;
         border: none;
       }
