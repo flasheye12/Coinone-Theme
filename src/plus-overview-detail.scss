@@ -3,7 +3,7 @@
     .wrap-lnb {
       background-color: var(--bg-color) !important;
 
-      @media (min-width: 980px) {
+      @media (min-width: 640px) {
         background-color: transparent !important;
       }
 
@@ -16,7 +16,7 @@
     .lnb-feature {
       border-bottom: 1px solid var(--border-color);
 
-      @media (min-width: 980px) {
+      @media (min-width: 640px) {
         border: none;
       }
 
@@ -25,7 +25,7 @@
         color: var(--font-color) !important;
         border: none;
 
-        @media (min-width: 980px) {
+        @media (min-width: 640px) {
           border: 1px solid var(--border-color);
           border-radius: 4px;
         }

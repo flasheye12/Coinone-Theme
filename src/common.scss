@@ -1,4 +1,24 @@
-@-moz-document regexp("^https?://coinone.co.kr/(\\?[\\S]*)?"), url-prefix("https://coinone.co.kr/swap"), url-prefix("https://coinone.co.kr/plus"), url-prefix("https://coinone.co.kr/account/login"), url-prefix("https://coinone.co.kr/account/recover"), url-prefix("https://coinone.co.kr/sos"), url-prefix("https://coinone.co.kr/user"), url-prefix("https://coinone.co.kr/coins"), url-prefix("https://coinone.co.kr/support"), url-prefix("https://coinone.co.kr/privacy"), url-prefix("https://coinone.co.kr/fees"), url-prefix("https://coinone.co.kr/terms"), url-prefix("https://coinone.co.kr/wallet"), url-prefix("https://coinone.co.kr/listing-guideline"), url-prefix("https://coinone.co.kr/ico"), url-prefix("https://coinone.co.kr/docs"), url-prefix("https://coinone.co.kr/404"), url-prefix("https://coinone.co.kr/my"), url-prefix("https://coinone.co.kr/promotion"), url-prefix("https://coinone.co.kr/balance"), url-prefix("https://coinone.co.kr/exchange") {
+@-moz-document regexp("^https?://coinone.co.kr/(\\?[\\S]*)?"),
+url-prefix("https://coinone.co.kr/swap"),
+url-prefix("https://coinone.co.kr/plus"),
+url-prefix("https://coinone.co.kr/account/login"),
+url-prefix("https://coinone.co.kr/account/recover"),
+url-prefix("https://coinone.co.kr/sos"),
+url-prefix("https://coinone.co.kr/user"),
+url-prefix("https://coinone.co.kr/coins"),
+url-prefix("https://coinone.co.kr/support"),
+url-prefix("https://coinone.co.kr/privacy"),
+url-prefix("https://coinone.co.kr/fees"),
+url-prefix("https://coinone.co.kr/terms"),
+url-prefix("https://coinone.co.kr/wallet"),
+url-prefix("https://coinone.co.kr/listing-guideline"),
+url-prefix("https://coinone.co.kr/ico"),
+url-prefix("https://coinone.co.kr/docs"),
+url-prefix("https://coinone.co.kr/404"),
+url-prefix("https://coinone.co.kr/my"),
+url-prefix("https://coinone.co.kr/promotion"),
+url-prefix("https://coinone.co.kr/balance"),
+url-prefix("https://coinone.co.kr/exchange") {
   * {
     text-shadow: none !important;
     box-shadow: none !important;
@@ -89,7 +109,7 @@
       }
 
       .user-email {
-        > span {
+        >span {
           color: var(--font-color);
         }
       }
@@ -151,6 +171,7 @@
     }
 
     .before-login {
+
       .info-txt,
       .btn-grayline-gray {
         color: var(--font-color);
@@ -178,6 +199,7 @@
 
   .dropdown,
   .dropdown-item {
+
     button,
     .ui-option-text,
     .link-list,
@@ -214,7 +236,7 @@
     background-color: var(--disabled-color) !important;
   }
 
-  .toggle input:checked ~ .slider {
+  .toggle input:checked~.slider {
     background-color: var(--highlight-color) !important;
   }
 
@@ -395,28 +417,29 @@
   /* skeleton layout */
   #loading-screen,
   #d {
+
     .dummy-content,
     .mobile-main-dummy .d1::before,
     .mobile-main-dummy .d1::after,
-    .mobile-main-dummy .d1 > div,
+    .mobile-main-dummy .d1>div,
     .mobile-main-dummy .d2::before,
     .mobile-main-dummy .d2::after,
     .mobile-main-dummy .d2 i,
     .mobile-main-dummy div:not([class]),
     .pc-main-dummy div:not([class]),
-    .pc-main-dummy .d1 .d1-left > div,
-    .pc-main-dummy .d1 .d1-right > div:nth-child(1),
-    .pc-main-dummy .d1 .d1-right > div:nth-child(2),
-    .pc-main-dummy .d2 > div:nth-child(1),
-    .pc-main-dummy .d2 > div:nth-child(2),
+    .pc-main-dummy .d1 .d1-left>div,
+    .pc-main-dummy .d1 .d1-right>div:nth-child(1),
+    .pc-main-dummy .d1 .d1-right>div:nth-child(2),
+    .pc-main-dummy .d2>div:nth-child(1),
+    .pc-main-dummy .d2>div:nth-child(2),
     .pc-main-dummy .d2::before,
     .pc-main-dummy .d2::after,
     .pc-main-dummy .d3-left-top i,
     .pc-main-dummy .d3-left-top div,
     .pc-main-dummy .d3-left-bottom-list i,
-    .pc-main-dummy .d3-left-bottom-item > div:nth-child(1)::before,
-    .pc-main-dummy .d3-left-bottom-item > div:nth-child(1)::after,
-    .pc-main-dummy .d3-left-bottom-item > div:nth-child(2),
+    .pc-main-dummy .d3-left-bottom-item>div:nth-child(1)::before,
+    .pc-main-dummy .d3-left-bottom-item>div:nth-child(1)::after,
+    .pc-main-dummy .d3-left-bottom-item>div:nth-child(2),
     .pc-main-dummy .d3-right-top::before,
     .pc-main-dummy .d3-right-bottom::before,
     .pc-main-dummy .d3-right-top i,
@@ -476,7 +499,7 @@
   .fixed-mobile {
     background-color: var(--bg-color);
 
-    @media (min-width: 980px) {
+    @media (min-width: 640px) {
       background-color: transparent;
     }
   }
@@ -506,11 +529,9 @@
 
   /* balance/transfer */
   .dw-coin-wrap::after {
-    background-image: linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0),
-      var(--bg-color)
-    ) !important;
+    background-image: linear-gradient(to bottom,
+        rgba(255, 255, 255, 0),
+        var(--bg-color)) !important;
   }
 
   /* my */

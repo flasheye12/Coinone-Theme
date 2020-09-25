@@ -1,6 +1,6 @@
-@-moz-document url-prefix("https://coinone.co.kr/plus/lockup")
-{
+@-moz-document url-prefix("https://coinone.co.kr/plus/lockup") {
   lockup-title {
+
     .tit-plus,
     .txt-item,
     .tit-list {
@@ -19,11 +19,12 @@
   }
 
   lockup-summary {
+
     .section-summary,
     .desc-title {
       background-color: var(--bg-color) !important;
 
-      @media (min-width: 980px) {
+      @media (min-width: 640px) {
         background-color: transparent !important;
       }
     }
